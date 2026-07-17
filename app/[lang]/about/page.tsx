@@ -40,7 +40,7 @@ const content: Record<Lang, {
       items: [
         { year: '2026 Q2', title: '项目启动', desc: 'FunDAO 概念验证完成，核心智能合约开发启动' },
         { year: '2026 Q3', title: '合约审计', desc: '智能合约通过多家安全机构审计，代码开源' },
-        { year: '2026 Q4', title: '主网上线', desc: 'FunDAO 协议在 BSC 主网部署，首批用户入驻' },
+        { year: '2026 Q4', title: '生态上线', desc: 'FunDAO生态协议在 BSC 主网部署，首批用户入驻' },
         { year: '2026 Q6', title: '生态扩展', desc: '合作伙伴突破 30+，覆盖全球 30 个国家和地区' },
         { year: '2027 Q1', title: 'V2 升级', desc: '协议 V2 版本上线，新增 AI 资产配置策略' },
       ],
@@ -76,7 +76,7 @@ const content: Record<Lang, {
       items: [
         { year: '2026 Q2', title: 'Project Launch', desc: 'FunDAO proof-of-concept completed, core smart contract development initiated' },
         { year: '2026 Q3', title: 'Contract Audit', desc: 'Smart contracts audited by multiple security firms, code open-sourced' },
-        { year: '2026 Q4', title: 'Mainnet Launch', desc: 'FunDAO protocol deployed on BSC mainnet, first users onboarded' },
+        { year: '2026 Q4', title: 'Ecosystem Launch', desc: 'FunDAO ecosystem protocol deployed on BSC mainnet, first users onboarded' },
         { year: '2026 Q6', title: 'Ecosystem Expansion', desc: 'Partners exceeded 30+, covering 30 countries and regions globally' },
         { year: '2027 Q1', title: 'V2 Upgrade', desc: 'Protocol V2 launched with AI-driven asset allocation strategies' },
       ],
