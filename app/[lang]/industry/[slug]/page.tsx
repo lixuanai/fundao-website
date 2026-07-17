@@ -12,12 +12,12 @@ export async function generateMetadata({
   const dict = getDictionary(params.lang as Lang)
   return getSEOMetadata({
     lang: params.lang as Lang,
-    path: `/news/${params.slug}`,
-    title: dict.t('news.title'),
+    path: `/industry/${params.slug}`,
+    title: dict.t('industry.title'),
   })
 }
 
-export default async function NewsArticlePage({
+export default async function IndustryArticlePage({
   params,
 }: {
   params: { lang: string; slug: string }
@@ -28,8 +28,8 @@ export default async function NewsArticlePage({
     <ArticleDetail
       lang={params.lang}
       slug={params.slug}
-      backPath={`/${params.lang}/news`}
-      backLabel={dict.t('news.title')}
+      backPath={`/${params.lang}/industry`}
+      backLabel={dict.t('industry.title')}
     />
   )
 }
