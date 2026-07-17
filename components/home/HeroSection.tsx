@@ -18,7 +18,7 @@ export function HeroSection({
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Background effects */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-50" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-cyan/8 rounded-full blur-[128px]" />
       <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-brand-purple/8 rounded-full blur-[128px]" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-pink/5 rounded-full blur-[200px]" />
@@ -55,9 +55,9 @@ export function HeroSection({
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-1.5">
-            <div className="w-1.5 h-3 rounded-full bg-white/40 animate-pulse" />
-          </div>
+          <svg className="w-6 h-6 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
         </div>
       </div>
     </section>

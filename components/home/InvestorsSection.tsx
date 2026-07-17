@@ -24,7 +24,7 @@ export function InvestorsSection({ title, investors }: InvestorsSectionProps) {
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
           {investors.map((inv) => {
             const content = (
-              <div className="group flex items-center justify-center h-12 opacity-50 hover:opacity-100 transition-opacity duration-300">
+              <div className="group flex items-center justify-center h-12 opacity-60 hover:opacity-100 transition-opacity duration-300">
                 <Image
                   src={urlFor(inv.logo).width(160).height(48).url()}
                   alt={inv.name}

@@ -7,6 +7,7 @@ import { FeaturesSection } from '@/components/home/FeaturesSection'
 import { RewardSection } from '@/components/home/RewardSection'
 import { InvestorsSection } from '@/components/home/InvestorsSection'
 import { CTASection } from '@/components/home/CTASection'
+import { ScrollReveal } from '@/components/ScrollReveal'
 
 export default async function HomePage({
   params,
@@ -22,20 +23,24 @@ export default async function HomePage({
   return (
     <>
       <HeroSection {...data.hero} lang={params.lang} />
-      <StatsSection stats={data.stats} />
-      <FeaturesSection
-        features={data.features}
-        title={params.lang === 'zh' ? '为什么选择 FunDAO' : 'Why FunDAO'}
-        subtitle={params.lang === 'zh' ? '安全、透明、高效的去中心化金融协议' : 'Secure, transparent, and efficient DeFi protocol'}
-      />
-      <RewardSection {...data.rewards} />
-      {data.investors.length > 0 && (
-        <InvestorsSection
-          title={params.lang === 'zh' ? '生态合作伙伴' : 'Ecosystem Partners'}
-          investors={data.investors}
+      <ScrollReveal><StatsSection stats={data.stats} /></ScrollReveal>
+      <ScrollReveal>
+        <FeaturesSection
+          features={data.features}
+          title={params.lang === 'zh' ? '为什么选择 FunDAO' : 'Why FunDAO'}
+          subtitle={params.lang === 'zh' ? '安全、透明、高效的去中心化金融协议' : 'Secure, transparent, and efficient DeFi protocol'}
         />
+      </ScrollReveal>
+      <ScrollReveal><RewardSection {...data.rewards} /></ScrollReveal>
+      {data.investors.length > 0 && (
+        <ScrollReveal>
+          <InvestorsSection
+            title={params.lang === 'zh' ? '生态合作伙伴' : 'Ecosystem Partners'}
+            investors={data.investors}
+          />
+        </ScrollReveal>
       )}
-      <CTASection {...data.cta} lang={params.lang} />
+      <ScrollReveal><CTASection {...data.cta} lang={params.lang} /></ScrollReveal>
     </>
   )
 }

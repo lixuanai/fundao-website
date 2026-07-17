@@ -49,10 +49,10 @@ export function Header({ lang, dict }: HeaderProps) {
             <Link
               key={item.href}
               href={item.href}
-              className={`px-3 py-2 rounded-lg text-sm transition-colors ${
+              className={`px-3 py-2 rounded-lg text-sm transition-all duration-300 ${
                 isActive(item.href)
-                  ? 'text-white bg-white/10'
-                  : 'text-white/60 hover:text-white hover:bg-white/5'
+                  ? 'text-brand-cyan border-b-2 border-brand-cyan'
+                  : 'text-white/60 hover:text-brand-cyan hover:bg-white/5'
               }`}
             >
               {item.label}
@@ -79,17 +79,21 @@ export function Header({ lang, dict }: HeaderProps) {
       </nav>
 
       {/* Mobile Nav */}
-      {mobileOpen && (
-        <div className="md:hidden border-t border-white/[0.06] bg-surface/95 backdrop-blur-xl">
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="border-t border-white/[0.06] bg-surface/95 backdrop-blur-xl">
           <div className="container-main py-4 space-y-1">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className={`block px-4 py-3 rounded-lg text-sm transition-colors ${
+                className={`block px-4 py-3 rounded-lg text-sm transition-all duration-300 ${
                   isActive(item.href)
-                    ? 'text-white bg-white/10'
+                    ? 'text-brand-cyan bg-brand-cyan/10'
                     : 'text-white/60 hover:text-white hover:bg-white/5'
                 }`}
               >
@@ -105,7 +109,7 @@ export function Header({ lang, dict }: HeaderProps) {
             </Link>
           </div>
         </div>
-      )}
+      </div>
     </header>
   )
 }
