@@ -111,7 +111,7 @@ const en = {
     docs: 'Docs',
     faq: 'FAQ',
     community: 'Community',
-    copyright: '© 2024 FunDAO. All rights reserved.',
+    copyright: '© 2026 FunDAO. All rights reserved.',
   },
 
   // ========== 404 ==========

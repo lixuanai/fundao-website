@@ -112,7 +112,7 @@ const zh = {
     docs: '文档',
     faq: '常见问题',
     community: '社区',
-    copyright: '© 2024 FunDAO. All rights reserved.',
+    copyright: '© 2026 FunDAO. All rights reserved.',
   },
 
   // ========== 404 ==========

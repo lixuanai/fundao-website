@@ -30,7 +30,7 @@ export function InvestorsSection({ title, investors }: InvestorsSectionProps) {
                   alt={inv.name}
                   width={160}
                   height={48}
-                  className="h-8 w-auto object-contain brightness-0 invert"
+                  className="h-8 w-auto object-contain"
                 />
               </div>
             )
