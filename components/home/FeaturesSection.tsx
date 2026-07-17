@@ -1,7 +1,6 @@
 import { Shield, Zap, Globe, Lock, BarChart3, Users } from 'lucide-react'
 
 interface FeatureItem {
-  icon: string
   title: string
   description: string
 }
@@ -12,14 +11,8 @@ interface FeaturesSectionProps {
   subtitle: string
 }
 
-const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
-  shield: Shield,
-  zap: Zap,
-  globe: Globe,
-  lock: Lock,
-  'bar-chart': BarChart3,
-  users: Users,
-}
+// 图标按位置固定分配（不进 CMS，写死代码）
+const ICONS = [Shield, Zap, Globe, Lock, BarChart3, Users]
 
 export function FeaturesSection({ features, title, subtitle }: FeaturesSectionProps) {
   if (!features.length) return null
@@ -33,8 +26,8 @@ export function FeaturesSection({ features, title, subtitle }: FeaturesSectionPr
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature) => {
-            const Icon = ICON_MAP[feature.icon] || Shield
+          {features.map((feature, i) => {
+            const Icon = ICONS[i % ICONS.length]
             return (
               <div
                 key={feature.title}

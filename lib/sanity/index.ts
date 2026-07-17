@@ -1,9 +1,12 @@
 export { sanityClient } from './client'
 export { urlFor } from './imageUrl'
 export {
-  getPageBySlug,
-  getAllNews,
-  getAllIndustryNews,
-  getAllProducts,
-  getHomePageConfig,
+  getAllArticles,
+  getArticlesByCategory,
+  getArticleBySlug,
+  getArticlesPaginated,
+  searchArticles,
+  getAllTags,
+  getHomePageData,
+  getAllInvestors,
 } from './queries'

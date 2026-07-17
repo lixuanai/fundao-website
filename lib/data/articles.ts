@@ -4,23 +4,21 @@ import type { Lang } from '@/lib/i18n/config'
 /**
  * 文章数据获取 — CMS 优先，fallback 到默认数据
  * 新闻 & 行业资讯共用同一 schema，通过 category 区分
+ * 中英双版本：CMS 存储 titleZh/titleEn, excerptZh/excerptEn, contentZh/contentEn
  */
 
 export interface Article {
   _id: string
   title: string
-  slug: string
+  slug: { current: string } | string
   excerpt: string
+  content?: any[]
   coverImage?: any
   author?: string
   publishedAt: string
   tags?: string[]
   category: 'news' | 'industry'
 }
-
-const ARTICLES_QUERY = `*[_type == "article"] | order(publishedAt desc) {
-  _id, title, slug, excerpt, coverImage, author, publishedAt, tags, category
-}`
 
 // ===== 默认数据（fallback）=====
 const defaultArticles: Record<Lang, Article[]> = {
@@ -150,14 +148,128 @@ const defaultArticles: Record<Lang, Article[]> = {
   ],
 }
 
+/**
+ * 获取文章列表 — CMS 优先，fallback 到默认数据
+ */
 export async function getArticles(lang: Lang, category: 'news' | 'industry'): Promise<Article[]> {
   try {
-    const articles = await sanityClient.fetch(ARTICLES_QUERY)
-    const filtered = articles?.filter((a: Article) => a.category === category)
-    if (filtered?.length > 0) return filtered
+    const titleField = lang === 'zh' ? 'titleZh' : 'titleEn'
+    const excerptField = lang === 'zh' ? 'excerptZh' : 'excerptEn'
+
+    const articles = await sanityClient.fetch(
+      `*[_type == "article" && status == "published" && category == $category] | order(publishedAt desc) {
+        _id,
+        "title": ${titleField},
+        "excerpt": ${excerptField},
+        slug,
+        category,
+        coverImage,
+        author,
+        publishedAt,
+        tags
+      }`,
+      { category }
+    )
+
+    if (articles?.length > 0) return articles
   } catch {
     // CMS unavailable, use defaults
   }
 
   return defaultArticles[lang].filter((a) => a.category === category)
+}
+
+/**
+ * 获取文章详情 — CMS 优先，fallback 返回 null
+ */
+export async function getArticleBySlug(lang: Lang, slug: string): Promise<Article | null> {
+  try {
+    const titleField = lang === 'zh' ? 'titleZh' : 'titleEn'
+    const excerptField = lang === 'zh' ? 'excerptZh' : 'excerptEn'
+    const contentField = lang === 'zh' ? 'contentZh' : 'contentEn'
+
+    const article = await sanityClient.fetch(
+      `*[_type == "article" && slug.current == $slug && status == "published"][0] {
+        _id,
+        "title": ${titleField},
+        "excerpt": ${excerptField},
+        "content": ${contentField},
+        slug,
+        category,
+        coverImage,
+        author,
+        publishedAt,
+        tags
+      }`,
+      { slug }
+    )
+
+    if (article) return article
+  } catch {
+    // CMS unavailable
+  }
+
+  // Fallback: search in defaults
+  const found = defaultArticles[lang].find((a) => {
+    const s = typeof a.slug === 'string' ? a.slug : a.slug.current
+    return s === slug
+  })
+  return found || null
+}
+
+/**
+ * 分页获取文章
+ */
+export async function getArticlesPaginated(
+  lang: Lang,
+  category: 'news' | 'industry' | null,
+  page: number = 1,
+  limit: number = 10
+): Promise<{ articles: Article[]; total: number; page: number; totalPages: number }> {
+  try {
+    const titleField = lang === 'zh' ? 'titleZh' : 'titleEn'
+    const excerptField = lang === 'zh' ? 'excerptZh' : 'excerptEn'
+    const start = (page - 1) * limit
+    const end = start + limit
+    const categoryFilter = category ? `&& category == $category` : ''
+
+    const [articles, total] = await Promise.all([
+      sanityClient.fetch(
+        `*[_type == "article" && status == "published" ${categoryFilter}] | order(publishedAt desc) [${start}...${end}] {
+          _id,
+          "title": ${titleField},
+          "excerpt": ${excerptField},
+          slug,
+          category,
+          coverImage,
+          author,
+          publishedAt,
+          tags
+        }`,
+        category ? { category } : {}
+      ),
+      sanityClient.fetch(
+        `count(*[_type == "article" && status == "published" ${categoryFilter}])`,
+        category ? { category } : {}
+      ),
+    ])
+
+    if (articles?.length > 0 || total > 0) {
+      return { articles: articles || [], total, page, totalPages: Math.ceil(total / limit) }
+    }
+  } catch {
+    // CMS unavailable
+  }
+
+  // Fallback
+  const filtered = category
+    ? defaultArticles[lang].filter((a) => a.category === category)
+    : defaultArticles[lang]
+  const start = (page - 1) * limit
+  return {
+    articles: filtered.slice(start, start + limit),
+    total: filtered.length,
+    page,
+    totalPages: Math.ceil(filtered.length / limit),
+  }
 }
