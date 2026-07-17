@@ -3,13 +3,13 @@ import { isValidLang, type Lang } from '@/lib/i18n/config'
 import { getDictionary } from '@/lib/i18n/dictionaries'
 import { getSEOMetadata } from '@/lib/i18n/seo'
 import { getArticles } from '@/lib/data/articles'
-import { ArticleList } from '@/components/ArticleList'
+import { ArticleListClient } from '@/components/ArticleListClient'
 
 export async function generateMetadata({ params }: { params: { lang: string } }) {
   if (!isValidLang(params.lang)) return {}
-  const dict = await getDictionary(params.lang)
+  const dict = getDictionary(params.lang as Lang)
   return getSEOMetadata({
-    lang: params.lang,
+    lang: params.lang as Lang,
     path: '/news',
     title: dict.t('news.title'),
   })
@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: { lang: string } })
 
 export default async function NewsPage({ params }: { params: { lang: string } }) {
   if (!isValidLang(params.lang)) notFound()
-  const dict = await getDictionary(params.lang)
+  const dict = getDictionary(params.lang as Lang)
   const articles = await getArticles(params.lang as Lang, 'news')
 
   return (
@@ -35,10 +35,14 @@ export default async function NewsPage({ params }: { params: { lang: string } })
         </div>
       </section>
 
-      {/* Articles */}
+      {/* Articles with search, filter, pagination */}
       <section className="section-padding">
         <div className="container-main">
-          <ArticleList articles={articles} lang={params.lang} />
+          <ArticleListClient
+            articles={articles}
+            lang={params.lang}
+            category="news"
+          />
         </div>
       </section>
     </>
