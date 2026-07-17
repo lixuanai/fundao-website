@@ -6,8 +6,8 @@ const zh = {
   nav: {
     home: '首页',
     about: '关于我们',
-    products: '产品',
-    news: '新闻',
+    products: '产品介绍',
+    news: '新闻动态',
     industry: '行业资讯',
     contact: '联系我们',
     cta: '立即加入',
