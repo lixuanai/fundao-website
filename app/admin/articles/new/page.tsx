@@ -10,6 +10,7 @@ export default function NewArticle() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [showPreview, setShowPreview] = useState(false)
+  const [uploading, setUploading] = useState(false)
 
   const [form, setForm] = useState({
     titleZh: '',
@@ -22,6 +23,7 @@ export default function NewArticle() {
     slug: '',
     tags: '',
     status: 'draft' as 'draft' | 'published',
+    coverImage: '',
   })
 
   const handleChange = (field: string, value: string) => {
@@ -36,6 +38,34 @@ export default function NewArticle() {
       .replace(/^-|-$/g, '')
       .substring(0, 60)
     setForm(prev => ({ ...prev, slug }))
+  }
+
+  const handleCoverImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+
+    setUploading(true)
+    try {
+      const formData = new FormData()
+      formData.append('file', file)
+
+      const res = await fetch('/api/admin/upload', {
+        method: 'POST',
+        body: formData,
+      })
+
+      if (res.ok) {
+        const data = await res.json()
+        setForm(prev => ({ ...prev, coverImage: data.assetId }))
+      } else {
+        const data = await res.json()
+        setError(data.error || '封面图上传失败')
+      }
+    } catch {
+      setError('封面图上传失败')
+    } finally {
+      setUploading(false)
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -152,13 +182,12 @@ export default function NewArticle() {
                     value={form.slug}
                     onChange={(e) => handleChange('slug', e.target.value)}
                     className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="article-slug"
                     required
                   />
                   <button
                     type="button"
                     onClick={generateSlug}
-                    className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-gray-300 rounded-lg transition-colors"
+                    className="px-3 py-2 bg-gray-700 hover:bg-gray-600 text-gray-300 rounded-lg text-sm transition-colors"
                   >
                     自动生成
                   </button>
@@ -190,6 +219,27 @@ export default function NewArticle() {
                   <option value="draft">草稿</option>
                   <option value="published">立即发布</option>
                 </select>
+              </div>
+            </div>
+
+            {/* Cover Image */}
+            <div className="mt-4">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                封面图 *
+              </label>
+              <div className="flex items-center gap-4">
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleCoverImageUpload}
+                  className="block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-blue-600 file:text-white hover:file:bg-blue-700 file:cursor-pointer cursor-pointer"
+                />
+                {uploading && (
+                  <span className="text-sm text-gray-400">上传中...</span>
+                )}
+                {form.coverImage && !uploading && (
+                  <span className="text-sm text-green-400">✓ 已上传</span>
+                )}
               </div>
             </div>
           </div>

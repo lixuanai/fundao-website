@@ -16,22 +16,34 @@ interface ContactFormProps {
 
 export function ContactForm({ lang, labels }: ContactFormProps) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+  const [errorMsg, setErrorMsg] = useState('')
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setStatus('sending')
+    setErrorMsg('')
 
     const form = e.currentTarget
     const data = Object.fromEntries(new FormData(form))
 
     try {
-      // TODO: 接入实际 API（如 Sanity webhook / 邮件服务）
-      await new Promise((r) => setTimeout(r, 1000))
-      console.log('Contact form submission:', data)
-      setStatus('success')
-      form.reset()
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+
+      if (res.ok) {
+        setStatus('success')
+        form.reset()
+      } else {
+        const result = await res.json()
+        setErrorMsg(result.error || '发送失败')
+        setStatus('error')
+      }
     } catch {
       setStatus('error')
+      setErrorMsg('网络错误，请稍后重试')
     }
   }
 
@@ -106,7 +118,7 @@ export function ContactForm({ lang, labels }: ContactFormProps) {
         <p className="text-center text-brand-cyan text-sm">{labels.success}</p>
       )}
       {status === 'error' && (
-        <p className="text-center text-red-400 text-sm">Failed to send. Please try again.</p>
+        <p className="text-center text-red-400 text-sm">{errorMsg || 'Failed to send. Please try again.'}</p>
       )}
     </form>
   )

@@ -86,7 +86,7 @@ fundao2026
 |--------|------|------|
 | `ADMIN_PASSWORD` | 后台登录密码 | `fundao2026` |
 | `JWT_SECRET` | JWT 签名密钥（随机字符串） | `random-secret-string` |
-| `SANITY_API_TOKEN` | Sanity 写权限 Token | `sk-...` |
+| `SANITY_API_WRITE_TOKEN` | Sanity 写权限 Token | `sk-...` |
 | `NEXT_PUBLIC_SANITY_PROJECT_ID` | Sanity 项目 ID | `4wq2d1xx` |
 | `NEXT_PUBLIC_SANITY_DATASET` | Sanity 数据集 | `production` |
 
@@ -97,4 +97,4 @@ fundao2026
 3. 名称填 `fundao-admin`
 4. 权限选「Editor」
 5. 点「Create token」
-6. 复制 token 填到 `SANITY_API_TOKEN` 环境变量
+6. 复制 token 填到 `SANITY_API_WRITE_TOKEN` 环境变量
