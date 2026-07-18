@@ -13,6 +13,17 @@ export function middleware(request: NextRequest) {
     return
   }
 
+  // Admin routes: /admin/... → pass through
+  if (pathname.startsWith('/admin')) {
+    return
+  }
+
+  // Admin routes with lang prefix: /zh/admin/... or /en/admin/... → redirect to /admin/...
+  if (pathname.match(/^\/(zh|en)\/admin(\/|$)/)) {
+    const adminPath = pathname.replace(/^\/(zh|en)/, '')
+    return NextResponse.redirect(new URL(adminPath, request.url))
+  }
+
   // Check if pathname starts with a valid lang
   const segments = pathname.split('/').filter(Boolean)
   const firstSegment = segments[0]
