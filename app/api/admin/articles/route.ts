@@ -67,6 +67,11 @@ export async function POST(request: NextRequest) {
       }))
     }
 
+    // 清理 slug：确保是 ASCII 安全的 URL 格式
+    const cleanSlug = slug
+      ? slug.toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-|-$/g, '').substring(0, 96) || `article-${Date.now()}`
+      : `article-${Date.now()}`
+
     const doc = {
       _type: 'article',
       titleZh,
@@ -76,7 +81,7 @@ export async function POST(request: NextRequest) {
       contentZh: buildPortableText(contentZh),
       contentEn: buildPortableText(contentEn),
       category: category || 'news',
-      slug: { _type: 'slug', current: slug || `article-${Date.now()}` },
+      slug: { _type: 'slug', current: cleanSlug },
       tags: tags || [],
       status: status || 'draft',
       publishedAt: status === 'published' ? new Date().toISOString() : null,
@@ -94,6 +99,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: true, article: result })
   } catch (error) {
     console.error('Create article error:', error)
-    return NextResponse.json({ error: '创建文章失败', details: String(error) }, { status: 500 })
+    return NextResponse.json({ error: '创建文章失败: ' + String(error) }, { status: 500 })
   }
 }

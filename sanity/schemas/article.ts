@@ -139,7 +139,7 @@ export const article = defineType({
           validation: (Rule) => Rule.required().error('封面图 Alt 文本必填'),
         }),
       ],
-      validation: (Rule) => Rule.required(),
+      // validation: (Rule) => Rule.required(), // 改为非必填
     }),
 
     // ===== 元数据 =====
