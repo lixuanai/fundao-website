@@ -3,42 +3,32 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
+
+interface Article {
+  id: string;
+  title_zh: string;
+  title_en: string;
+  slug: string;
+  category: string;
+  excerpt_zh: string;
+  excerpt_en: string;
+  created_at: string;
+}
 
 export default function LatestNewsSection() {
   const t = useTranslations('home.latestNews');
   const tCommon = useTranslations('common');
   const pathname = usePathname();
   const currentLocale = pathname.split('/')[1] || 'zh';
+  const [articles, setArticles] = useState<Article[]>([]);
 
-  const mockArticles = [
-    {
-      id: '1',
-      title: currentLocale === 'zh' ? 'FunDAO 生态再创新高' : 'FunDAO Ecosystem Reaches New Heights',
-      excerpt: currentLocale === 'zh' 
-        ? '持币人数突破 7,700，30天涨幅超18倍，社区持续壮大' 
-        : 'Token holders exceed 7,700, 30-day growth over 18x, community continues to grow',
-      date: '2024-07-28',
-      category: currentLocale === 'zh' ? '新闻' : 'News',
-    },
-    {
-      id: '2',
-      title: currentLocale === 'zh' ? 'FunDAO 资金分配机制详解' : 'Understanding FunDAO Fund Allocation',
-      excerpt: currentLocale === 'zh'
-        ? '60% LP + 25% 分享收益 + 15% 周分红，科学合理的资金分配确保生态健康发展'
-        : '60% LP + 25% shared revenue + 15% weekly dividend, scientific fund allocation ensures healthy ecosystem',
-      date: '2024-07-25',
-      category: currentLocale === 'zh' ? '机制解读' : 'Mechanism',
-    },
-    {
-      id: '3',
-      title: currentLocale === 'zh' ? '通缩保护机制如何运作' : 'How Deflation Protection Works',
-      excerpt: currentLocale === 'zh'
-        ? '每日 2.5% 通缩 + 三级熔断机制，持续保护代币价值'
-        : 'Daily 2.5% deflation + three-tier circuit breaker, continuously protecting token value',
-      date: '2024-07-20',
-      category: currentLocale === 'zh' ? '机制解读' : 'Mechanism',
-    },
-  ];
+  useEffect(() => {
+    fetch(`/api/articles?lang=${currentLocale}&published=true`)
+      .then(res => res.json())
+      .then(data => setArticles(data.slice(0, 3)))
+      .catch(() => {});
+  }, [currentLocale]);
 
   return (
     <section className="py-20 bg-gray-950">
@@ -62,23 +52,23 @@ export default function LatestNewsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {mockArticles.map((article) => (
+          {articles.map((article) => (
             <Link
               key={article.id}
-              href={`/${currentLocale}/news/${article.id}`}
+              href={`/${currentLocale}/news/${article.slug}`}
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 transition-all group"
             >
               <div className="flex items-center space-x-2 mb-4">
                 <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-400 rounded">
                   {article.category}
                 </span>
-                <span className="text-xs text-gray-500">{article.date}</span>
+                <span className="text-xs text-gray-500">{article.created_at?.split('T')[0] || ''}</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                {article.title}
+                {currentLocale === 'zh' ? article.title_zh : article.title_en}
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                {article.excerpt}
+                {currentLocale === 'zh' ? article.excerpt_zh : article.excerpt_en}
               </p>
               <div className="flex items-center text-blue-400 text-sm">
                 <span>{tCommon('readMore')}</span>
@@ -89,6 +79,12 @@ export default function LatestNewsSection() {
             </Link>
           ))}
         </div>
+
+        {articles.length === 0 && (
+          <div className="text-center text-gray-500 py-12">
+            {t('noArticles') || '暂无文章'}
+          </div>
+        )}
 
         <div className="md:hidden mt-8 text-center">
           <Link
