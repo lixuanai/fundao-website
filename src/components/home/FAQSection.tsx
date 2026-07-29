@@ -1,47 +1,70 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 export default function FAQSection() {
   const t = useTranslations('home.faq');
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const pathname = usePathname();
+  const currentLocale = pathname.split('/')[1] || 'zh';
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const faqs = t.raw('items') as Array<{ question: string; answer: string }>;
+  const faqs = [
+    { qKey: 'q1', aKey: 'a1' },
+    { qKey: 'q2', aKey: 'a2' },
+    { qKey: 'q3', aKey: 'a3' },
+    { qKey: 'q4', aKey: 'a4' },
+    { qKey: 'q5', aKey: 'a5' },
+    { qKey: 'q6', aKey: 'a6' },
+  ];
 
   return (
     <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-purple-950/5 to-gray-950"></div>
-
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            {t('title')}
+      <div className="absolute inset-0 mesh-gradient opacity-30"></div>
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section header */}
+        <div className="text-center mb-16">
+          <span className="tag-cyan mb-4 inline-block">{t('badge') || '常见问题'}</span>
+          <h2 className="text-4xl md:text-5xl font-black mb-4">
+            <span className="gradient-text">{t('title') || '常见问题'}</span>
           </h2>
-          <p className="text-gray-400 text-lg">{t('subtitle')}</p>
+          <p className="text-lg text-gray-500">
+            {t('subtitle') || '关于 FunDAO 你最想知道的'}
+          </p>
         </div>
 
+        {/* FAQ items */}
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
+          {faqs.map((faq, i) => (
             <div
-              key={index}
-              className="gradient-border card-glow overflow-hidden group"
+              key={i}
+              className="glass-card rounded-2xl overflow-hidden card-hover"
             >
               <button
-                className="w-full px-6 py-4 text-left flex justify-between items-center"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                className="w-full flex items-center justify-between p-6 text-left"
               >
-                <span className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">{faq.question}</span>
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${openIndex === index ? 'bg-gradient-to-r from-blue-500 to-purple-500 rotate-180' : 'bg-gray-800'}`}>
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className="text-lg font-semibold text-gray-800 pr-4">
+                  {t(faq.qKey)}
+                </span>
+                <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+                  openIndex === i
+                    ? 'bg-gradient-to-br from-purple-500 to-pink-500 text-white rotate-180'
+                    : 'bg-purple-50 text-purple-500'
+                }`}>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </div>
               </button>
-              {openIndex === index && (
-                <div className="px-6 pb-4">
-                  <div className="section-divider mb-4"></div>
-                  <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
+              {openIndex === i && (
+                <div className="px-6 pb-6">
+                  <div className="pt-2 border-t border-purple-100/50">
+                    <p className="text-gray-600 leading-relaxed mt-4">
+                      {t(faq.aKey)}
+                    </p>
+                  </div>
                 </div>
               )}
             </div>

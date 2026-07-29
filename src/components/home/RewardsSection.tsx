@@ -1,42 +1,110 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 
 export default function RewardsSection() {
   const t = useTranslations('home.rewards');
+  const pathname = usePathname();
+  const currentLocale = pathname.split('/')[1] || 'zh';
 
-  const items = [
-    { title: t('directReward'), description: t('directRewardDesc'), highlight: '15%', gradient: 'from-blue-400 to-cyan-400' },
-    { title: t('dynamicReward'), description: t('dynamicRewardDesc'), highlight: '35%', gradient: 'from-purple-400 to-pink-400' },
-    { title: t('weeklyDividend'), description: t('weeklyDividendDesc'), highlight: '15%', gradient: 'from-green-400 to-emerald-400' },
+  const rewards = [
+    {
+      value: '15%',
+      titleKey: 'item1Title',
+      descKey: 'item1Desc',
+      color: 'text-purple-600',
+      bg: 'from-purple-500 to-purple-600',
+      ring: 'ring-purple-200',
+    },
+    {
+      value: '35%',
+      titleKey: 'item2Title',
+      descKey: 'item2Desc',
+      color: 'text-pink-500',
+      bg: 'from-pink-500 to-pink-600',
+      ring: 'ring-pink-200',
+    },
+    {
+      value: '15%',
+      titleKey: 'item3Title',
+      descKey: 'item3Desc',
+      color: 'text-cyan-500',
+      bg: 'from-cyan-500 to-cyan-600',
+      ring: 'ring-cyan-200',
+    },
+  ];
+
+  const allocationData = [
+    { label: 'LP 流动性池', value: 60, color: 'bg-purple-500' },
+    { label: '分享收益', value: 25, color: 'bg-pink-500' },
+    { label: '周分红', value: 15, color: 'bg-cyan-500' },
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-purple-950/10 to-gray-950"></div>
-
-      {/* Decorative orbs */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-500/5 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-500/5 to-transparent rounded-full blur-3xl"></div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 relative overflow-hidden bg-white">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-200 to-transparent"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-            {t('title')}
+          <span className="tag-pink mb-4 inline-block">{t('badge') || '收益体系'}</span>
+          <h2 className="text-4xl md:text-5xl font-black mb-4">
+            <span className="gradient-text">{t('title') || 'FunDAO 收益模型'}</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">{t('subtitle')}</p>
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+            {t('subtitle') || '0.1 BNB 即可参与，三重收益自动分配'}
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {items.map((item, i) => (
-            <div key={i} className="gradient-border card-glow p-6 text-center group">
-              <div className={`text-5xl font-bold bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform`}>
-                {item.highlight}
+        {/* Reward cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {rewards.map((item, i) => (
+            <div
+              key={i}
+              className="relative glass-card rounded-3xl p-10 text-center card-hover group"
+            >
+              {/* Percentage */}
+              <div className={`text-6xl md:text-7xl font-black ${item.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                {item.value}
               </div>
-              <h3 className="text-lg font-semibold text-white mb-3">{item.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">
+                {t(item.titleKey)}
+              </h3>
+              <p className="text-gray-500 text-sm">
+                {t(item.descKey)}
+              </p>
+
+              {/* Bottom gradient line */}
+              <div className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-gradient-to-r ${item.bg} rounded-full opacity-0 group-hover:opacity-100 transition-opacity`}></div>
             </div>
           ))}
+        </div>
+
+        {/* Fund allocation bar */}
+        <div className="glass-card rounded-2xl p-8 max-w-3xl mx-auto">
+          <h3 className="text-lg font-bold text-gray-800 mb-6 text-center">
+            {t('allocationTitle') || '资金分配比例'}
+          </h3>
+          <div className="flex rounded-full overflow-hidden h-4 mb-6">
+            {allocationData.map((item, i) => (
+              <div
+                key={i}
+                className={`${item.color} transition-all duration-500 hover:opacity-80`}
+                style={{ width: `${item.value}%` }}
+              ></div>
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center gap-6">
+            {allocationData.map((item, i) => (
+              <div key={i} className="flex items-center space-x-2">
+                <div className={`w-3 h-3 rounded-full ${item.color}`}></div>
+                <span className="text-sm text-gray-600">
+                  {item.label} <span className="font-bold text-gray-800">{item.value}%</span>
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

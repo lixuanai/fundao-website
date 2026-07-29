@@ -11,34 +11,30 @@ export default function CTASection() {
 
   return (
     <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-blue-950/20 to-gray-950"></div>
-
-      {/* Animated orbs */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse-ring"></div>
-      <div className="absolute top-0 right-1/4 w-64 h-64 bg-gradient-to-br from-purple-500/10 to-transparent rounded-full blur-3xl animate-float-orb-1"></div>
-      <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-full blur-3xl animate-float-orb-2"></div>
-
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-gradient-animated bg-clip-text text-transparent">
-          {t('title')}
+      <div className="absolute inset-0 animated-gradient-bg opacity-90"></div>
+      <div className="absolute inset-0" style={{
+        backgroundImage: 'radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)'
+      }}></div>
+      
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+          {t('title') || '准备好加入 FunDAO 了吗？'}
         </h2>
-        <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-          {t('subtitle')}
+        <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
+          {t('description') || '0.1 BNB 即可参与，开启去中心化金融新体验'}
         </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
-            href={`/${currentLocale}/contact`}
-            className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 hover:from-blue-500 hover:via-purple-500 hover:to-cyan-500 text-white font-semibold rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25 overflow-hidden"
+            href={`/${currentLocale}/whitepaper`}
+            className="px-8 py-4 rounded-full bg-white text-purple-600 font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-xl"
           >
-            <span className="relative z-10">{t('button')}</span>
-            <div className="absolute inset-0 shimmer"></div>
+            {t('ctaPrimary') || '阅读白皮书'}
           </Link>
           <Link
-            href={`/${currentLocale}/products`}
-            className="px-8 py-4 bg-gray-800/50 backdrop-blur-sm hover:bg-gray-700/50 text-white font-semibold rounded-lg transition-all border border-gray-700 hover:border-blue-500/50 card-glow"
+            href={`/${currentLocale}/contact`}
+            className="px-8 py-4 rounded-full border-2 border-white/50 text-white font-bold text-lg hover:bg-white/10 transition-all"
           >
-            {currentLocale === 'zh' ? '了解更多' : 'Learn More'}
+            {t('ctaSecondary') || '联系我们'}
           </Link>
         </div>
       </div>

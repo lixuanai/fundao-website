@@ -1,50 +1,52 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-
-const partners = [
-  { name: 'Dragonfly', short: 'D', color: 'from-blue-600 to-blue-800', textColor: 'text-blue-400' },
-  { name: 'Animoca Brands', short: 'AB', color: 'from-red-600 to-red-800', textColor: 'text-red-400' },
-  { name: 'OKX Ventures', short: 'OKX', color: 'from-gray-700 to-gray-900', textColor: 'text-white' },
-  { name: 'Spartan Group', short: 'SG', color: 'from-amber-600 to-amber-800', textColor: 'text-amber-400' },
-  { name: 'Bitscale Capital', short: 'BC', color: 'from-green-600 to-green-800', textColor: 'text-green-400' },
-  { name: '6th Man Ventures', short: '6M', color: 'from-orange-600 to-orange-800', textColor: 'text-orange-400' },
-  { name: 'IVC', short: 'IVC', color: 'from-indigo-600 to-indigo-800', textColor: 'text-indigo-400' },
-  { name: 'Mechanism Capital', short: 'MC', color: 'from-cyan-600 to-cyan-800', textColor: 'text-cyan-400' },
-  { name: 'Morningstar Ventures', short: 'MV', color: 'from-yellow-600 to-yellow-800', textColor: 'text-yellow-400' },
-  { name: 'W3GG', short: 'W3', color: 'from-purple-600 to-purple-800', textColor: 'text-purple-400' },
-  { name: 'Xinyuan Capital', short: 'XY', color: 'from-rose-600 to-rose-800', textColor: 'text-rose-400' },
-  { name: 'Red Building Capital', short: 'RB', color: 'from-red-700 to-red-900', textColor: 'text-red-300' },
-  { name: 'Yolo Investments', short: 'YO', color: 'from-emerald-600 to-emerald-800', textColor: 'text-emerald-400' },
-];
+import { usePathname } from 'next/navigation';
 
 export default function PartnersSection() {
   const t = useTranslations('home.partners');
+  const pathname = usePathname();
+  const currentLocale = pathname.split('/')[1] || 'zh';
+
+  const partners = [
+    { name: 'Dragonfly', abbr: 'D', color: 'from-blue-500 to-blue-600' },
+    { name: 'Animoca Brands', abbr: 'AB', color: 'from-red-500 to-red-600' },
+    { name: 'OKX Ventures', abbr: 'OKX', color: 'from-gray-700 to-gray-900' },
+    { name: 'Spartan Group', abbr: 'SG', color: 'from-indigo-500 to-indigo-600' },
+    { name: 'Bitscale Capital', abbr: 'BC', color: 'from-green-500 to-green-600' },
+    { name: '6th Man Ventures', abbr: '6M', color: 'from-orange-500 to-orange-600' },
+    { name: 'IVC', abbr: 'IVC', color: 'from-purple-500 to-purple-600' },
+    { name: 'Mechanism Capital', abbr: 'MC', color: 'from-cyan-500 to-cyan-600' },
+    { name: 'Morningstar Ventures', abbr: 'MV', color: 'from-yellow-500 to-yellow-600' },
+    { name: 'W3GG', abbr: 'W3', color: 'from-pink-500 to-pink-600' },
+    { name: '心元资本', abbr: 'XY', color: 'from-teal-500 to-teal-600' },
+    { name: 'Red Building Capital', abbr: 'RB', color: 'from-rose-500 to-rose-600' },
+    { name: 'Yolo Investments', abbr: 'YI', color: 'from-amber-500 to-amber-600' },
+  ];
 
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-blue-950/5 to-gray-950"></div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-white relative">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-200 to-transparent"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent">
-            {t('title')}
+          <span className="tag-purple mb-4 inline-block">{t('badge') || '生态合作伙伴'}</span>
+          <h2 className="text-3xl md:text-4xl font-black">
+            <span className="gradient-text">{t('title') || '13 家顶级机构参投'}</span>
           </h2>
-          <p className="text-gray-400 text-lg">{t('subtitle')}</p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
-          {partners.map((partner, index) => (
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-4">
+          {partners.map((partner, i) => (
             <div
-              key={index}
-              className="gradient-border card-glow p-4 flex flex-col items-center justify-center group"
+              key={i}
+              className="group flex flex-col items-center p-4 rounded-xl hover:bg-purple-50/50 transition-all cursor-default"
             >
-              <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${partner.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                <span className="text-white font-bold text-sm tracking-wider">{partner.short}</span>
+              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${partner.color} flex items-center justify-center text-white font-bold text-sm mb-2 group-hover:scale-110 transition-transform shadow-lg`}>
+                {partner.abbr}
               </div>
-              <div className={`text-xs font-medium ${partner.textColor} text-center group-hover:text-white transition-colors`}>
+              <span className="text-xs text-gray-500 text-center font-medium group-hover:text-purple-600 transition-colors">
                 {partner.name}
-              </div>
+              </span>
             </div>
           ))}
         </div>
