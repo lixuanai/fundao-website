@@ -43,11 +43,13 @@ export default function ArticleDetailPage({ params }: { params: { id: string; la
   };
 
   return (
-    <div className="min-h-screen bg-gray-950 pt-24 pb-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen pt-24 pb-20">
+      <div className="mesh-gradient opacity-30"></div>
+      
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
           href={`/${currentLocale}/news`}
-          className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8"
+          className="inline-flex items-center text-purple-600 hover:text-purple-800 mb-8 transition-colors"
         >
           <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -55,20 +57,20 @@ export default function ArticleDetailPage({ params }: { params: { id: string; la
           {tCommon('back')}
         </Link>
 
-        <article className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-8">
+        <article className="glass-card rounded-3xl p-8">
           <div className="flex items-center space-x-2 mb-6">
-            <span className="text-sm px-3 py-1 bg-blue-500/20 text-blue-400 rounded">
+            <span className="tag-purple">
               {article.category}
             </span>
             <span className="text-sm text-gray-500">{article.date}</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-8">
+          <h1 className="text-3xl md:text-4xl font-bold gradient-text mb-8">
             {article.title}
           </h1>
 
           <div 
-            className="prose prose-invert max-w-none"
+            className="prose max-w-none text-gray-700"
             dangerouslySetInnerHTML={{ __html: article.content }}
           />
         </article>
