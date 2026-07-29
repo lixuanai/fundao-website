@@ -1,0 +1,536 @@
+{
+  "common": {
+    "siteName": "FunDAO",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "contactUs": "Contact Us",
+    "learnMore": "Learn More",
+    "submit": "Submit",
+    "sending": "Sending...",
+    "sent": "Sent",
+    "back": "Back",
+    "home": "Home",
+    "news": "News",
+    "products": "Products & Services",
+    "whitepaper": "Whitepaper",
+    "about": "About Us",
+    "contact": "Contact",
+    "riskDisclaimer": "Risk Warning: Investment involves risks. Past performance is not indicative of future results."
+  },
+  "nav": {
+    "home": "Home",
+    "news": "News",
+    "products": "Products",
+    "whitepaper": "Whitepaper",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "FunDAO: A New Decentralized Finance Ecosystem",
+      "subtitle": "FunDAO is the world's first DeFi smart contract consensus financial protocol co-built by institutions and community, deployed on Binance Smart Chain (BSC), creating sustainable value through innovative fund allocation, daily deflation and transparent governance",
+      "cta": "Learn More",
+      "stats": {
+        "holders": "Holder Addresses",
+        "holdersValue": "7,739",
+        "growth": "30-Day Growth",
+        "growthValue": "18x+",
+        "lp": "LP Pool",
+        "lpValue": "60%",
+        "totalSupply": "Total Supply",
+        "totalSupplyValue": "2.1B",
+        "chain": "Chain",
+        "chainValue": "BSC"
+      }
+    },
+    "advantages": {
+      "title": "Core Advantages",
+      "subtitle": "Four mechanisms working in synergy to build sustainable value growth cycle",
+      "items": [
+        {
+          "title": "Daily Deflation 2.5%",
+          "description": "50% permanent burn reduces circulating supply, 50% distributed to holders. Continuously reduces supply, supports token value, making $FUN one of strongest deflationary tokens in BSC ecosystem"
+        },
+        {
+          "title": "Smart Circuit Breaker",
+          "description": "Three-tier circuit breaker (5%/10%/20%) prevents crashes, FUN sold after triggering is burned, unclaimed BNB flows back to pool, effectively preventing project team misconduct"
+        },
+        {
+          "title": "Automatic Revenue Distribution",
+          "description": "Direct referral reward 15% (instant) + Community contribution incentive 35% + Weekly dividend 15% (weighted distribution). Multi-dimensional, multi-level revenue system, automatically executed"
+        },
+        {
+          "title": "Liquidity Buffer Pool",
+          "description": "BNB-denominated liquidity buffer pool provides bottom support for all participants. Even last participants protected, system runs automatically in cycles, achieving decentralized value appreciation"
+        }
+      ]
+    },
+    "rewards": {
+      "title": "Revenue System",
+      "subtitle": "FunDAO Revenue Model — Start with just 0.1 BNB",
+      "fundAllocation": "Fund Allocation",
+      "fundAllocationDesc": "60% LP + 25% Revenue Sharing + 15% Weekly Dividend",
+      "directReward": "Referral Reward",
+      "directRewardDesc": "15% Instant",
+      "dynamicReward": "Community Incentive",
+      "dynamicRewardDesc": "35% Shared Growth",
+      "weeklyDividend": "Weekly Dividend",
+      "weeklyDividendDesc": "15% Weighted",
+      "deflation": "Daily Deflation",
+      "deflationDesc": "2.5% (50% Burn + 50% Distribution)",
+      "circuitBreaker": "Smart Circuit Breaker",
+      "circuitBreakerDesc": "5%/10%/20% Three-Tier"
+    },
+    "latestNews": {
+      "title": "Latest News",
+      "subtitle": "Stay updated with FunDAO"
+    },
+    "partners": {
+      "title": "Ecosystem Partners",
+      "subtitle": "13 top-tier institutions invested"
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Frequently asked questions about FunDAO",
+      "items": [
+        {
+          "question": "What is FunDAO?",
+          "answer": "FunDAO is the world's first decentralized value-added platform with 'FunDAO' as its core governance model, built on PVP Fun underlying platform, built on BNB Smart Chain (BSC). Through innovative quadruple mechanism of 'Daily Deflation + Smart Circuit Breaker + Automatic Revenue Distribution + Liquidity Buffer Pool', it solves three core DeFi pain points: unsustainable deflation, inability to lock in retail investor profits, and lack of trust in project teams."
+        },
+        {
+          "question": "What are FunDAO's four mechanisms?",
+          "answer": "Four mechanisms work in synergy: ① Daily deflation 2.5% (50% burn + 50% distribution) continuously reduces supply; ② Smart circuit breaker three-tier protection (5%/10%/20%) prevents crashes; ③ Automatic revenue distribution (Direct 15% + Community incentive 35% + Weekly dividend 15%) locks in profits; ④ Liquidity buffer pool (BNB-denominated) provides bottom support. Four mechanisms interlock to form sustainable value growth cycle."
+        },
+        {
+          "question": "How to participate in FunDAO?",
+          "answer": "Start with just 0.1 BNB (about $60), accessible DeFi for everyone. After joining, enjoy direct referral reward 15% (instant), community contribution incentive 35% (35% of referred person's revenue), weekly dividend 15% (weighted distribution, weekly settlement). All rules verifiable on-chain, transparent and fair."
+        },
+        {
+          "question": "How does circuit breaker protect investors?",
+          "answer": "Three-tier circuit breaker protection: >5% drop triggers 50% breaker (receive only 500k), >10% triggers 70% (receive only 300k), >20% triggers 90% (receive only 100k). After triggering, all FUN sold that day is burned, unclaimed BNB flows back to pool. Effectively prevents crashes and project team misconduct, protecting all participants' interests."
+        },
+        {
+          "question": "How does FunDAO ensure security?",
+          "answer": "Adopts 'Six-No' security architecture: no project team, no private sale, no reserve, no hidden allocation, no backdoors, permissions discarded. All smart contract code fully open-source, management permissions permanently discarded after deployment: cannot modify rules, cannot mint, cannot pause, cannot transfer funds. Five core modules (Trading Engine, Distribution Engine, Deflation Engine, Circuit Breaker, Liquidity Buffer Pool) all verifiable on-chain."
+        },
+        {
+          "question": "Which institutional investors support FunDAO?",
+          "answer": "Backed by 13 top global crypto investment institutions: Dragonfly, Animoca Brands, OKX Ventures, Spartan Group, Bitscale Capital, 6th Man Ventures, IVC, Mechanism Capital, Morningstar Ventures, W3GG, Xinyuan Capital, Red Building Capital, Yolo Investments. Ecosystem partners include Binance (spot/futures deep cooperation), Hyperliquid (AI smart trading), FuFuture (decentralized contract exchange)."
+        },
+        {
+          "question": "What is the token economic model?",
+          "answer": "FUN token (BEP-20) total supply 2.1 billion, 2 billion (95.24%) injected into liquidity pool ensuring sufficient liquidity, 100 million (4.76%) for public distribution. No private sale, no reserve, no hidden allocation, no backdoors. Daily deflation 2.5% (50% permanent burn + 50% distribution to holders), continuously reduces circulating supply. Fund allocation: 60% LP Liquidity Pool + 25% Revenue Sharing + 15% Weekly Dividend."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Join FunDAO Ecosystem",
+      "subtitle": "Accessible, Transparent, Secure, Sustainable. Start with just 0.1 BNB in the world's first decentralized value-added platform",
+      "button": "Join Now"
+    }
+  },
+  "articles": {
+    "title": "News & Updates",
+    "subtitle": "Latest FunDAO news, mechanism insights and industry trends",
+    "all": "All",
+    "news": "News",
+    "industry": "Industry",
+    "publishedAt": "Published",
+    "relatedArticles": "Related Articles",
+    "noArticles": "No articles yet"
+  },
+  "products": {
+    "title": "Core Mechanisms",
+    "subtitle": "Four mechanisms working in synergy to build sustainable value growth cycle",
+    "features": [
+      {
+        "title": "Daily Deflation 2.5%",
+        "description": "Automatic daily 2.5% deflation, 50% permanent burn reduces circulating supply, 50% distributed to holders. Continuously reduces supply, supports token value, making $FUN one of the strongest deflationary tokens in BSC ecosystem."
+      },
+      {
+        "title": "Smart Circuit Breaker",
+        "description": "Three-tier circuit breaker protection against crashes: >5% drop triggers 50% breaker, >10% triggers 70%, >20% triggers 90%. After triggering, all FUN sold that day is burned, unclaimed BNB flows back to pool, preventing project team misconduct."
+      },
+      {
+        "title": "Automatic Revenue Distribution",
+        "description": "Direct referral reward 15% (instant) + Community contribution incentive 35% + Weekly dividend 15% (weighted distribution). Multi-dimensional, multi-level revenue system, automatically executed, no manual intervention needed."
+      },
+      {
+        "title": "Liquidity Buffer Pool",
+        "description": "BNB-denominated liquidity buffer pool provides bottom-line support for all participants. Even the last participants are protected, system runs automatically in cycles, achieving true decentralized value appreciation."
+      }
+    ],
+    "process": {
+      "title": "How to Participate",
+      "steps": [
+        {
+          "title": "Understand Mechanisms",
+          "description": "Familiarize with FunDAO's four core mechanisms: Daily Deflation, Smart Circuit Breaker, Automatic Revenue Distribution, Liquidity Buffer Pool"
+        },
+        {
+          "title": "Join Community",
+          "description": "Start with just 0.1 BNB (about $60), join global community through Telegram, Discord and other channels"
+        },
+        {
+          "title": "Participate in Governance",
+          "description": "Participate in community voting, jointly decide FunDAO development direction, rules verifiable on-chain, transparent and fair"
+        },
+        {
+          "title": "Share Revenue",
+          "description": "Enjoy direct referral reward 15%, community contribution incentive 35%, weekly dividend 15% and multiple revenue streams, start small win big"
+        }
+      ]
+    }
+  },
+  "whitepaper": {
+    "title": "FunDAO",
+    "subtitle": "World's First Decentralized Value-Added Platform — BSC Daily Deflation 2.5%",
+    "version": "v2.0 | July 2025",
+    "readOnline": "Read Online",
+    "download": "Download PDF",
+    "sections": {
+      "overview": {
+        "title": "Project Overview",
+        "content": "FunDAO is the world's first decentralized value-added platform with 'FunDAO' as its core governance model, built on PVP Fun—a Web3.0 infrastructure and predictive trading underlying platform. Built on BNB Smart Chain (BSC), it solves three core pain points in DeFi through its innovative quadruple mechanism: 'Daily Deflation + Smart Circuit Breaker + Automatic Revenue Distribution + Liquidity Buffer Pool'—unsustainable token deflation, inability to lock in retail investor profits, and lack of trust in project teams.",
+        "highlights": [
+          "World's first decentralized value-added platform",
+          "Quadruple mechanism: Daily Deflation + Smart Circuit Breaker + Auto Revenue Distribution + Liquidity Buffer Pool",
+          "Solves three DeFi pain points: unsustainable deflation, unlocked profits, trust deficit",
+          "Built on PVP Fun underlying platform on BSC"
+        ]
+      },
+      "tokenomics": {
+        "title": "Token Economics",
+        "content": "FUN token (BEP-20) has a total supply of 2.1 billion, with 2 billion (95.24%) injected into the liquidity pool to ensure sufficient liquidity, and 100 million (4.76%) for public distribution. No private sale, no reserve, no hidden allocation, no backdoors. Daily deflation of 2.5% (50% permanent burn + 50% distribution to holders) continuously reduces circulating supply and increases token value.",
+        "tokenName": "FUN (BEP-20)",
+        "totalSupply": "2.1 Billion",
+        "lpInjection": "2 Billion (95.24%)",
+        "publicDistribution": "100 Million (4.76%)",
+        "deflationRate": "Daily 2.5%",
+        "chain": "BNB Smart Chain (BSC)",
+        "allocation": {
+          "title": "Fund Allocation",
+          "lp": "60% LP Liquidity Pool",
+          "sharing": "25% Revenue Sharing",
+          "weekly": "15% Weekly Dividend"
+        }
+      },
+      "mechanism": {
+        "title": "Core Mechanisms",
+        "content": "FunDAO's innovative quadruple mechanism works in synergy: Daily deflation of 2.5% continuously reduces supply, smart circuit breaker prevents crashes, revenue distribution locks in profits, and liquidity buffer pool provides bottom-line support. The four mechanisms interlock to form a sustainable value growth cycle.",
+        "fourMechanisms": [
+          {
+            "name": "Daily Deflation 2.5%",
+            "description": "50% permanent burn reduces circulating supply, 50% distributed to holders. Continuously reduces supply to support token value."
+          },
+          {
+            "name": "Smart Circuit Breaker",
+            "description": "Three-tier circuit breaker protection: >5% drop triggers 50% breaker, >10% triggers 70%, >20% triggers 90%. After triggering, all FUN sold that day is burned, and unclaimed BNB flows back to the pool."
+          },
+          {
+            "name": "Automatic Revenue Distribution",
+            "description": "Direct referral reward 15% (instant) + Community contribution incentive 35% + Weekly dividend 15% (weighted distribution). Multi-dimensional, multi-level revenue system."
+          },
+          {
+            "name": "Liquidity Buffer Pool",
+            "description": "BNB-denominated liquidity buffer pool provides liquidity support for all participants. Even the last participants are protected, system runs automatically in cycles."
+          }
+        ]
+      },
+      "rewards": {
+        "title": "Revenue System",
+        "content": "FunDAO builds a multi-dimensional, multi-level revenue system composed of three pillars: referral contribution rewards, community contribution incentives, and weekly dividends. Start with just 0.1 BNB (about $60), accessible DeFi for everyone.",
+        "pillars": [
+          {
+            "name": "Referral Contribution Reward 15%",
+            "description": "Directly refer new participants, referrers receive 15% of the referred person's participation amount as referral contribution reward. Instant到账, only counts direct referrals (no multi-level distribution), 15% high ratio industry-leading.",
+            "example": "A refers B, B participates with 1,000 U → A receives 150 U, instant到账"
+          },
+          {
+            "name": "Community Contribution Incentive 35%",
+            "description": "Referrers receive 35% of the dynamic revenue earned by referred persons in the system. Share growth dividends, incentivize high-quality referrals, build social network effects.",
+            "example": "A refers B, B earns 1 million revenue → A receives 350,000"
+          },
+          {
+            "name": "Weekly Dividend 15% (Weighted Distribution)",
+            "description": "15% of total weekly performance is extracted as weekly dividend pool, distributed by weighted ratio. Higher performance means higher weight, settled weekly, fair and transparent.",
+            "example": "Personal weekly dividend = Weekly dividend pool × (Personal performance weight / Total network performance weight)"
+          }
+        ]
+      },
+      "security": {
+        "title": "Security & Trust",
+        "content": "FunDAO adopts 'Six-No' security architecture: no project team, no private sale, no reserve, no hidden allocation, no backdoors, permissions discarded. All smart contract code is fully open-source, management permissions permanently discarded after deployment: cannot modify rules, cannot mint, cannot pause, cannot transfer funds. Data permanently stored, immutable, traceable, queryable.",
+        "sixNo": [
+          "No project team — no centralized operations team",
+          "No private sale — all tokens fairly distributed",
+          "No reserve — no hidden allocation",
+          "No hidden allocation — transparent and fair",
+          "No backdoors — code fully open-source",
+          "Permissions discarded — cannot modify rules, mint, pause"
+        ],
+        "modules": [
+          "Trading Engine — core transaction processing",
+          "Distribution Engine — automatic revenue distribution",
+          "Deflation Engine — daily 2.5% automatic execution",
+          "Circuit Breaker — three-tier protection auto-trigger",
+          "Liquidity Buffer Pool — BNB-denominated bottom support"
+        ]
+      },
+      "governance": {
+        "title": "Decentralized Governance",
+        "content": "FunDAO adopts decentralized governance model with community-driven and smart contract execution. Rules executed by contracts, not by people; decisions driven by community; information equally open to all. Every participant is an ambassador, incentivized by referral contribution rewards to expand the community.",
+        "principles": [
+          "Rules executed by contracts, not by people",
+          "Decisions driven by community",
+          "Information equally open to all"
+        ],
+        "evolution": [
+          "Short-term (0-6 months): Multi-language community, proposal mechanism, contributor incentives",
+          "Mid-term (6-18 months): Governance framework, community treasury, cross-chain governance standardization",
+          "Long-term (18+ months): Full community autonomy, industry standards, model promotion"
+        ]
+      },
+      "roadmap": {
+        "title": "Development Roadmap",
+        "content": "FunDAO roadmap covers 2025-2026, from BSC ecosystem building to cross-chain expansion, from community governance to AI trading integration, gradually building a complete decentralized value-added ecosystem.",
+        "phases": [
+          {
+            "phase": "Completed",
+            "date": "2025 Q2",
+            "items": "Protocol launch, token issuance, 13 institutional investors, 18x+ growth in 30 days, 7,739+ holder addresses"
+          },
+          {
+            "phase": "Short-term Plan",
+            "date": "2025 Q3-Q4",
+            "items": "Multi-language community building, liquidity enhancement, real-time data dashboard launch, community governance activation, ecosystem partnership deepening"
+          },
+          {
+            "phase": "Mid-to-Long-term Plan",
+            "date": "2026+",
+            "items": "Cross-chain expansion (Ethereum, Solana), AI trading integration, FunDAO ecosystem fund, institutional-grade compliance, RWA exploration"
+          }
+        ]
+      }
+    },
+    "keyData": [
+      {
+        "label": "Total Supply",
+        "value": "2.1 Billion"
+      },
+      {
+        "label": "LP Injection",
+        "value": "95.24%"
+      },
+      {
+        "label": "Daily Deflation",
+        "value": "2.5%"
+      },
+      {
+        "label": "Min Entry",
+        "value": "0.1 BNB"
+      },
+      {
+        "label": "Referral Reward",
+        "value": "15%"
+      },
+      {
+        "label": "Community Incentive",
+        "value": "35%"
+      },
+      {
+        "label": "Weekly Dividend",
+        "value": "15%"
+      },
+      {
+        "label": "Institutional Investors",
+        "value": "13"
+      }
+    ]
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "World's First Decentralized Value-Added Platform — Accessible, Transparent, Secure, Sustainable",
+    "vision": {
+      "title": "Project Vision",
+      "content": "FunDAO is committed to building the most comprehensive deflation model and creating a zero-trust-cost investment paradigm. Through daily deflation of 2.5%, making $FUN one of the strongest deflationary tokens with the most certain value growth in the BSC ecosystem. We believe blockchain dividends should not belong only to capital giants—every ordinary person can participate in the Web3.0 asset appreciation wave at minimal cost."
+    },
+    "mission": {
+      "title": "Mission",
+      "content": "Solve three core pain points in DeFi: unsustainable token deflation, inability to lock in retail investor profits, and lack of trust in project teams. Through innovative quadruple mechanism (Daily Deflation + Smart Circuit Breaker + Automatic Revenue Distribution + Liquidity Buffer Pool), build a fair, transparent, and sustainable decentralized value-added ecosystem."
+    },
+    "principles": {
+      "title": "Four Founding Principles",
+      "subtitle": "Four simple yet firm beliefs",
+      "items": [
+        {
+          "title": "Accessible",
+          "description": "Start small, win big. Just 0.1 BNB (about $60) to participate, enabling every ordinary person to join Web3.0 asset appreciation"
+        },
+        {
+          "title": "Transparent",
+          "description": "Fair, just, open. All revenue distribution rules, fund flows, deflation burn records are all on-chain, traceable, immutable"
+        },
+        {
+          "title": "Secure",
+          "description": "Contract-secured, chain-executed. No project team, no backend permissions, all rules written in smart contracts, permissions discarded after deployment"
+        },
+        {
+          "title": "Sustainable",
+          "description": "Long-term vision, grow together. Reject short-term profiteering, support token value through deflation mechanism, liquidity buffer pool protects all participants"
+        }
+      ]
+    },
+    "history": {
+      "title": "Development Journey",
+      "milestones": [
+        {
+          "date": "2025 Q2",
+          "title": "Protocol Launch",
+          "description": "Smart contract development and audit completed, FUN token issued, 2 billion tokens injected into liquidity pool (95.24%), 13 top-tier institutional investors"
+        },
+        {
+          "date": "2025 Q3",
+          "title": "Rapid Growth",
+          "description": "18x+ growth in 30 days after launch, holder addresses exceeded 7,739, community scale rapidly expanded"
+        },
+        {
+          "date": "2025 Q4",
+          "title": "Global Community Building",
+          "description": "Multi-language community launched, real-time data dashboard released, community governance mechanism activated"
+        },
+        {
+          "date": "2026+",
+          "title": "Cross-Chain Expansion",
+          "description": "Expand to Ethereum, Solana and other chains, AI trading integration, FunDAO ecosystem fund established"
+        }
+      ]
+    },
+    "investors": {
+      "title": "13 Institutional Investors",
+      "subtitle": "Joint support from top global crypto funds",
+      "list": [
+        "Dragonfly",
+        "Animoca Brands",
+        "OKX Ventures",
+        "Spartan Group",
+        "Bitscale Capital",
+        "6th Man Ventures",
+        "IVC",
+        "Mechanism Capital",
+        "Morningstar Ventures",
+        "W3GG",
+        "Xinyuan Capital",
+        "Red Building Capital",
+        "Yolo Investments"
+      ]
+    },
+    "partners": {
+      "title": "Ecosystem Partners",
+      "subtitle": "Deep strategic partnerships",
+      "list": [
+        {
+          "name": "Binance",
+          "desc": "Spot/Futures deep cooperation"
+        },
+        {
+          "name": "Hyperliquid",
+          "desc": "AI smart trading"
+        },
+        {
+          "name": "FuFuture",
+          "desc": "Decentralized contract exchange"
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We look forward to connecting with you",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Message sent, we'll get back to you soon",
+      "error": "Failed to send, please try again later"
+    },
+    "info": {
+      "email": "Email",
+      "telegram": "Telegram",
+      "discord": "Discord",
+      "twitter": "Twitter"
+    }
+  },
+  "footer": {
+    "description": "World's first decentralized value-added platform — Accessible, Transparent, Secure, Sustainable",
+    "quickLinks": "Quick Links",
+    "socialLinks": "Social Links",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "disclaimer": "Risk Disclaimer",
+    "copyright": "© 2024 FunDAO. All rights reserved."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "section1": {
+        "title": "1. Information Collection",
+        "content": "We only collect information necessary to provide our services, including contact information you voluntarily provide and browsing data."
+      },
+      "section2": {
+        "title": "2. Information Use",
+        "content": "Collected information is used to improve user experience, provide customer support, and optimize website functionality."
+      },
+      "section3": {
+        "title": "3. Information Protection",
+        "content": "We employ industry-standard security measures to protect your information from unauthorized access, disclosure, or destruction."
+      },
+      "section4": {
+        "title": "4. Cookie Policy",
+        "content": "We use cookies and similar technologies to enhance user experience. You can manage cookie preferences through your browser settings."
+      },
+      "section5": {
+        "title": "5. Policy Updates",
+        "content": "This privacy policy may be updated periodically. Updated policies will be posted on this page."
+      }
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "section1": {
+        "title": "1. Service Description",
+        "content": "FunDAO provides information display services related to decentralized digital asset value-added platform. By using this website, you agree to comply with these terms."
+      },
+      "section2": {
+        "title": "2. User Responsibilities",
+        "content": "You are responsible for your use of this website and shall not engage in any illegal activities or actions that harm other users."
+      },
+      "section3": {
+        "title": "3. Intellectual Property",
+        "content": "All content on this website (including but not limited to text, images, code) is protected by intellectual property laws and may not be copied or used without authorization."
+      },
+      "section4": {
+        "title": "4. Disclaimer",
+        "content": "Information provided on this website is for reference only and does not constitute investment advice. Investment involves risks."
+      }
+    },
+    "disclaimer": {
+      "title": "Risk Disclaimer",
+      "warning": "Important Notice: Digital asset investment carries significant risk. Please make decisions with caution.",
+      "section1": {
+        "title": "1. Investment Risk",
+        "content": "Digital asset prices are highly volatile and may result in total loss of principal. Past performance does not indicate future results."
+      },
+      "section2": {
+        "title": "2. Regulatory Risk",
+        "content": "Regulatory policies for digital assets vary by country and region. You may face legal and compliance risks."
+      },
+      "section3": {
+        "title": "3. Technical Risk",
+        "content": "Blockchain technology is still evolving and may be subject to security vulnerabilities, network attacks, and other technical risks."
+      }
+    }
+  }
+}
