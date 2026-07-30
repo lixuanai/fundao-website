@@ -83,7 +83,8 @@
     },
     "latestNews": {
       "title": "Latest News",
-      "subtitle": "Stay updated with FunDAO"
+      "subtitle": "Stay updated with FunDAO",
+      "noArticles": "No articles yet"
     },
     "partners": {
       "title": "Ecosystem Partners",

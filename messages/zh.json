@@ -83,7 +83,8 @@
     },
     "latestNews": {
       "title": "最新动态",
-      "subtitle": "了解 FunDAO 最新资讯"
+      "subtitle": "了解 FunDAO 最新资讯",
+      "noArticles": "暂无文章"
     },
     "partners": {
       "title": "生态合作伙伴",

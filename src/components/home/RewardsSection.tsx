@@ -11,27 +11,24 @@ export default function RewardsSection() {
   const rewards = [
     {
       value: '15%',
-      titleKey: 'item1Title',
-      descKey: 'item1Desc',
+      titleKey: 'directReward',
+      descKey: 'directRewardDesc',
       color: 'text-purple-600',
       bg: 'from-purple-500 to-purple-600',
-      ring: 'ring-purple-200',
     },
     {
       value: '35%',
-      titleKey: 'item2Title',
-      descKey: 'item2Desc',
+      titleKey: 'dynamicReward',
+      descKey: 'dynamicRewardDesc',
       color: 'text-pink-500',
       bg: 'from-pink-500 to-pink-600',
-      ring: 'ring-pink-200',
     },
     {
       value: '15%',
-      titleKey: 'item3Title',
-      descKey: 'item3Desc',
+      titleKey: 'weeklyDividend',
+      descKey: 'weeklyDividendDesc',
       color: 'text-cyan-500',
       bg: 'from-cyan-500 to-cyan-600',
-      ring: 'ring-cyan-200',
     },
   ];
 
@@ -48,12 +45,12 @@ export default function RewardsSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="tag-pink mb-4 inline-block">{t('badge') || '收益体系'}</span>
+          <span className="tag-pink mb-4 inline-block">收益体系</span>
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            <span className="gradient-text">{t('title') || 'FunDAO 收益模型'}</span>
+            <span className="gradient-text">{t('title')}</span>
           </h2>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-            {t('subtitle') || '0.1 BNB 即可参与，三重收益自动分配'}
+            {t('subtitle')}
           </p>
         </div>
 
@@ -64,7 +61,6 @@ export default function RewardsSection() {
               key={i}
               className="relative glass-card rounded-3xl p-10 text-center card-hover group"
             >
-              {/* Percentage */}
               <div className={`text-6xl md:text-7xl font-black ${item.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
                 {item.value}
               </div>
@@ -74,8 +70,6 @@ export default function RewardsSection() {
               <p className="text-gray-500 text-sm">
                 {t(item.descKey)}
               </p>
-
-              {/* Bottom gradient line */}
               <div className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-gradient-to-r ${item.bg} rounded-full opacity-0 group-hover:opacity-100 transition-opacity`}></div>
             </div>
           ))}
@@ -84,7 +78,7 @@ export default function RewardsSection() {
         {/* Fund allocation bar */}
         <div className="glass-card rounded-2xl p-8 max-w-3xl mx-auto">
           <h3 className="text-lg font-bold text-gray-800 mb-6 text-center">
-            {t('allocationTitle') || '资金分配比例'}
+            {t('fundAllocation')}
           </h3>
           <div className="flex rounded-full overflow-hidden h-4 mb-6">
             {allocationData.map((item, i) => (

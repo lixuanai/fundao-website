@@ -18,23 +18,23 @@ export default function CTASection() {
       
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-          {t('title') || '准备好加入 FunDAO 了吗？'}
+          {t('title')}
         </h2>
         <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-          {t('description') || '0.1 BNB 即可参与，开启去中心化金融新体验'}
+          {t('subtitle')}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href={`/${currentLocale}/whitepaper`}
             className="px-8 py-4 rounded-full bg-white text-purple-600 font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-xl"
           >
-            {t('ctaPrimary') || '阅读白皮书'}
+            {t('button')}
           </Link>
           <Link
             href={`/${currentLocale}/contact`}
             className="px-8 py-4 rounded-full border-2 border-white/50 text-white font-bold text-lg hover:bg-white/10 transition-all"
           >
-            {t('ctaSecondary') || '联系我们'}
+            联系我们
           </Link>
         </div>
       </div>
