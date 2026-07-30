@@ -3,6 +3,7 @@ import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 import { locales } from '../../../i18n.config';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import '../globals.css';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale }));
