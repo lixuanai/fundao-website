@@ -48,21 +48,21 @@ export default function ContactPage() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="tag-cyan mb-4 inline-block">联系我们</span>
+          <span className="tag-cyan mb-4 inline-block">{t('contactBadge')}</span>
           <h1 className="text-4xl md:text-5xl font-black mb-4">
-            <span className="gradient-text">{t('title') || '联系我们'}</span>
+            <span className="gradient-text">{t('title')}</span>
           </h1>
-          <p className="text-gray-500 text-lg">{t('subtitle') || '有任何问题？我们随时为你解答'}</p>
+          <p className="text-gray-500 text-lg">{t('subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Form */}
           <div className="glass-card rounded-3xl p-8 md:p-10">
-            <h2 className="text-2xl font-bold text-gray-800 mb-8">{t('form.submit') || '发送消息'}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-8">{t('form.submit')}</h2>
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                  {t('form.name') || '姓名'}
+                  {t('form.name')}
                 </label>
                 <input
                   type="text"
@@ -72,13 +72,13 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-100 transition-all"
-                  placeholder={t('form.name') || '请输入姓名'}
+                  placeholder={t('form.namePlaceholder')}
                 />
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                  {t('form.email') || '邮箱'}
+                  {t('form.email')}
                 </label>
                 <input
                   type="email"
@@ -88,13 +88,13 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-100 transition-all"
-                  placeholder={t('form.email') || '请输入邮箱'}
+                  placeholder={t('form.emailPlaceholder')}
                 />
               </div>
 
               <div>
                 <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
-                  {t('form.subject') || '主题'}
+                  {t('form.subject')}
                 </label>
                 <input
                   type="text"
@@ -104,13 +104,13 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-100 transition-all"
-                  placeholder={t('form.subject') || '请输入主题'}
+                  placeholder={t('form.subjectPlaceholder')}
                 />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-                  {t('form.message') || '留言'}
+                  {t('form.message')}
                 </label>
                 <textarea
                   id="message"
@@ -120,37 +120,32 @@ export default function ContactPage() {
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-100 transition-all resize-none"
-                  placeholder={t('form.message') || '请输入留言内容'}
+                  placeholder={t('form.messagePlaceholder')}
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={status === 'sending'}
-                className="w-full btn-gradient !py-4 !text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full btn-gradient shimmer-btn text-white font-bold py-4 rounded-xl disabled:opacity-50"
               >
-                {status === 'sending' ? (t('form.sending') || '发送中...') : (t('form.submit') || '发送消息')}
+                {status === 'sending' ? t('common.sending', { default: 'Sending...' }) : t('form.submit')}
               </button>
 
               {status === 'success' && (
-                <div className="p-4 bg-green-50 border border-green-200 rounded-xl text-green-600 text-center font-medium">
-                  ✅ {t('form.success') || '消息已发送，我们会尽快回复！'}
-                </div>
+                <p className="text-green-600 text-sm font-medium text-center">{t('form.success')}</p>
               )}
-
               {status === 'error' && (
-                <div className="p-4 bg-red-50 border border-red-200 rounded-xl text-red-600 text-center font-medium">
-                  ❌ {t('form.error') || '发送失败，请重试'}
-                </div>
+                <p className="text-red-500 text-sm font-medium text-center">{t('form.error')}</p>
               )}
             </form>
           </div>
 
-          {/* Contact info */}
+          {/* Contact info side */}
           <div className="space-y-6">
             {/* Contact cards */}
             <div className="glass-card rounded-3xl p-8">
-              <h2 className="text-xl font-bold text-gray-800 mb-6">联系方式</h2>
+              <h2 className="text-xl font-bold text-gray-800 mb-6">{t('contactInfo')}</h2>
               <div className="space-y-5">
                 {[
                   {
@@ -206,9 +201,9 @@ export default function ContactPage() {
             <div className="relative rounded-3xl p-8 overflow-hidden">
               <div className="absolute inset-0 animated-gradient-bg opacity-90"></div>
               <div className="relative">
-                <h3 className="text-xl font-bold text-white mb-3">快速响应</h3>
+                <h3 className="text-xl font-bold text-white mb-3">{t('quickResponse')}</h3>
                 <p className="text-white/80 leading-relaxed">
-                  我们会在 24 小时内回复所有咨询。紧急事项请通过 Telegram 联系，获得更快的帮助。
+                  {t('quickResponseDesc')}
                 </p>
               </div>
             </div>

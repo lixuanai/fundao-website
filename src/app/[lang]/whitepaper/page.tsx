@@ -45,7 +45,7 @@ export default function WhitepaperPage() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="tag-purple mb-4 inline-block">
-            {currentLocale === 'zh' ? '技术文档' : 'Technical Document'}
+            {t('docBadge')}
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-4 gradient-text">
             {t('title')}
@@ -57,7 +57,7 @@ export default function WhitepaperPage() {
         {/* Key Data Grid */}
         <div className="glass-card rounded-3xl p-8 mb-16 card-hover">
           <h2 className="text-2xl font-bold text-center gradient-text mb-6">
-            {currentLocale === 'zh' ? '核心数据一览' : 'Key Data Summary'}
+            {t('keyDataTitle')}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {keyData.map((item, i) => (
@@ -80,7 +80,7 @@ export default function WhitepaperPage() {
           <p className="text-gray-700 leading-relaxed mb-6">{t('sections.overview.content')}</p>
           <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
-              {currentLocale === 'zh' ? '项目亮点' : 'Project Highlights'}
+              {t('sections.overview.highlightsTitle')}
             </h3>
             <ul className="space-y-3">
               {overviewHighlights.map((h, i) => (
@@ -104,26 +104,26 @@ export default function WhitepaperPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                {currentLocale === 'zh' ? '代币信息' : 'Token Info'}
+                {t('sections.tokenomics.tokenInfo')}
               </h3>
               <ul className="space-y-2 text-sm">
-                <li className="flex justify-between"><span className="text-gray-600">{currentLocale === 'zh' ? '代币名称' : 'Token Name'}</span><span className="font-semibold text-gray-900">{tokenomics.tokenName}</span></li>
-                <li className="flex justify-between"><span className="text-gray-600">{currentLocale === 'zh' ? '总供应量' : 'Total Supply'}</span><span className="font-semibold text-gray-900">{tokenomics.totalSupply}</span></li>
-                <li className="flex justify-between"><span className="text-gray-600">{currentLocale === 'zh' ? '底池注入' : 'LP Injection'}</span><span className="font-semibold text-gray-900">{tokenomics.lpInjection}</span></li>
-                <li className="flex justify-between"><span className="text-gray-600">{currentLocale === 'zh' ? '公域分配' : 'Public Distribution'}</span><span className="font-semibold text-gray-900">{tokenomics.publicDistribution}</span></li>
-                <li className="flex justify-between"><span className="text-gray-600">{currentLocale === 'zh' ? '通缩率' : 'Deflation Rate'}</span><span className="font-semibold text-gray-900">{tokenomics.deflationRate}</span></li>
-                <li className="flex justify-between"><span className="text-gray-600">{currentLocale === 'zh' ? '区块链' : 'Chain'}</span><span className="font-semibold text-gray-900">{tokenomics.chain}</span></li>
+                <li className="flex justify-between"><span className="text-gray-600">{t('sections.tokenomics.tokenNameLabel')}</span><span className="font-semibold text-gray-900">{tokenomics.tokenName}</span></li>
+                <li className="flex justify-between"><span className="text-gray-600">{t('sections.tokenomics.totalSupplyLabel')}</span><span className="font-semibold text-gray-900">{tokenomics.totalSupply}</span></li>
+                <li className="flex justify-between"><span className="text-gray-600">{t('sections.tokenomics.lpInjectionLabel')}</span><span className="font-semibold text-gray-900">{tokenomics.lpInjection}</span></li>
+                <li className="flex justify-between"><span className="text-gray-600">{t('sections.tokenomics.publicDistributionLabel')}</span><span className="font-semibold text-gray-900">{tokenomics.publicDistribution}</span></li>
+                <li className="flex justify-between"><span className="text-gray-600">{t('sections.tokenomics.deflationRateLabel')}</span><span className="font-semibold text-gray-900">{tokenomics.deflationRate}</span></li>
+                <li className="flex justify-between"><span className="text-gray-600">{t('sections.tokenomics.chainLabel')}</span><span className="font-semibold text-gray-900">{tokenomics.chain}</span></li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                {currentLocale === 'zh' ? '资金分配' : 'Fund Allocation'}
+                {t('sections.tokenomics.fundAllocationTitle')}
               </h3>
               <div className="space-y-4">
                 <div>
                   <div className="flex justify-between text-sm mb-1">
-                    <span className="text-gray-600">{currentLocale === 'zh' ? 'LP 流动性池' : 'LP Pool'}</span>
+                    <span className="text-gray-600">{t('sections.tokenomics.allocation.lpLabel')}</span>
                     <span className="font-semibold text-purple-600">{fundAllocation.lp}</span>
                   </div>
                   <div className="w-full bg-white/50 rounded-full h-2">
@@ -132,7 +132,7 @@ export default function WhitepaperPage() {
                 </div>
                 <div>
                   <div className="flex justify-between text-sm mb-1">
-                    <span className="text-gray-600">{currentLocale === 'zh' ? '分享收益' : 'Sharing Rewards'}</span>
+                    <span className="text-gray-600">{t('sections.tokenomics.allocation.sharingLabel')}</span>
                     <span className="font-semibold text-cyan-600">{fundAllocation.sharing}</span>
                   </div>
                   <div className="w-full bg-white/50 rounded-full h-2">
@@ -141,7 +141,7 @@ export default function WhitepaperPage() {
                 </div>
                 <div>
                   <div className="flex justify-between text-sm mb-1">
-                    <span className="text-gray-600">{currentLocale === 'zh' ? '周分红' : 'Weekly Dividend'}</span>
+                    <span className="text-gray-600">{t('sections.tokenomics.allocation.weeklyLabel')}</span>
                     <span className="font-semibold text-pink-600">{fundAllocation.weekly}</span>
                   </div>
                   <div className="w-full bg-white/50 rounded-full h-2">
@@ -214,7 +214,7 @@ export default function WhitepaperPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-5">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                {currentLocale === 'zh' ? '「六无」安全架构' : '"Six-No" Security'}
+                {t('sections.security.sixNoTitle')}
               </h3>
               <ul className="space-y-2">
                 {sixNo.map((item, i) => (
@@ -227,7 +227,7 @@ export default function WhitepaperPage() {
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-5">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                {currentLocale === 'zh' ? '五大核心模块' : 'Five Core Modules'}
+                {t('sections.security.modulesTitle')}
               </h3>
               <ul className="space-y-2">
                 {modules.map((item, i) => (
@@ -252,7 +252,7 @@ export default function WhitepaperPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-5">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                {currentLocale === 'zh' ? '治理原则' : 'Governance Principles'}
+                {t('sections.governance.principlesTitle')}
               </h3>
               <ul className="space-y-2">
                 {govPrinciples.map((item, i) => (
@@ -265,7 +265,7 @@ export default function WhitepaperPage() {
             </div>
             <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-5">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                {currentLocale === 'zh' ? '演进方向' : 'Evolution'}
+                {t('sections.governance.evolutionTitle')}
               </h3>
               <ul className="space-y-2">
                 {govEvolution.map((item, i) => (

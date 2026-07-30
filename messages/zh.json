@@ -15,7 +15,9 @@
     "whitepaper": "白皮书",
     "about": "关于我们",
     "contact": "联系我们",
-    "riskDisclaimer": "风险提示：投资有风险，入市需谨慎。过往收益不代表未来表现。"
+    "riskDisclaimer": "风险提示：投资有风险，入市需谨慎。过往收益不代表未来表现。",
+    "switchToZh": "中文",
+    "switchToEn": "🌐 EN"
   },
   "nav": {
     "home": "首页",
@@ -79,7 +81,10 @@
       "deflation": "每日通缩",
       "deflationDesc": "2.5%（50%销毁 + 50%分配）",
       "circuitBreaker": "智能熔断",
-      "circuitBreakerDesc": "5%/10%/20% 三级保护"
+      "circuitBreakerDesc": "5%/10%/20% 三级保护",
+      "lpLabel": "LP 流动性池",
+      "revenueLabel": "分享收益",
+      "dividendLabel": "周分红"
     },
     "latestNews": {
       "title": "最新动态",
@@ -129,6 +134,24 @@
       "title": "加入 FunDAO 生态",
       "subtitle": "轻资博远，三公分利，合约锁安，初心长久。0.1 BNB 即可参与全球首个去中心化增值平台",
       "button": "立即加入"
+    },
+    "heroBadge": {
+      "text": "全球首个去中心化增值平台"
+    },
+    "advantagesBadge": {
+      "text": "核心优势"
+    },
+    "rewardsBadge": {
+      "text": "收益体系"
+    },
+    "faqBadge": {
+      "text": "常见问题"
+    },
+    "partnersBadge": {
+      "text": "生态合作伙伴"
+    },
+    "latestNewsBadge": {
+      "text": "最新动态"
     }
   },
   "articles": {
@@ -182,7 +205,9 @@
           "description": "享受直推奖励 15%、社区贡献激励 35%、周分红 15% 等多重收益，轻资博远"
         }
       ]
-    }
+    },
+    "featuresBadge": "核心机制",
+    "processBadge": "参与流程"
   },
   "whitepaper": {
     "title": "FunDAO",
@@ -199,7 +224,8 @@
           "四重机制：每日通缩 + 智能熔断 + 自动收益分配 + 流动性缓冲池",
           "解决 DeFi 三大痛点：通缩不可持续、收益无法锁定、信任缺失",
           "依托 PVP Fun 底层平台，构建于 BSC 之上"
-        ]
+        ],
+        "highlightsTitle": "项目亮点"
       },
       "tokenomics": {
         "title": "代币经济",
@@ -214,8 +240,19 @@
           "title": "资金分配",
           "lp": "60% LP 流动性池",
           "sharing": "25% 分享收益",
-          "weekly": "15% 周分红"
-        }
+          "weekly": "15% 周分红",
+          "lpLabel": "LP 流动性池",
+          "sharingLabel": "分享收益",
+          "weeklyLabel": "周分红"
+        },
+        "tokenInfo": "代币信息",
+        "tokenNameLabel": "代币名称",
+        "totalSupplyLabel": "总供应量",
+        "lpInjectionLabel": "底池注入",
+        "publicDistributionLabel": "公域分配",
+        "deflationRateLabel": "通缩率",
+        "chainLabel": "区块链",
+        "fundAllocationTitle": "资金分配"
       },
       "mechanism": {
         "title": "核心机制",
@@ -277,7 +314,9 @@
           "通缩引擎 — 每日 2.5% 自动执行",
           "熔断机制 — 三级保护自动触发",
           "流动性缓冲池 — BNB 本位底部支撑"
-        ]
+        ],
+        "sixNoTitle": "「六无」安全架构",
+        "modulesTitle": "五大核心模块"
       },
       "governance": {
         "title": "去中心化治理",
@@ -291,7 +330,9 @@
           "短期（0-6月）：多语言社区、提案机制、贡献者激励",
           "中期（6-18月）：治理框架、社区金库、跨链治理标准化",
           "长期（18月+）：完全社区自治、行业标准、模式推广"
-        ]
+        ],
+        "principlesTitle": "治理原则",
+        "evolutionTitle": "演进方向"
       },
       "roadmap": {
         "title": "发展路线图",
@@ -348,7 +389,9 @@
         "label": "投资机构",
         "value": "13 家"
       }
-    ]
+    ],
+    "docBadge": "技术文档",
+    "keyDataTitle": "核心数据一览"
   },
   "about": {
     "title": "关于我们",
@@ -444,7 +487,12 @@
           "desc": "去中心化合约交易所"
         }
       ]
-    }
+    },
+    "aboutBadge": "关于我们",
+    "principlesBadge": "四大初心",
+    "historyBadge": "发展历程",
+    "investorsBadge": "投资机构",
+    "partnersBadge": "生态合作"
   },
   "contact": {
     "title": "联系我们",
@@ -456,14 +504,22 @@
       "message": "留言内容",
       "submit": "发送留言",
       "success": "留言已发送，我们会尽快回复您",
-      "error": "发送失败，请稍后重试"
+      "error": "发送失败，请稍后重试",
+      "namePlaceholder": "请输入姓名",
+      "emailPlaceholder": "请输入邮箱",
+      "subjectPlaceholder": "请输入主题",
+      "messagePlaceholder": "请输入留言内容"
     },
     "info": {
       "email": "邮箱",
       "telegram": "Telegram",
       "discord": "Discord",
       "twitter": "Twitter"
-    }
+    },
+    "contactBadge": "联系我们",
+    "contactInfo": "联系方式",
+    "quickResponse": "快速响应",
+    "quickResponseDesc": "我们会在 24 小时内回复所有咨询。紧急事项请通过 Telegram 联系，获得更快的帮助。"
   },
   "footer": {
     "description": "全球首个去中心化增值平台 — 轻资博远，三公分利，合约锁安，初心长久",
@@ -537,5 +593,42 @@
       },
       "description": "FunDAO 代币（FUN）为去中心化金融协议代币，不构成任何投资建议。过往收益不代表未来表现。请在充分了解风险后参与。"
     }
+  },
+  "news": {
+    "newsBadge": "新闻动态",
+    "noArticles": "暂无文章",
+    "categories": {
+      "all": "全部",
+      "mechanism": "机制解读",
+      "partnership": "生态合作",
+      "updates": "项目动态"
+    }
+  },
+  "agent": {
+    "title": "Agent API 门户",
+    "enabled": "Agent 操作端口已启用",
+    "enabledDesc": "外部 Agent 可以通过 API 管理文章、页面内容和系统设置。所有写操作需要 API Key 认证。",
+    "endpoints": "API 端点",
+    "articleMgmt": "文章管理",
+    "createArticle": "创建文章",
+    "updateArticle": "更新文章",
+    "deleteArticle": "删除文章",
+    "pageContent": "页面内容",
+    "updatePage": "更新页面内容",
+    "settings": "系统设置",
+    "updateSettings": "更新设置",
+    "auth": "认证方式",
+    "authDesc": "所有写操作需要在请求头中包含 API Key：",
+    "examples": "请求示例",
+    "dataModel": "数据模型",
+    "articleModel": "文章 (Article)",
+    "titleZhEn": "中英文标题",
+    "slug": "URL 标识符（唯一）",
+    "category": "分类（news/industry）",
+    "contentZhEn": "中英文内容",
+    "excerptZhEn": "中英文摘要",
+    "coverImage": "封面图 URL",
+    "tags": "标签数组",
+    "published": "是否发布"
   }
 }

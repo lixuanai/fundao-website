@@ -15,7 +15,9 @@
     "whitepaper": "Whitepaper",
     "about": "About Us",
     "contact": "Contact",
-    "riskDisclaimer": "Risk Warning: Investment involves risks. Past performance is not indicative of future results."
+    "riskDisclaimer": "Risk Warning: Investment involves risks. Past performance is not indicative of future results.",
+    "switchToZh": "中文",
+    "switchToEn": "🌐 EN"
   },
   "nav": {
     "home": "Home",
@@ -79,7 +81,10 @@
       "deflation": "Daily Deflation",
       "deflationDesc": "2.5% (50% Burn + 50% Distribution)",
       "circuitBreaker": "Smart Circuit Breaker",
-      "circuitBreakerDesc": "5%/10%/20% Three-Tier"
+      "circuitBreakerDesc": "5%/10%/20% Three-Tier",
+      "lpLabel": "LP Liquidity Pool",
+      "revenueLabel": "Revenue Sharing",
+      "dividendLabel": "Weekly Dividend"
     },
     "latestNews": {
       "title": "Latest News",
@@ -129,6 +134,24 @@
       "title": "Join FunDAO Ecosystem",
       "subtitle": "Accessible, Transparent, Secure, Sustainable. Start with just 0.1 BNB in the world's first decentralized value-added platform",
       "button": "Join Now"
+    },
+    "heroBadge": {
+      "text": "World's First Decentralized Value Platform"
+    },
+    "advantagesBadge": {
+      "text": "Core Advantages"
+    },
+    "rewardsBadge": {
+      "text": "Revenue System"
+    },
+    "faqBadge": {
+      "text": "FAQ"
+    },
+    "partnersBadge": {
+      "text": "Ecosystem Partners"
+    },
+    "latestNewsBadge": {
+      "text": "Latest News"
     }
   },
   "articles": {
@@ -182,7 +205,9 @@
           "description": "Enjoy direct referral reward 15%, community contribution incentive 35%, weekly dividend 15% and multiple revenue streams, start small win big"
         }
       ]
-    }
+    },
+    "featuresBadge": "Core Mechanisms",
+    "processBadge": "How to Participate"
   },
   "whitepaper": {
     "title": "FunDAO",
@@ -199,7 +224,8 @@
           "Quadruple mechanism: Daily Deflation + Smart Circuit Breaker + Auto Revenue Distribution + Liquidity Buffer Pool",
           "Solves three DeFi pain points: unsustainable deflation, unlocked profits, trust deficit",
           "Built on PVP Fun underlying platform on BSC"
-        ]
+        ],
+        "highlightsTitle": "Project Highlights"
       },
       "tokenomics": {
         "title": "Token Economics",
@@ -214,8 +240,19 @@
           "title": "Fund Allocation",
           "lp": "60% LP Liquidity Pool",
           "sharing": "25% Revenue Sharing",
-          "weekly": "15% Weekly Dividend"
-        }
+          "weekly": "15% Weekly Dividend",
+          "lpLabel": "LP Pool",
+          "sharingLabel": "Sharing Rewards",
+          "weeklyLabel": "Weekly Dividend"
+        },
+        "tokenInfo": "Token Info",
+        "tokenNameLabel": "Token Name",
+        "totalSupplyLabel": "Total Supply",
+        "lpInjectionLabel": "LP Injection",
+        "publicDistributionLabel": "Public Distribution",
+        "deflationRateLabel": "Deflation Rate",
+        "chainLabel": "Chain",
+        "fundAllocationTitle": "Fund Allocation"
       },
       "mechanism": {
         "title": "Core Mechanisms",
@@ -277,7 +314,9 @@
           "Deflation Engine — daily 2.5% automatic execution",
           "Circuit Breaker — three-tier protection auto-trigger",
           "Liquidity Buffer Pool — BNB-denominated bottom support"
-        ]
+        ],
+        "sixNoTitle": "\"Six-No\" Security Architecture",
+        "modulesTitle": "Five Core Modules"
       },
       "governance": {
         "title": "Decentralized Governance",
@@ -291,7 +330,9 @@
           "Short-term (0-6 months): Multi-language community, proposal mechanism, contributor incentives",
           "Mid-term (6-18 months): Governance framework, community treasury, cross-chain governance standardization",
           "Long-term (18+ months): Full community autonomy, industry standards, model promotion"
-        ]
+        ],
+        "principlesTitle": "Governance Principles",
+        "evolutionTitle": "Evolution"
       },
       "roadmap": {
         "title": "Development Roadmap",
@@ -348,7 +389,9 @@
         "label": "Institutional Investors",
         "value": "13"
       }
-    ]
+    ],
+    "docBadge": "Technical Document",
+    "keyDataTitle": "Key Data Overview"
   },
   "about": {
     "title": "About Us",
@@ -444,7 +487,12 @@
           "desc": "Decentralized contract exchange"
         }
       ]
-    }
+    },
+    "aboutBadge": "About Us",
+    "principlesBadge": "Four Principles",
+    "historyBadge": "Milestones",
+    "investorsBadge": "Investors",
+    "partnersBadge": "Ecosystem Partners"
   },
   "contact": {
     "title": "Contact Us",
@@ -456,14 +504,22 @@
       "message": "Message",
       "submit": "Send Message",
       "success": "Message sent, we'll get back to you soon",
-      "error": "Failed to send, please try again later"
+      "error": "Failed to send, please try again later",
+      "namePlaceholder": "Enter your name",
+      "emailPlaceholder": "Enter your email",
+      "subjectPlaceholder": "Enter subject",
+      "messagePlaceholder": "Enter your message"
     },
     "info": {
       "email": "Email",
       "telegram": "Telegram",
       "discord": "Discord",
       "twitter": "Twitter"
-    }
+    },
+    "contactBadge": "Contact Us",
+    "contactInfo": "Contact Info",
+    "quickResponse": "Quick Response",
+    "quickResponseDesc": "We respond to all inquiries within 24 hours. For urgent matters, please reach us via Telegram for faster assistance."
   },
   "footer": {
     "description": "World's first decentralized value-added platform — Accessible, Transparent, Secure, Sustainable",
@@ -534,5 +590,42 @@
         "content": "Blockchain technology is still evolving and may be subject to security vulnerabilities, network attacks, and other technical risks."
       }
     }
+  },
+  "news": {
+    "newsBadge": "Latest News",
+    "noArticles": "No articles yet",
+    "categories": {
+      "all": "All",
+      "mechanism": "Mechanism",
+      "partnership": "Partnership",
+      "updates": "Updates"
+    }
+  },
+  "agent": {
+    "title": "Agent API Portal",
+    "enabled": "Agent API Port Enabled",
+    "enabledDesc": "External agents can manage articles, page content and system settings via API. All write operations require API Key authentication.",
+    "endpoints": "API Endpoints",
+    "articleMgmt": "Article Management",
+    "createArticle": "Create article",
+    "updateArticle": "Update article",
+    "deleteArticle": "Delete article",
+    "pageContent": "Page Content",
+    "updatePage": "Update page content",
+    "settings": "System Settings",
+    "updateSettings": "Update settings",
+    "auth": "Authentication",
+    "authDesc": "All write operations require API Key in request header:",
+    "examples": "Request Examples",
+    "dataModel": "Data Model",
+    "articleModel": "Article",
+    "titleZhEn": "Chinese/English titles",
+    "slug": "URL identifier (unique)",
+    "category": "Category (news/industry)",
+    "contentZhEn": "Chinese/English content",
+    "excerptZhEn": "Chinese/English excerpts",
+    "coverImage": "Cover image URL",
+    "tags": "Tags array",
+    "published": "Whether published"
   }
 }

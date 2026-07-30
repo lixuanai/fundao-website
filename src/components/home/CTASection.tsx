@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 
 export default function CTASection() {
   const t = useTranslations('home.cta');
+  const tContact = useTranslations('common');
   const pathname = usePathname();
   const currentLocale = pathname.split('/')[1] || 'zh';
 
@@ -34,7 +35,7 @@ export default function CTASection() {
             href={`/${currentLocale}/contact`}
             className="px-8 py-4 rounded-full border-2 border-white/50 text-white font-bold text-lg hover:bg-white/10 transition-all"
           >
-            联系我们
+            {tContact('contactUs')}
           </Link>
         </div>
       </div>

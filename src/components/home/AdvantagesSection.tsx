@@ -5,8 +5,7 @@ import { usePathname } from 'next/navigation';
 
 export default function AdvantagesSection() {
   const t = useTranslations('home.advantages');
-  const pathname = usePathname();
-  const currentLocale = pathname.split('/')[1] || 'zh';
+  const tBadge = useTranslations('home.advantagesBadge');
 
   const advantages = [
     {
@@ -65,7 +64,7 @@ export default function AdvantagesSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="tag-purple mb-4 inline-block">核心优势</span>
+          <span className="tag-purple mb-4 inline-block">{tBadge('text')}</span>
           <h2 className="text-4xl md:text-5xl font-black mb-4">
             <span className="gradient-text">{t('title')}</span>
           </h2>

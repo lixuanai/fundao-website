@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 
 export default function RewardsSection() {
   const t = useTranslations('home.rewards');
+  const tBadge = useTranslations('home.rewardsBadge');
   const pathname = usePathname();
   const currentLocale = pathname.split('/')[1] || 'zh';
 
@@ -33,9 +34,9 @@ export default function RewardsSection() {
   ];
 
   const allocationData = [
-    { label: 'LP 流动性池', value: 60, color: 'bg-purple-500' },
-    { label: '分享收益', value: 25, color: 'bg-pink-500' },
-    { label: '周分红', value: 15, color: 'bg-cyan-500' },
+    { labelKey: 'lpLabel', value: 60, color: 'bg-purple-500' },
+    { labelKey: 'revenueLabel', value: 25, color: 'bg-pink-500' },
+    { labelKey: 'dividendLabel', value: 15, color: 'bg-cyan-500' },
   ];
 
   return (
@@ -45,7 +46,7 @@ export default function RewardsSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="tag-pink mb-4 inline-block">收益体系</span>
+          <span className="tag-pink mb-4 inline-block">{tBadge('text')}</span>
           <h2 className="text-4xl md:text-5xl font-black mb-4">
             <span className="gradient-text">{t('title')}</span>
           </h2>
@@ -94,7 +95,7 @@ export default function RewardsSection() {
               <div key={i} className="flex items-center space-x-2">
                 <div className={`w-3 h-3 rounded-full ${item.color}`}></div>
                 <span className="text-sm text-gray-600">
-                  {item.label} <span className="font-bold text-gray-800">{item.value}%</span>
+                  {t(item.labelKey)} <span className="font-bold text-gray-800">{item.value}%</span>
                 </span>
               </div>
             ))}

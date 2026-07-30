@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 
 export default function Header() {
   const t = useTranslations('nav');
+  const tLang = useTranslations('common');
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -28,6 +29,8 @@ export default function Header() {
     { href: '/about', label: t('about') },
     { href: '/contact', label: t('contact') },
   ];
+
+  const langLabel = otherLocale === 'zh' ? tLang('switchToZh') : tLang('switchToEn');
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -68,7 +71,7 @@ export default function Header() {
               href={`/${otherLocale}${pathname.replace(`/${currentLocale}`, '')}`}
               className="text-sm font-medium text-gray-500 hover:text-purple-600 transition-colors px-4 py-2 rounded-full border border-gray-200 hover:border-purple-300 hover:bg-purple-50/50"
             >
-              {otherLocale === 'zh' ? ' 中文' : '🌐 EN'}
+              {langLabel}
             </Link>
             <Link
               href={`/${currentLocale}/contact`}
@@ -112,7 +115,7 @@ export default function Header() {
                   href={`/${otherLocale}${pathname.replace(`/${currentLocale}`, '')}`}
                   className="text-sm text-gray-500 hover:text-purple-600 transition-colors px-4 py-2 rounded-full border border-gray-200"
                 >
-                  {otherLocale === 'zh' ? '中文' : 'EN'}
+                  {langLabel}
                 </Link>
                 <Link
                   href={`/${currentLocale}/contact`}

@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 export default function FAQSection() {
   const t = useTranslations('home.faq');
+  const tBadge = useTranslations('home.faqBadge');
   const pathname = usePathname();
   const currentLocale = pathname.split('/')[1] || 'zh';
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -18,7 +19,7 @@ export default function FAQSection() {
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="tag-cyan mb-4 inline-block">常见问题</span>
+          <span className="tag-cyan mb-4 inline-block">{tBadge('text')}</span>
           <h2 className="text-4xl md:text-5xl font-black mb-4">
             <span className="gradient-text">{t('title')}</span>
           </h2>

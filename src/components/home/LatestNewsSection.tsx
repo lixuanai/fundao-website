@@ -31,18 +31,19 @@ export default function LatestNewsSection() {
   }, [currentLocale]);
 
   return (
-    <section className="py-20 bg-gray-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 mesh-gradient opacity-30"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-end mb-12">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-              {t('title')}
+            <h2 className="text-4xl md:text-5xl font-black mb-4">
+              <span className="gradient-text">{t('title')}</span>
             </h2>
-            <p className="text-gray-400 text-lg">{t('subtitle')}</p>
+            <p className="text-lg text-gray-500">{t('subtitle')}</p>
           </div>
           <Link
             href={`/${currentLocale}/news`}
-            className="hidden md:flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors"
+            className="hidden md:flex items-center space-x-2 text-purple-600 hover:text-purple-700 transition-colors font-medium"
           >
             <span>{tCommon('viewAll')}</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,21 +57,21 @@ export default function LatestNewsSection() {
             <Link
               key={article.id}
               href={`/${currentLocale}/news/${article.slug}`}
-              className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 transition-all group"
+              className="glass-card rounded-2xl p-6 card-hover group"
             >
               <div className="flex items-center space-x-2 mb-4">
-                <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-400 rounded">
+                <span className="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full font-medium">
                   {article.category}
                 </span>
-                <span className="text-xs text-gray-500">{article.created_at?.split('T')[0] || ''}</span>
+                <span className="text-xs text-gray-400">{article.created_at?.split('T')[0] || ''}</span>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+              <h3 className="text-lg font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors">
                 {currentLocale === 'zh' ? article.title_zh : article.title_en}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              <p className="text-gray-500 text-sm leading-relaxed mb-4">
                 {currentLocale === 'zh' ? article.excerpt_zh : article.excerpt_en}
               </p>
-              <div className="flex items-center text-blue-400 text-sm">
+              <div className="flex items-center text-purple-600 text-sm font-medium">
                 <span>{tCommon('readMore')}</span>
                 <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -81,15 +82,15 @@ export default function LatestNewsSection() {
         </div>
 
         {articles.length === 0 && (
-          <div className="text-center text-gray-500 py-12">
-            {t('noArticles') || '暂无文章'}
+          <div className="text-center text-gray-400 py-12 glass-card rounded-2xl">
+            {t('noArticles')}
           </div>
         )}
 
         <div className="md:hidden mt-8 text-center">
           <Link
             href={`/${currentLocale}/news`}
-            className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors"
+            className="inline-flex items-center space-x-2 text-purple-600 hover:text-purple-700 transition-colors font-medium"
           >
             <span>{tCommon('viewAll')}</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

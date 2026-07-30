@@ -24,11 +24,11 @@ export default function ProductsPage() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="tag-purple mb-4 inline-block">核心机制</span>
+          <span className="tag-purple mb-4 inline-block">{t('featuresBadge')}</span>
           <h1 className="text-4xl md:text-5xl font-black mb-4">
-            <span className="gradient-text">{t('title') || '产品与服务'}</span>
+            <span className="gradient-text">{t('title')}</span>
           </h1>
-          <p className="text-gray-500 text-lg">{t('subtitle') || 'FunDAO 四重保障机制详解'}</p>
+          <p className="text-gray-500 text-lg">{t('subtitle')}</p>
         </div>
 
         {/* Features grid */}
@@ -53,9 +53,9 @@ export default function ProductsPage() {
         {/* Process steps */}
         <div className="glass-card rounded-3xl p-8 md:p-12">
           <div className="text-center mb-12">
-            <span className="tag-cyan mb-4 inline-block">参与流程</span>
+            <span className="tag-cyan mb-4 inline-block">{t('processBadge')}</span>
             <h2 className="text-3xl md:text-4xl font-black">
-              <span className="gradient-text">{t('process.title') || '如何参与'}</span>
+              <span className="gradient-text">{t('process.title')}</span>
             </h2>
           </div>
           

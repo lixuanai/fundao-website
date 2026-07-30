@@ -7,14 +7,15 @@ import { usePathname } from 'next/navigation';
 export default function Footer() {
   const t = useTranslations('footer');
   const tCommon = useTranslations('common');
+  const tNav = useTranslations('nav');
   const pathname = usePathname();
   const currentLocale = pathname.split('/')[1] || 'zh';
 
   const quickLinks = [
-    { href: '/news', label: t('quickLinks') === '快速链接' ? '新闻动态' : 'News' },
-    { href: '/products', label: t('quickLinks') === '快速链接' ? '产品与服务' : 'Products' },
-    { href: '/about', label: t('quickLinks') === '快速链接' ? '关于我们' : 'About' },
-    { href: '/contact', label: t('quickLinks') === '快速链接' ? '联系我们' : 'Contact' },
+    { href: '/news', label: tNav('news') },
+    { href: '/products', label: tNav('products') },
+    { href: '/about', label: tNav('about') },
+    { href: '/contact', label: tNav('contact') },
   ];
 
   const socialLinks = [

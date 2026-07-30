@@ -19,6 +19,7 @@ interface Article {
 
 export default function NewsPage() {
   const t = useTranslations('articles');
+  const tNews = useTranslations('news');
   const tCommon = useTranslations('common');
   const pathname = usePathname();
   const currentLocale = pathname.split('/')[1] || 'zh';
@@ -33,10 +34,10 @@ export default function NewsPage() {
   }, []);
 
   const categories = [
-    { key: 'all', label: t('all') || '全部' },
-    { key: '机制解读', label: currentLocale === 'zh' ? '机制解读' : 'Mechanism' },
-    { key: '生态合作', label: currentLocale === 'zh' ? '生态合作' : 'Partnership' },
-    { key: '项目动态', label: currentLocale === 'zh' ? '项目动态' : 'Updates' },
+    { key: 'all', label: tNews('categories.all') },
+    { key: '机制解读', label: tNews('categories.mechanism') },
+    { key: '生态合作', label: tNews('categories.partnership') },
+    { key: '项目动态', label: tNews('categories.updates') },
   ];
 
   const filteredArticles = activeCategory === 'all'
@@ -55,11 +56,11 @@ export default function NewsPage() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="tag-purple mb-4 inline-block">新闻动态</span>
+          <span className="tag-purple mb-4 inline-block">{tNews('newsBadge')}</span>
           <h1 className="text-4xl md:text-5xl font-black mb-4">
-            <span className="gradient-text">{t('title') || '新闻动态'}</span>
+            <span className="gradient-text">{t('title')}</span>
           </h1>
-          <p className="text-gray-500 text-lg">{t('subtitle') || '了解 FunDAO 最新资讯'}</p>
+          <p className="text-gray-500 text-lg">{t('subtitle')}</p>
         </div>
 
         {/* Category filter */}
@@ -100,7 +101,7 @@ export default function NewsPage() {
                 {currentLocale === 'zh' ? article.excerpt_zh : article.excerpt_en}
               </p>
               <div className="flex items-center text-purple-500 text-sm font-medium">
-                <span>{tCommon('readMore') || '阅读更多'}</span>
+                <span>{tCommon('readMore')}</span>
                 <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -112,7 +113,7 @@ export default function NewsPage() {
         {filteredArticles.length === 0 && (
           <div className="text-center py-20">
             <div className="text-6xl mb-4">📰</div>
-            <p className="text-gray-400 text-lg">暂无文章</p>
+            <p className="text-gray-400 text-lg">{tNews('noArticles')}</p>
           </div>
         )}
       </div>

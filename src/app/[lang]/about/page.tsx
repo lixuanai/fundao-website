@@ -16,7 +16,7 @@ export default function AboutPage() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="tag-purple mb-4 inline-block">关于我们</span>
+          <span className="tag-purple mb-4 inline-block">{t('aboutBadge')}</span>
           <h1 className="text-4xl md:text-5xl font-black mb-4">
             <span className="gradient-text">{t('title')}</span>
           </h1>
@@ -41,7 +41,7 @@ export default function AboutPage() {
         {/* Four Principles */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <span className="tag-cyan mb-4 inline-block">四大初心</span>
+            <span className="tag-cyan mb-4 inline-block">{t('principlesBadge')}</span>
             <h2 className="text-3xl md:text-4xl font-black">
               <span className="gradient-text">{t('principles.title')}</span>
             </h2>
@@ -49,10 +49,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {principles.map((p, i) => {
               const colors = [
-                { bg: 'from-purple-50 to-purple-100/50', border: 'border-purple-200/50', text: 'text-purple-600', gradient: 'from-purple-500 to-purple-600' },
-                { bg: 'from-pink-50 to-pink-100/50', border: 'border-pink-200/50', text: 'text-pink-500', gradient: 'from-pink-500 to-pink-600' },
-                { bg: 'from-cyan-50 to-cyan-100/50', border: 'border-cyan-200/50', text: 'text-cyan-500', gradient: 'from-cyan-500 to-cyan-600' },
-                { bg: 'from-green-50 to-green-100/50', border: 'border-green-200/50', text: 'text-green-500', gradient: 'from-green-500 to-green-600' },
+                { bg: 'from-purple-50 to-purple-100/50', border: 'border-purple-200/50', text: 'text-purple-600' },
+                { bg: 'from-pink-50 to-pink-100/50', border: 'border-pink-200/50', text: 'text-pink-500' },
+                { bg: 'from-cyan-50 to-cyan-100/50', border: 'border-cyan-200/50', text: 'text-cyan-500' },
+                { bg: 'from-green-50 to-green-100/50', border: 'border-green-200/50', text: 'text-green-500' },
               ];
               const c = colors[i % 4];
               return (
@@ -68,7 +68,7 @@ export default function AboutPage() {
         {/* Milestones */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <span className="tag-pink mb-4 inline-block">发展历程</span>
+            <span className="tag-pink mb-4 inline-block">{t('historyBadge')}</span>
             <h2 className="text-3xl md:text-4xl font-black">
               <span className="gradient-text">{t('history.title')}</span>
             </h2>
@@ -94,7 +94,7 @@ export default function AboutPage() {
         {/* Investors */}
         <div className="glass-card rounded-3xl p-8 md:p-12 mb-12">
           <div className="text-center mb-10">
-            <span className="tag-purple mb-4 inline-block">投资机构</span>
+            <span className="tag-purple mb-4 inline-block">{t('investorsBadge')}</span>
             <h2 className="text-3xl font-bold">
               <span className="gradient-text">{t('investors.title')}</span>
             </h2>
@@ -111,7 +111,7 @@ export default function AboutPage() {
         {/* Partners */}
         <div className="glass-card rounded-3xl p-8 md:p-12">
           <div className="text-center mb-10">
-            <span className="tag-cyan mb-4 inline-block">生态合作</span>
+            <span className="tag-cyan mb-4 inline-block">{t('partnersBadge')}</span>
             <h2 className="text-3xl font-bold">
               <span className="gradient-text">{t('partners.title')}</span>
             </h2>
