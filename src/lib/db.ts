@@ -1,5 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
+import seedArticlesData from '../data/seed-articles.json';
 
 const DB_DIR = join(process.cwd(), 'data');
 const DB_PATH = join(DB_DIR, 'fundao.json');
@@ -183,45 +184,23 @@ function seedData() {
     created_at: now,
   });
 
-  // Seed articles
-  const articles: Article[] = [
-    {
-      id: genId(), title_zh: 'FunDAO 上线 30 天涨幅超 18 倍', title_en: 'FunDAO Surges 18x in 30 Days',
-      slug: 'fundao-30days', category: '机制解读',
-      content_zh: 'FunDAO 自上线以来，凭借每日 2.5% 通缩机制和智能熔断保护，30 天内实现超 18 倍涨幅。持币地址数突破 7,739 个，社区持续壮大。',
-      content_en: 'FunDAO has achieved over 18x growth in 30 days, powered by its daily 2.5% deflation mechanism and smart circuit breaker protection. Holder addresses have surpassed 7,739.',
-      excerpt_zh: '上线 30 天涨幅超 18 倍，持币地址突破 7,739 个',
-      excerpt_en: '18x growth in 30 days, 7,739+ holder addresses',
-      cover_image: '', tags: '涨幅,通缩,社区', published: 1, created_at: now, updated_at: now,
-    },
-    {
-      id: genId(), title_zh: '每日通缩 2.5%：FunDAO 的可持续价值引擎', title_en: 'Daily 2.5% Deflation: Sustainable Value Engine',
-      slug: 'daily-deflation', category: '机制解读',
-      content_zh: 'FunDAO 独创每日 2.5% 通缩机制，其中 50% 永久销毁、50% 分配给持有者。持续减少流通供应量，支撑代币长期价值。配合三级熔断机制（5%/10%/20%），有效防止恶意砸盘。',
-      content_en: "FunDAO's innovative daily 2.5% deflation mechanism permanently burns 50% and distributes 50% to holders. Combined with three-tier circuit breaker (5%/10%/20%), it effectively prevents malicious dumping.",
-      excerpt_zh: '50% 销毁 + 50% 分配，三级熔断保护',
-      excerpt_en: '50% burn + 50% distribute, three-tier circuit breaker',
-      cover_image: '', tags: '通缩,销毁,熔断', published: 1, created_at: now, updated_at: now,
-    },
-    {
-      id: genId(), title_zh: '13 家顶级加密基金参投 FunDAO', title_en: '13 Top Crypto Funds Invest in FunDAO',
-      slug: '13-funds', category: '生态合作',
-      content_zh: 'Dragonfly、Animoca Brands、OKX Ventures 等 13 家全球顶级加密基金共同参投 FunDAO，彰显市场对去中心化增值模式的信心。',
-      content_en: '13 top global crypto funds including Dragonfly, Animoca Brands, and OKX Ventures have invested in FunDAO.',
-      excerpt_zh: 'Dragonfly、Animoca、OKX Ventures 等 13 家机构参投',
-      excerpt_en: 'Dragonfly, Animoca, OKX Ventures among 13 institutional investors',
-      cover_image: '', tags: '投资,机构,合作', published: 1, created_at: now, updated_at: now,
-    },
-    {
-      id: genId(), title_zh: 'FunDAO 路线图：从 BSC 到多链生态', title_en: 'FunDAO Roadmap: From BSC to Multi-Chain',
-      slug: 'roadmap-2026', category: '项目动态',
-      content_zh: 'FunDAO 发布发展路线图：短期聚焦多语言社区建设和流动性增强，中长期将扩展至以太坊、Solana 等多链生态，并探索 AI 交易整合与 RWA 应用。',
-      content_en: 'FunDAO releases development roadmap: short-term focus on multilingual community and liquidity enhancement, mid-to-long term expansion to Ethereum, Solana multi-chain ecosystem.',
-      excerpt_zh: '多链扩展、AI 交易整合、RWA 探索',
-      excerpt_en: 'Multi-chain expansion, AI trading, RWA exploration',
-      cover_image: '', tags: '路线图,多链,AI', published: 1, created_at: now, updated_at: now,
-    },
-  ];
+  // Seed articles from committed JSON file (works on Vercel)
+  const articles: Article[] = (seedArticlesData as any[]).map((a: any, i: number) => ({
+    id: a.id || genId(),
+    title_zh: a.title_zh || '',
+    title_en: a.title_en || '',
+    slug: a.slug || '',
+    category: a.category || '',
+    content_zh: a.content_zh || '',
+    content_en: a.content_en || '',
+    excerpt_zh: a.excerpt_zh || '',
+    excerpt_en: a.excerpt_en || '',
+    cover_image: a.cover_image || '',
+    tags: a.tags || '',
+    published: a.published ?? 1,
+    created_at: a.created_at || now,
+    updated_at: a.updated_at || now,
+  }));
   db.articles = articles;
   saveDB();
 }

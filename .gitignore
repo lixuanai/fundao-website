@@ -40,6 +40,6 @@ logs/
 # PM2
 .pm2/
 backend/db/
-data/
+/data/
 .vercel
 .env*
