@@ -20,7 +20,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <div lang={lang} className="bg-[#FAFBFF] text-gray-900 antialiased relative overflow-hidden">
+    <div lang={lang} className="bg-[#F0EDF6] text-gray-900 antialiased relative overflow-hidden">
       <NextIntlClientProvider messages={messages}>
         <DynamicBackground />
         <Header />

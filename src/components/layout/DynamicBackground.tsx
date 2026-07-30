@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-interface Sparkle {
+interface Particle {
   id: number;
   x: number;
   y: number;
@@ -13,25 +13,26 @@ interface Sparkle {
 }
 
 export default function DynamicBackground() {
-  const [sparkles, setSparkles] = useState<Sparkle[]>([]);
+  const [particles, setParticles] = useState<Particle[]>([]);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const colors = [
-      'rgba(124, 58, 237, 0.6)',
-      'rgba(236, 72, 153, 0.5)',
-      'rgba(6, 182, 212, 0.5)',
+      'rgba(124, 58, 237, 0.5)',
+      'rgba(236, 72, 153, 0.4)',
+      'rgba(6, 182, 212, 0.4)',
+      'rgba(168, 85, 247, 0.3)',
     ];
-    const generated: Sparkle[] = Array.from({ length: 20 }, (_, i) => ({
+    const generated: Particle[] = Array.from({ length: 30 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
-      size: Math.random() * 4 + 2,
-      duration: Math.random() * 4 + 3,
-      delay: Math.random() * 5,
-      color: colors[i % 3],
+      size: Math.random() * 3 + 1,
+      duration: Math.random() * 5 + 4,
+      delay: Math.random() * 6,
+      color: colors[i % 4],
     }));
-    setSparkles(generated);
+    setParticles(generated);
   }, []);
 
   useEffect(() => {
@@ -44,52 +45,52 @@ export default function DynamicBackground() {
 
   return (
     <>
-      {/* Aurora background */}
-      <div className="aurora-bg" />
+      {/* Mesh gradient base */}
+      <div className="mesh-gradient-animated" />
 
-      {/* Floating light orbs */}
+      {/* Floating orbs - 5 new positions */}
       <div className="light-orb light-orb-1" />
       <div className="light-orb light-orb-2" />
       <div className="light-orb light-orb-3" />
       <div className="light-orb light-orb-4" />
+      <div className="light-orb light-orb-5" />
 
-      {/* Light beams */}
-      <div className="light-beam light-beam-1" />
-      <div className="light-beam light-beam-2" />
-      <div className="light-beam light-beam-3" />
+      {/* Rotating ring */}
+      <div className="rotating-ring rotating-ring-1" />
+      <div className="rotating-ring rotating-ring-2" />
 
       {/* Sparkle particles */}
-      {sparkles.map((s) => (
+      {particles.map((p) => (
         <div
-          key={s.id}
+          key={p.id}
           className="sparkle-dot"
           style={{
-            left: `${s.x}%`,
-            top: `${s.y}%`,
-            width: `${s.size}px`,
-            height: `${s.size}px`,
-            background: s.color,
-            boxShadow: `0 0 ${s.size * 2}px ${s.size}px ${s.color}`,
-            animation: `sparkle ${s.duration}s ease-in-out ${s.delay}s infinite`,
+            left: `${p.x}%`,
+            top: `${p.y}%`,
+            width: `${p.size}px`,
+            height: `${p.size}px`,
+            background: p.color,
+            boxShadow: `0 0 ${p.size * 2}px ${p.size}px ${p.color}`,
+            animation: `sparkle ${p.duration}s ease-in-out ${p.delay}s infinite`,
           }}
         />
       ))}
 
       {/* Mouse-follow glow */}
       <div
-        className="fixed pointer-events-none z-0 transition-all duration-700 ease-out"
+        className="fixed pointer-events-none z-0 transition-all duration-500 ease-out"
         style={{
-          left: mousePos.x - 150,
-          top: mousePos.y - 150,
-          width: 300,
-          height: 300,
+          left: mousePos.x - 120,
+          top: mousePos.y - 120,
+          width: 240,
+          height: 240,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(124, 58, 237, 0.06) 0%, transparent 70%)',
-          filter: 'blur(40px)',
+          background: 'radial-gradient(circle, rgba(124, 58, 237, 0.05) 0%, transparent 70%)',
+          filter: 'blur(30px)',
         }}
       />
 
-      {/* Gradient wave at bottom */}
+      {/* Bottom wave */}
       <div className="gradient-wave" />
     </>
   );
