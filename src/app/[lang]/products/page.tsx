@@ -15,8 +15,8 @@ export default function ProductsPage() {
     { bg: 'from-green-50 to-green-100/50', border: 'border-green-200/50', icon: 'from-green-500 to-green-600', text: 'text-green-500' },
   ];
 
-  const icons = ['🛡️', '💧', '', '⚖️'];
-  const stepIcons = ['📝', '', '🗳️', '🚀'];
+  const icons = ['🔥', '🛡️', '💰', '⚖️'];
+  const stepIcons = ['📝', '👥', '🗳️', '🚀'];
 
   return (
     <div className="min-h-screen pt-20 sm:pt-24 pb-12 sm:pb-20">
