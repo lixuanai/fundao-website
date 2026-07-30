@@ -1,5 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getDb, genId, saveDb } from '@/lib/db';
+import { getDb, genId, queryAll, saveDb } from '@/lib/db';
+
+export async function GET() {
+  await getDb();
+  const contacts = queryAll("SELECT * FROM contacts ORDER BY created_at DESC");
+  return NextResponse.json(contacts);
+}
 
 export async function POST(request: NextRequest) {
   await getDb();
