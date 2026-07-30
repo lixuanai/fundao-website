@@ -3,6 +3,15 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
+interface Contact {
+  id: string;
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  created_at: string;
+}
+
 interface Article {
   id: string;
   title_zh: string;
@@ -20,12 +29,13 @@ interface Article {
 
 const ADMIN_API_KEY = 'fundao_agent_8caa8e1209a44a05a0a0e5f990a6a577';
 
-type Tab = 'articles';
+type Tab = 'articles' | 'contacts';
 
 export default function AdminDashboard() {
   const router = useRouter();
   const [tab, setTab] = useState<Tab>('articles');
   const [articles, setArticles] = useState<Article[]>([]);
+  const [contacts, setContacts] = useState<Contact[]>([]);
   const [showForm, setShowForm] = useState(false);
   const [editingArticle, setEditingArticle] = useState<Article | null>(null);
   const [formData, setFormData] = useState({
@@ -41,8 +51,13 @@ export default function AdminDashboard() {
   }, [tab]);
 
   const loadData = async () => {
-    const res = await fetch('/api/articles');
-    setArticles(await res.json());
+    if (tab === 'articles') {
+      const res = await fetch('/api/articles');
+      setArticles(await res.json());
+    } else if (tab === 'contacts') {
+      const res = await fetch('/api/contact');
+      setContacts(await res.json());
+    }
   };
 
   const handleSave = async () => {
@@ -95,6 +110,7 @@ export default function AdminDashboard() {
 
   const tabs: { key: Tab; label: string; icon: string }[] = [
     { key: 'articles', label: '文章管理', icon: '📝' },
+    { key: 'contacts', label: '联系消息', icon: '📬' },
   ];
 
   return (
@@ -220,6 +236,36 @@ export default function AdminDashboard() {
                 </div>
               ))}
             </div>
+          </div>
+        )}
+
+        {tab === 'contacts' && (
+          <div>
+            <h2 className="text-lg font-semibold text-gray-800 mb-4">共 {contacts.length} 条消息</h2>
+            {contacts.length === 0 ? (
+              <div className="text-center py-20">
+                <div className="text-6xl mb-4">📭</div>
+                <p className="text-gray-400 text-lg">暂无联系消息</p>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                {contacts.map((c) => (
+                  <div key={c.id} className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 hover:border-purple-200 transition-all">
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-sm font-semibold text-gray-800">{c.name || '匿名'}</span>
+                          <span className="text-xs text-gray-400">{c.email}</span>
+                          <span className="text-xs text-gray-400 ml-auto">{c.created_at?.split('T')[0]} {c.created_at?.split('T')[1]?.slice(0,5) || ''}</span>
+                        </div>
+                        {c.subject && <p className="text-sm font-medium text-purple-600 mb-1">主题：{c.subject}</p>}
+                        <p className="text-sm text-gray-600 whitespace-pre-wrap">{c.message}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
 
