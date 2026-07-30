@@ -31,7 +31,7 @@ export default function HeroSection() {
           <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-purple-50 border border-purple-100 mb-8 reveal">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
             <span className="text-sm font-medium text-purple-600">
-              {t('badge') || '全球首个去中心化增值平台'}
+              全球首个去中心化增值平台
             </span>
           </div>
 
@@ -47,7 +47,7 @@ export default function HeroSection() {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed reveal reveal-delay-3">
-            {t('description')}
+            {t('subtitle')}
           </p>
 
           {/* CTA Buttons */}
@@ -56,24 +56,24 @@ export default function HeroSection() {
               href={`/${currentLocale}/whitepaper`}
               className="btn-gradient shimmer-btn text-lg !px-8 !py-4 !rounded-full"
             >
-              {t('ctaPrimary') || '了解更多'}
+              {t('cta')}
             </Link>
             <Link
               href={`/${currentLocale}/about`}
               className="px-8 py-4 rounded-full border-2 border-purple-200 text-purple-600 font-semibold text-lg hover:bg-purple-50 hover:border-purple-300 transition-all"
             >
-              {t('ctaSecondary') || '关于我们'}
+              关于我们
             </Link>
           </div>
 
           {/* Stats cards */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
             {[
-              { value: '7,739', label: t('stat1Label') || '持币地址', color: 'purple' },
-              { value: '18x', label: t('stat2Label') || '30天涨幅', color: 'pink' },
-              { value: '60%', label: t('stat3Label') || 'LP资金池', color: 'cyan' },
-              { value: '21亿', label: t('stat4Label') || '代币总量', color: 'purple' },
-              { value: 'BSC', label: t('stat5Label') || '底层链', color: 'pink' },
+              { value: t('stats.holdersValue'), label: t('stats.holders'), color: 'purple' },
+              { value: t('stats.growthValue'), label: t('stats.growth'), color: 'pink' },
+              { value: t('stats.lpValue'), label: t('stats.lp'), color: 'cyan' },
+              { value: t('stats.totalSupplyValue'), label: t('stats.totalSupply'), color: 'purple' },
+              { value: t('stats.chainValue'), label: t('stats.chain'), color: 'pink' },
             ].map((stat, i) => (
               <div
                 key={i}

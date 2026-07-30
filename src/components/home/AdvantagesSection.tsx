@@ -15,8 +15,8 @@ export default function AdvantagesSection() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
       ),
-      titleKey: 'item1Title',
-      descKey: 'item1Desc',
+      titleKey: 'items.0.title',
+      descKey: 'items.0.description',
       gradient: 'from-purple-500 to-purple-600',
       bgGradient: 'from-purple-50 to-purple-100/50',
       borderColor: 'border-purple-200/50',
@@ -27,8 +27,8 @@ export default function AdvantagesSection() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
-      titleKey: 'item2Title',
-      descKey: 'item2Desc',
+      titleKey: 'items.1.title',
+      descKey: 'items.1.description',
       gradient: 'from-cyan-500 to-cyan-600',
       bgGradient: 'from-cyan-50 to-cyan-100/50',
       borderColor: 'border-cyan-200/50',
@@ -39,8 +39,8 @@ export default function AdvantagesSection() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
         </svg>
       ),
-      titleKey: 'item3Title',
-      descKey: 'item3Desc',
+      titleKey: 'items.2.title',
+      descKey: 'items.2.description',
       gradient: 'from-pink-500 to-pink-600',
       bgGradient: 'from-pink-50 to-pink-100/50',
       borderColor: 'border-pink-200/50',
@@ -51,8 +51,8 @@ export default function AdvantagesSection() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      titleKey: 'item4Title',
-      descKey: 'item4Desc',
+      titleKey: 'items.3.title',
+      descKey: 'items.3.description',
       gradient: 'from-cyan-500 to-purple-500',
       bgGradient: 'from-cyan-50 to-purple-50',
       borderColor: 'border-cyan-200/50',
@@ -65,12 +65,12 @@ export default function AdvantagesSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="tag-purple mb-4 inline-block">{t('badge') || '核心优势'}</span>
+          <span className="tag-purple mb-4 inline-block">核心优势</span>
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            <span className="gradient-text">{t('title') || '为什么选择 FunDAO'}</span>
+            <span className="gradient-text">{t('title')}</span>
           </h2>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-            {t('subtitle') || '四重机制保障，打造可持续去中心化金融生态'}
+            {t('subtitle')}
           </p>
         </div>
 
