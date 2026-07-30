@@ -32,46 +32,43 @@ export default function Footer() {
 
   return (
     <footer className="relative bg-gray-950 overflow-hidden">
-      {/* Top gradient border */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400"></div>
+      <div className="absolute bottom-0 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
 
-      {/* Background glow */}
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 md:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
           {/* Brand */}
-          <div className="col-span-1 md:col-span-2">
-            <Link href={`/${currentLocale}`} className="flex items-center space-x-2.5 mb-5 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-purple-500/20 group-hover:shadow-purple-500/40 transition-all">
-                <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <div className="col-span-1 sm:col-span-2">
+            <Link href={`/${currentLocale}`} className="flex items-center space-x-2.5 mb-4 sm:mb-5 group">
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-purple-500/20 group-hover:shadow-purple-500/40 transition-all">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                 </svg>
               </div>
-              <span className="text-xl font-extrabold text-white">
+              <span className="text-lg sm:text-xl font-extrabold text-white">
                 Fun<span className="gradient-text-hero">DAO</span>
               </span>
             </Link>
-            <p className="text-gray-400 text-sm mb-5 max-w-md leading-relaxed">
+            <p className="text-gray-400 text-xs sm:text-sm mb-4 sm:mb-5 max-w-md leading-relaxed">
               {t('description')}
             </p>
-            <p className="text-xs text-gray-500 bg-gray-900/50 p-4 rounded-xl border border-gray-800/50 leading-relaxed">
+            <p className="text-xs text-gray-500 bg-gray-900/50 p-3 sm:p-4 rounded-lg sm:rounded-xl border border-gray-800/50 leading-relaxed">
               {tCommon('riskDisclaimer')}
             </p>
           </div>
 
           {/* Quick links */}
           <div>
-            <h3 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">{t('quickLinks')}</h3>
-            <ul className="space-y-3">
+            <h3 className="text-white font-bold mb-4 sm:mb-5 text-xs sm:text-sm uppercase tracking-wider">{t('quickLinks')}</h3>
+            <ul className="space-y-2 sm:space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={`/${currentLocale}${link.href}`}
-                    className="text-gray-400 hover:text-purple-400 transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover:text-purple-400 transition-colors text-xs sm:text-sm flex items-center group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-500/50 mr-3 group-hover:bg-purple-400 transition-colors"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-purple-500/50 mr-2 sm:mr-3 group-hover:bg-purple-400 transition-colors"></span>
                     {link.label}
                   </Link>
                 </li>
@@ -81,17 +78,17 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">{t('socialLinks')}</h3>
-            <ul className="space-y-3">
+            <h3 className="text-white font-bold mb-4 sm:mb-5 text-xs sm:text-sm uppercase tracking-wider">{t('socialLinks')}</h3>
+            <ul className="space-y-2 sm:space-y-3">
               {socialLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-purple-400 transition-colors text-sm flex items-center space-x-3 group"
+                    className="text-gray-400 hover:text-purple-400 transition-colors text-xs sm:text-sm flex items-center space-x-2 sm:space-x-3 group"
                   >
-                    <span className="w-8 h-8 rounded-lg bg-gray-800/50 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors text-gray-400 group-hover:text-purple-400">
+                    <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-gray-800/50 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors text-gray-400 group-hover:text-purple-400">
                       {link.icon}
                     </span>
                     <span>{link.name}</span>
@@ -103,16 +100,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-gray-800/50 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-gray-500 text-sm">{t('copyright')}</p>
-          <div className="flex space-x-6">
-            <Link href={`/${currentLocale}/legal/privacy`} className="text-gray-500 hover:text-purple-400 text-sm transition-colors">
+        <div className="mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 border-t border-gray-800/50 flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0 gap-3">
+          <p className="text-gray-500 text-xs sm:text-sm">{t('copyright')}</p>
+          <div className="flex flex-wrap justify-center gap-x-4 sm:gap-x-6 gap-y-2">
+            <Link href={`/${currentLocale}/legal/privacy`} className="text-gray-500 hover:text-purple-400 text-xs sm:text-sm transition-colors">
               {t('privacy')}
             </Link>
-            <Link href={`/${currentLocale}/legal/terms`} className="text-gray-500 hover:text-purple-400 text-sm transition-colors">
+            <Link href={`/${currentLocale}/legal/terms`} className="text-gray-500 hover:text-purple-400 text-xs sm:text-sm transition-colors">
               {t('terms')}
             </Link>
-            <Link href={`/${currentLocale}/legal/disclaimer`} className="text-gray-500 hover:text-purple-400 text-sm transition-colors">
+            <Link href={`/${currentLocale}/legal/disclaimer`} className="text-gray-500 hover:text-purple-400 text-xs sm:text-sm transition-colors">
               {t('disclaimer')}
             </Link>
           </div>

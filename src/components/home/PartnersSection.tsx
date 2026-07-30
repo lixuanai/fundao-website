@@ -1,12 +1,9 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
 
 export default function PartnersSection() {
   const t = useTranslations('home.partners');
-  const pathname = usePathname();
-  const currentLocale = pathname.split('/')[1] || 'zh';
 
   const partners = [
     { name: 'Dragonfly', abbr: 'D', color: 'from-blue-500 to-blue-600' },
@@ -25,26 +22,26 @@ export default function PartnersSection() {
   ];
 
   return (
-    <section className="py-20 bg-white relative">
+    <section className="py-12 sm:py-16 md:py-20 bg-white relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-200 to-transparent"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <span className="tag-purple mb-4 inline-block">{t('badge') || '生态合作伙伴'}</span>
-          <h2 className="text-3xl md:text-4xl font-black">
+        <div className="text-center mb-8 sm:mb-12">
+          <span className="tag-purple mb-3 sm:mb-4 inline-block text-xs sm:text-sm">{t('badge') || '生态合作伙伴'}</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black">
             <span className="gradient-text">{t('title') || '13 家顶级机构参投'}</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-4">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-3 sm:gap-4">
           {partners.map((partner, i) => (
             <div
               key={i}
-              className="group flex flex-col items-center p-4 rounded-xl hover:bg-purple-50/50 transition-all cursor-default"
+              className="group flex flex-col items-center p-2 sm:p-4 rounded-lg sm:rounded-xl hover:bg-purple-50/50 transition-all cursor-default"
             >
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${partner.color} flex items-center justify-center text-white font-bold text-sm mb-2 group-hover:scale-110 transition-transform shadow-lg`}>
+              <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-gradient-to-br ${partner.color} flex items-center justify-center text-white font-bold text-xs sm:text-sm mb-1.5 sm:mb-2 group-hover:scale-110 transition-transform shadow-lg`}>
                 {partner.abbr}
               </div>
-              <span className="text-xs text-gray-500 text-center font-medium group-hover:text-purple-600 transition-colors">
+              <span className="text-[10px] sm:text-xs text-gray-500 text-center font-medium group-hover:text-purple-600 transition-colors leading-tight">
                 {partner.name}
               </span>
             </div>
