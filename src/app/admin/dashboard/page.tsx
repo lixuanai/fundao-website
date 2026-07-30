@@ -18,30 +18,14 @@ interface Article {
   updated_at: string;
 }
 
-interface Contact {
-  id: string;
-  name: string;
-  email: string;
-  message: string;
-  created_at: string;
-}
-
-interface Setting {
-  key: string;
-  value: string;
-  updated_at: string;
-}
-
 const ADMIN_API_KEY = 'fundao_agent_8caa8e1209a44a05a0a0e5f990a6a577';
 
-type Tab = 'articles' | 'contacts' | 'settings';
+type Tab = 'articles';
 
 export default function AdminDashboard() {
   const router = useRouter();
   const [tab, setTab] = useState<Tab>('articles');
   const [articles, setArticles] = useState<Article[]>([]);
-  const [contacts, setContacts] = useState<Contact[]>([]);
-  const [settings, setSettings] = useState<Setting[]>([]);
   const [showForm, setShowForm] = useState(false);
   const [editingArticle, setEditingArticle] = useState<Article | null>(null);
   const [formData, setFormData] = useState({
@@ -57,18 +41,8 @@ export default function AdminDashboard() {
   }, [tab]);
 
   const loadData = async () => {
-    if (tab === 'articles') {
-      const res = await fetch('/api/articles');
-      setArticles(await res.json());
-    } else if (tab === 'contacts') {
-      const res = await fetch('/api/contact');
-      const data = await res.json();
-      setContacts(Array.isArray(data) ? data : []);
-    } else if (tab === 'settings') {
-      const res = await fetch('/api/settings');
-      const data = await res.json();
-      setSettings(Array.isArray(data) ? data : []);
-    }
+    const res = await fetch('/api/articles');
+    setArticles(await res.json());
   };
 
   const handleSave = async () => {
@@ -121,8 +95,6 @@ export default function AdminDashboard() {
 
   const tabs: { key: Tab; label: string; icon: string }[] = [
     { key: 'articles', label: '文章管理', icon: '📝' },
-    { key: 'contacts', label: '联系消息', icon: '📬' },
-    { key: 'settings', label: '网站设置', icon: '⚙️' },
   ];
 
   return (
@@ -188,7 +160,7 @@ export default function AdminDashboard() {
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">分类</label>
                     <select value={formData.category} onChange={e => setFormData({...formData, category: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-purple-400">
-                      <option>机制解读</option>
+                      <option>行业新闻</option>
                       <option>生态合作</option>
                       <option>项目动态</option>
                     </select>
@@ -251,51 +223,6 @@ export default function AdminDashboard() {
           </div>
         )}
 
-        {tab === 'contacts' && (
-          <div>
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">共 {contacts.length} 条消息</h2>
-            {contacts.length === 0 ? (
-              <div className="text-center py-20 text-gray-400">暂无联系消息</div>
-            ) : (
-              <div className="space-y-3">
-                {contacts.map((c) => (
-                  <div key={c.id} className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center gap-3">
-                        <span className="font-medium text-gray-800">{c.name || '匿名'}</span>
-                        <span className="text-sm text-gray-400">{c.email}</span>
-                      </div>
-                      <span className="text-xs text-gray-400">{c.created_at?.split('T')[0]}</span>
-                    </div>
-                    <p className="text-gray-600 text-sm">{c.message}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        )}
-
-        {tab === 'settings' && (
-          <div>
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">网站设置</h2>
-            <div className="space-y-3">
-              {settings.map((s) => (
-                <div key={s.key} className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-sm font-medium text-purple-600 bg-purple-50 px-2 py-1 rounded-lg">{s.key}</span>
-                      <p className="text-gray-600 text-sm mt-2">{s.value}</p>
-                    </div>
-                    <span className="text-xs text-gray-400">{s.updated_at?.split('T')[0]}</span>
-                  </div>
-                </div>
-              ))}
-              {settings.length === 0 && (
-                <div className="text-center py-20 text-gray-400">暂无设置项</div>
-              )}
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

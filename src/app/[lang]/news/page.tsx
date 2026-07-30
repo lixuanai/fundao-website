@@ -35,7 +35,7 @@ export default function NewsPage() {
 
   const categories = [
     { key: 'all', label: tNews('categories.all') },
-    { key: '机制解读', label: tNews('categories.mechanism') },
+    { key: '行业新闻', label: tNews('categories.mechanism') },
     { key: '生态合作', label: tNews('categories.partnership') },
     { key: '项目动态', label: tNews('categories.updates') },
   ];
@@ -45,7 +45,7 @@ export default function NewsPage() {
     : articles.filter(a => a.category === activeCategory);
 
   const tagColors: Record<string, string> = {
-    '机制解读': 'tag-purple',
+    '行业新闻': 'tag-purple',
     '生态合作': 'tag-cyan',
     '项目动态': 'tag-pink',
   };
