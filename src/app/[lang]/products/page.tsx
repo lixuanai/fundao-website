@@ -19,31 +19,31 @@ export default function ProductsPage() {
   const stepIcons = ['📝', '', '🗳️', '🚀'];
 
   return (
-    <div className="min-h-screen pt-24 pb-20">
+    <div className="min-h-screen pt-20 sm:pt-24 pb-12 sm:pb-20">
       <div className="absolute inset-0 mesh-gradient opacity-30 pointer-events-none"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-16">
           <span className="tag-purple mb-4 inline-block">{t('featuresBadge')}</span>
-          <h1 className="text-4xl md:text-5xl font-black mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl font-black mb-4">
             <span className="gradient-text">{t('title')}</span>
           </h1>
-          <p className="text-gray-500 text-lg">{t('subtitle')}</p>
+          <p className="text-gray-500 text-base sm:text-lg">{t('subtitle')}</p>
         </div>
 
         {/* Features grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 mb-12 sm:mb-20">
           {features.map((feature, index) => {
             const g = gradients[index % 4];
             return (
               <div
                 key={index}
-                className={`bg-gradient-to-br ${g.bg} rounded-3xl p-8 card-hover border ${g.border} group`}
+                className={`bg-gradient-to-br ${g.bg} rounded-2xl sm:rounded-3xl p-5 sm:p-8 card-hover border ${g.border} group`}
               >
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${g.icon} flex items-center justify-center text-2xl mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
+                <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br ${g.icon} flex items-center justify-center text-xl sm:text-2xl mb-4 sm:mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
                   {icons[index]}
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-3">{feature.title}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-3">{feature.title}</h3>
                 <p className="text-gray-500 leading-relaxed">{feature.description}</p>
               </div>
             );
@@ -51,22 +51,22 @@ export default function ProductsPage() {
         </div>
 
         {/* Process steps */}
-        <div className="glass-card rounded-3xl p-8 md:p-12">
-          <div className="text-center mb-12">
+        <div className="glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12">
+          <div className="text-center mb-8 sm:mb-12">
             <span className="tag-cyan mb-4 inline-block">{t('processBadge')}</span>
-            <h2 className="text-3xl md:text-4xl font-black">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black">
               <span className="gradient-text">{t('process.title')}</span>
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8">
             {steps.map((step, index) => (
               <div key={index} className="relative text-center">
-                <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${gradients[index % 4].icon} flex items-center justify-center text-2xl shadow-lg`}>
+                <div className={`w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-2xl bg-gradient-to-br ${gradients[index % 4].icon} flex items-center justify-center text-2xl shadow-lg`}>
                   {stepIcons[index]}
                 </div>
-                <h3 className="text-lg font-bold text-gray-800 mb-2">{step.title}</h3>
-                <p className="text-gray-500 text-sm">{step.description}</p>
+                <h3 className="text-base sm:text-lg font-bold text-gray-800 mb-2">{step.title}</h3>
+                <p className="text-gray-500 text-xs sm:text-sm">{step.description}</p>
                 {index < steps.length - 1 && (
                   <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-purple-300 to-transparent -translate-x-8"></div>
                 )}

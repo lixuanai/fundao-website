@@ -336,21 +336,21 @@
       },
       "roadmap": {
         "title": "Development Roadmap",
-        "content": "FunDAO roadmap covers 2025-2026, from BSC ecosystem building to cross-chain expansion, from community governance to AI trading integration, gradually building a complete decentralized value-added ecosystem.",
+        "content": "FunDAO roadmap covers 2026-2027, from BSC ecosystem building to cross-chain expansion, from community governance to AI trading integration, gradually building a complete decentralized value-added ecosystem.",
         "phases": [
           {
             "phase": "Completed",
-            "date": "2025 Q2",
+            "date": "2026-2027",
             "items": "Protocol launch, token issuance, 13 institutional investors, 18x+ growth in 30 days, 7,739+ holder addresses"
           },
           {
             "phase": "Short-term Plan",
-            "date": "2025 Q3-Q4",
+            "date": "2026 Q2-Q4",
             "items": "Multi-language community building, liquidity enhancement, real-time data dashboard launch, community governance activation, ecosystem partnership deepening"
           },
           {
             "phase": "Mid-to-Long-term Plan",
-            "date": "2026+",
+            "date": "2027+",
             "items": "Cross-chain expansion (Ethereum, Solana), AI trading integration, FunDAO ecosystem fund, institutional-grade compliance, RWA exploration"
           }
         ]
@@ -430,22 +430,22 @@
       "title": "Development Journey",
       "milestones": [
         {
-          "date": "2025 Q2",
+          "date": "2026-2027",
           "title": "Protocol Launch",
           "description": "Smart contract development and audit completed, FUN token issued, 2 billion tokens injected into liquidity pool (95.24%), 13 top-tier institutional investors"
         },
         {
-          "date": "2025 Q3",
+          "date": "2026 Q3",
           "title": "Rapid Growth",
           "description": "18x+ growth in 30 days after launch, holder addresses exceeded 7,739, community scale rapidly expanded"
         },
         {
-          "date": "2025 Q4",
+          "date": "2026 Q4",
           "title": "Global Community Building",
           "description": "Multi-language community launched, real-time data dashboard released, community governance mechanism activated"
         },
         {
-          "date": "2026+",
+          "date": "2027+",
           "title": "Cross-Chain Expansion",
           "description": "Expand to Ethereum, Solana and other chains, AI trading integration, FunDAO ecosystem fund established"
         }

@@ -38,30 +38,30 @@ export default function WhitepaperPage() {
   const keyDataColors = ['from-blue-500 to-cyan-500', 'from-green-500 to-emerald-500', 'from-purple-500 to-pink-500', 'from-yellow-500 to-amber-500', 'from-cyan-500 to-blue-500', 'from-pink-500 to-rose-500', 'from-orange-500 to-red-500', 'from-indigo-500 to-violet-500'];
 
   return (
-    <div className="min-h-screen pt-24 pb-20">
+    <div className="min-h-screen pt-20 sm:pt-24 pb-12 sm:pb-20">
       <div className="mesh-gradient opacity-30"></div>
       
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-16">
           <div className="tag-purple mb-4 inline-block">
             {t('docBadge')}
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 gradient-text">
+          <h1 className="text-2xl sm:text-3xl md:text-6xl font-bold mb-4 gradient-text">
             {t('title')}
           </h1>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">{t('subtitle')}</p>
+          <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto">{t('subtitle')}</p>
           <p className="text-gray-500 text-sm mt-2">{t('version')}</p>
         </div>
 
         {/* Key Data Grid */}
-        <div className="glass-card rounded-3xl p-8 mb-16 card-hover">
-          <h2 className="text-2xl font-bold text-center gradient-text mb-6">
+        <div className="glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 mb-8 sm:mb-16 card-hover">
+          <h2 className="text-2xl font-bold text-center gradient-text mb-4 sm:mb-6">
             {t('keyDataTitle')}
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
             {keyData.map((item, i) => (
-              <div key={i} className="bg-white/50 rounded-2xl p-4 text-center card-hover">
+              <div key={i} className="bg-white/50 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-center card-hover">
                 <div className={`text-xl font-bold bg-gradient-to-r ${keyDataColors[i % keyDataColors.length]} bg-clip-text text-transparent`}>
                   {item.value}
                 </div>
@@ -72,20 +72,20 @@ export default function WhitepaperPage() {
         </div>
 
         {/* Section 1: Overview */}
-        <div className="glass-card rounded-3xl p-8 mb-8 card-hover">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-xl">📋</span>
+        <div className="glass-card rounded-3xl p-8 mb-6 sm:mb-8 card-hover">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-3">
+            <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-lg sm:text-xl">📋</span>
             {t('sections.overview.title')}
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-6">{t('sections.overview.content')}</p>
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+          <p className="text-gray-700 leading-relaxed mb-4 sm:mb-4 sm:mb-6">{t('sections.overview.content')}</p>
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl sm:rounded-xl sm:rounded-2xl p-3 sm:p-4 sm:p-6">
+            <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4">
               {t('sections.overview.highlightsTitle')}
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-1.5 sm:space-y-2 sm:space-y-3">
               {overviewHighlights.map((h, i) => (
                 <li key={i} className="flex items-start">
-                  <span className="text-purple-600 mr-2 text-xl">✦</span>
+                  <span className="text-purple-600 mr-2 text-lg sm:text-xl">✦</span>
                   <span className="text-gray-700">{h}</span>
                 </li>
               ))}
@@ -94,19 +94,19 @@ export default function WhitepaperPage() {
         </div>
 
         {/* Section 2: Tokenomics */}
-        <div className="glass-card rounded-3xl p-8 mb-8 card-hover">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-xl">💎</span>
+        <div className="glass-card rounded-3xl p-8 mb-6 sm:mb-8 card-hover">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-3">
+            <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-lg sm:text-xl">💎</span>
             {t('sections.tokenomics.title')}
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-6">{t('sections.tokenomics.content')}</p>
+          <p className="text-gray-700 leading-relaxed mb-4 sm:mb-4 sm:mb-6">{t('sections.tokenomics.content')}</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+            <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl sm:rounded-xl sm:rounded-2xl p-3 sm:p-4 sm:p-6">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4">
                 {t('sections.tokenomics.tokenInfo')}
               </h3>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
                 <li className="flex justify-between"><span className="text-gray-600">{t('sections.tokenomics.tokenNameLabel')}</span><span className="font-semibold text-gray-900">{tokenomics.tokenName}</span></li>
                 <li className="flex justify-between"><span className="text-gray-600">{t('sections.tokenomics.totalSupplyLabel')}</span><span className="font-semibold text-gray-900">{tokenomics.totalSupply}</span></li>
                 <li className="flex justify-between"><span className="text-gray-600">{t('sections.tokenomics.lpInjectionLabel')}</span><span className="font-semibold text-gray-900">{tokenomics.lpInjection}</span></li>
@@ -116,8 +116,8 @@ export default function WhitepaperPage() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl sm:rounded-xl sm:rounded-2xl p-3 sm:p-4 sm:p-6">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4">
                 {t('sections.tokenomics.fundAllocationTitle')}
               </h3>
               <div className="space-y-4">
@@ -154,45 +154,45 @@ export default function WhitepaperPage() {
         </div>
 
         {/* Section 3: Mechanism */}
-        <div className="glass-card rounded-3xl p-8 mb-8 card-hover">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center text-xl">⚙️</span>
+        <div className="glass-card rounded-3xl p-8 mb-6 sm:mb-8 card-hover">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-3">
+            <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center text-lg sm:text-xl">⚙️</span>
             {t('sections.mechanism.title')}
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-6">{t('sections.mechanism.content')}</p>
+          <p className="text-gray-700 leading-relaxed mb-4 sm:mb-4 sm:mb-6">{t('sections.mechanism.content')}</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {fourMechanisms.map((m, i) => (
-              <div key={i} className="bg-white/50 rounded-2xl p-5 card-hover">
+              <div key={i} className="bg-white/50 rounded-xl sm:rounded-xl sm:rounded-2xl p-3 sm:p-4 sm:p-5 card-hover">
                 <div className="flex items-center gap-3 mb-3">
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${mechanismColors[i]} flex items-center justify-center text-2xl`}>
                     {mechanismIcons[i]}
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900">{m.name}</h3>
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900">{m.name}</h3>
                 </div>
-                <p className="text-gray-700 text-sm">{m.description}</p>
+                <p className="text-gray-700 text-xs sm:text-sm">{m.description}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Section 4: Rewards */}
-        <div className="glass-card rounded-3xl p-8 mb-8 card-hover">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-xl">💰</span>
+        <div className="glass-card rounded-3xl p-8 mb-6 sm:mb-8 card-hover">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-3">
+            <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-lg sm:text-xl">💰</span>
             {t('sections.rewards.title')}
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-6">{t('sections.rewards.content')}</p>
+          <p className="text-gray-700 leading-relaxed mb-4 sm:mb-4 sm:mb-6">{t('sections.rewards.content')}</p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {rewardPillars.map((p, i) => {
               const colors = ['from-purple-500 to-pink-500', 'from-cyan-500 to-blue-500', 'from-green-500 to-emerald-500'];
               return (
-                <div key={i} className="bg-white/50 rounded-2xl p-5 card-hover">
+                <div key={i} className="bg-white/50 rounded-xl sm:rounded-xl sm:rounded-2xl p-3 sm:p-4 sm:p-5 card-hover">
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${colors[i]} flex items-center justify-center text-white font-bold text-xl mb-3`}>
                     {i + 1}
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{p.name}</h3>
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">{p.name}</h3>
                   <p className="text-gray-700 text-sm mb-3">{p.description}</p>
                   <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-3">
                     <p className="text-purple-600 text-sm italic">{p.example}</p>
@@ -204,34 +204,34 @@ export default function WhitepaperPage() {
         </div>
 
         {/* Section 5: Security */}
-        <div className="glass-card rounded-3xl p-8 mb-8 card-hover">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-xl">🔒</span>
+        <div className="glass-card rounded-3xl p-8 mb-6 sm:mb-8 card-hover">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-3">
+            <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-lg sm:text-xl">🔒</span>
             {t('sections.security.title')}
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-6">{t('sections.security.content')}</p>
+          <p className="text-gray-700 leading-relaxed mb-4 sm:mb-4 sm:mb-6">{t('sections.security.content')}</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-5">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl sm:rounded-xl sm:rounded-2xl p-3 sm:p-4 sm:p-5">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3">
                 {t('sections.security.sixNoTitle')}
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-1.5 sm:space-y-2">
                 {sixNo.map((item, i) => (
-                  <li key={i} className="flex items-start text-sm">
+                  <li key={i} className="flex items-start text-xs sm:text-sm">
                     <span className="text-green-600 mr-2">✓</span>
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-5">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl sm:rounded-xl sm:rounded-2xl p-3 sm:p-4 sm:p-5">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3">
                 {t('sections.security.modulesTitle')}
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-1.5 sm:space-y-2">
                 {modules.map((item, i) => (
-                  <li key={i} className="flex items-start text-sm">
+                  <li key={i} className="flex items-start text-xs sm:text-sm">
                     <span className="text-blue-600 mr-2">{i + 1}.</span>
                     <span className="text-gray-700">{item}</span>
                   </li>
@@ -242,34 +242,34 @@ export default function WhitepaperPage() {
         </div>
 
         {/* Section 6: Governance */}
-        <div className="glass-card rounded-3xl p-8 mb-8 card-hover">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-xl">🏛️</span>
+        <div className="glass-card rounded-3xl p-8 mb-6 sm:mb-8 card-hover">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-3">
+            <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-lg sm:text-xl">🏛️</span>
             {t('sections.governance.title')}
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-6">{t('sections.governance.content')}</p>
+          <p className="text-gray-700 leading-relaxed mb-4 sm:mb-4 sm:mb-6">{t('sections.governance.content')}</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-5">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl sm:rounded-xl sm:rounded-2xl p-3 sm:p-4 sm:p-5">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3">
                 {t('sections.governance.principlesTitle')}
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-1.5 sm:space-y-2">
                 {govPrinciples.map((item, i) => (
-                  <li key={i} className="flex items-start text-sm">
+                  <li key={i} className="flex items-start text-xs sm:text-sm">
                     <span className="text-purple-600 mr-2">◆</span>
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-5">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl sm:rounded-xl sm:rounded-2xl p-3 sm:p-4 sm:p-5">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3">
                 {t('sections.governance.evolutionTitle')}
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-1.5 sm:space-y-2">
                 {govEvolution.map((item, i) => (
-                  <li key={i} className="flex items-start text-sm">
+                  <li key={i} className="flex items-start text-xs sm:text-sm">
                     <span className="text-cyan-600 mr-2">→</span>
                     <span className="text-gray-700">{item}</span>
                   </li>
@@ -280,21 +280,21 @@ export default function WhitepaperPage() {
         </div>
 
         {/* Section 7: Roadmap */}
-        <div className="glass-card rounded-3xl p-8 mb-8 card-hover">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center text-xl">🗺️</span>
+        <div className="glass-card rounded-3xl p-8 mb-6 sm:mb-8 card-hover">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-3">
+            <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center text-lg sm:text-xl">🗺️</span>
             {t('sections.roadmap.title')}
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-6">{t('sections.roadmap.content')}</p>
+          <p className="text-gray-700 leading-relaxed mb-4 sm:mb-4 sm:mb-6">{t('sections.roadmap.content')}</p>
 
           <div className="space-y-4">
             {roadmapPhases.map((phase, i) => (
-              <div key={i} className={`bg-white/50 rounded-2xl p-5 border-l-4 ${phaseColors[i % phaseColors.length]} card-hover`}>
+              <div key={i} className={`bg-white/50 rounded-xl sm:rounded-xl sm:rounded-2xl p-3 sm:p-4 sm:p-5 border-l-4 ${phaseColors[i % phaseColors.length]} card-hover`}>
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-semibold text-gray-900">{phase.phase}</h3>
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900">{phase.phase}</h3>
                   <span className={`text-sm font-medium ${phaseTextColors[i % phaseTextColors.length]}`}>{phase.date}</span>
                 </div>
-                <p className="text-gray-600 text-sm">{phase.items}</p>
+                <p className="text-gray-600 text-xs sm:text-sm">{phase.items}</p>
               </div>
             ))}
           </div>
