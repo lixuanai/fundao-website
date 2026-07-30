@@ -281,3 +281,245 @@ body {
   border-radius: 4px;
   height: 8px;
 }
+
+/* === Dynamic Light & Shadow Effects === */
+
+/* Aurora background */
+.aurora-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.aurora-bg::before,
+.aurora-bg::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+}
+
+.aurora-bg::before {
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(135deg, #7C3AED, #EC4899);
+  top: -200px;
+  left: -100px;
+  animation: auroraMove1 12s ease-in-out infinite;
+}
+
+.aurora-bg::after {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, #06B6D4, #7C3AED);
+  bottom: -150px;
+  right: -100px;
+  animation: auroraMove2 15s ease-in-out infinite;
+}
+
+@keyframes auroraMove1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(100px, 50px) scale(1.1); }
+  50% { transform: translate(50px, 100px) scale(0.9); }
+  75% { transform: translate(-50px, 50px) scale(1.05); }
+}
+
+@keyframes auroraMove2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-80px, -60px) scale(1.15); }
+  66% { transform: translate(60px, -30px) scale(0.95); }
+}
+
+/* Floating light orbs - enhanced */
+.light-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+.light-orb-1 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.25) 0%, transparent 70%);
+  top: 10%;
+  left: 5%;
+  animation: orbFloat1 10s ease-in-out infinite;
+}
+
+.light-orb-2 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, transparent 70%);
+  top: 40%;
+  right: 10%;
+  animation: orbFloat2 13s ease-in-out infinite;
+}
+
+.light-orb-3 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
+  bottom: 20%;
+  left: 30%;
+  animation: orbFloat3 11s ease-in-out infinite;
+}
+
+.light-orb-4 {
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
+  top: 60%;
+  left: 60%;
+  animation: orbFloat4 14s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.25; }
+  25% { transform: translate(60px, 40px) scale(1.2); opacity: 0.35; }
+  50% { transform: translate(30px, 80px) scale(0.8); opacity: 0.2; }
+  75% { transform: translate(-40px, 30px) scale(1.1); opacity: 0.3; }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+  30% { transform: translate(-50px, 60px) scale(1.15); opacity: 0.3; }
+  60% { transform: translate(40px, -30px) scale(0.9); opacity: 0.15; }
+}
+
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+  40% { transform: translate(70px, -40px) scale(1.1); opacity: 0.3; }
+  80% { transform: translate(-30px, 50px) scale(0.85); opacity: 0.15; }
+}
+
+@keyframes orbFloat4 {
+  0%, 100% { transform: translate(0, 0); opacity: 0.15; }
+  50% { transform: translate(-60px, -50px); opacity: 0.25; }
+}
+
+/* Light beam sweep effect */
+.light-beam {
+  position: absolute;
+  width: 2px;
+  height: 200px;
+  background: linear-gradient(to bottom, transparent, rgba(124, 58, 237, 0.3), transparent);
+  pointer-events: none;
+  animation: beamSweep 8s linear infinite;
+}
+
+.light-beam-1 {
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.light-beam-2 {
+  left: 50%;
+  animation-delay: 3s;
+  height: 150px;
+  background: linear-gradient(to bottom, transparent, rgba(236, 72, 153, 0.2), transparent);
+}
+
+.light-beam-3 {
+  left: 80%;
+  animation-delay: 5s;
+  height: 180px;
+  background: linear-gradient(to bottom, transparent, rgba(6, 182, 212, 0.25), transparent);
+}
+
+@keyframes beamSweep {
+  0% { top: -200px; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: calc(100vh + 200px); opacity: 0; }
+}
+
+/* Particle sparkle */
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+.sparkle-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white;
+  pointer-events: none;
+  box-shadow: 0 0 6px 2px rgba(124, 58, 237, 0.5);
+}
+
+/* Gradient wave background */
+.gradient-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 200px;
+  background: linear-gradient(90deg, 
+    rgba(124, 58, 237, 0.03) 0%, 
+    rgba(236, 72, 153, 0.05) 25%, 
+    rgba(6, 182, 212, 0.03) 50%, 
+    rgba(124, 58, 237, 0.05) 75%, 
+    rgba(236, 72, 153, 0.03) 100%
+  );
+  animation: waveShift 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes waveShift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pulsing ring */
+@keyframes pulseRing {
+  0% { transform: scale(0.8); opacity: 0.3; }
+  50% { transform: scale(1.2); opacity: 0.1; }
+  100% { transform: scale(0.8); opacity: 0.3; }
+}
+
+.pulse-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(124, 58, 237, 0.2);
+  pointer-events: none;
+  animation: pulseRing 4s ease-in-out infinite;
+}
+
+/* Enhanced mesh gradient with animation */
+.mesh-gradient-animated {
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(124, 58, 237, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(236, 72, 153, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(6, 182, 212, 0.06) 0%, transparent 50%);
+  animation: meshShift 15s ease-in-out infinite;
+}
+
+@keyframes meshShift {
+  0%, 100% { 
+    background: 
+      radial-gradient(ellipse at 20% 50%, rgba(124, 58, 237, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(236, 72, 153, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 80%, rgba(6, 182, 212, 0.06) 0%, transparent 50%);
+  }
+  33% { 
+    background: 
+      radial-gradient(ellipse at 40% 30%, rgba(124, 58, 237, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at 60% 70%, rgba(236, 72, 153, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 30% 60%, rgba(6, 182, 212, 0.06) 0%, transparent 50%);
+  }
+  66% { 
+    background: 
+      radial-gradient(ellipse at 70% 60%, rgba(124, 58, 237, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 30% 40%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at 60% 30%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+  }
+}
