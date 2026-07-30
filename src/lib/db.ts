@@ -64,54 +64,80 @@ interface Contact {
 
 let cache: DB | null = null;
 
-function ensureDir(): boolean {
+function genId(): string {
+  return 'id_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+}
+
+function tryWriteDB(data: DB) {
   try {
     if (!existsSync(DB_DIR)) mkdirSync(DB_DIR, { recursive: true });
-    return true;
+    writeFileSync(DB_PATH, JSON.stringify(data, null, 2));
   } catch {
-    return false; // read-only filesystem (e.g. Vercel)
+    // read-only filesystem (Vercel) — data lives in memory only
   }
 }
 
-function loadDB(): DB {
-  if (cache) return cache;
-  if (existsSync(DB_PATH)) {
-    try {
-      cache = JSON.parse(readFileSync(DB_PATH, 'utf-8'));
-      return cache!;
-    } catch {
-      // corrupted file, re-seed
-    }
-  }
-  // Initialize empty DB and seed
-  cache = {
-    articles: [],
+function buildSeedDB(): DB {
+  const now = new Date().toISOString();
+  const articles: Article[] = (seedArticlesData as any[]).map((a: any) => ({
+    id: a.id || genId(),
+    title_zh: a.title_zh || '',
+    title_en: a.title_en || '',
+    slug: a.slug || '',
+    category: a.category || '',
+    content_zh: a.content_zh || '',
+    content_en: a.content_en || '',
+    excerpt_zh: a.excerpt_zh || '',
+    excerpt_en: a.excerpt_en || '',
+    cover_image: a.cover_image || '',
+    tags: a.tags || '',
+    published: a.published ?? 1,
+    created_at: a.created_at || now,
+    updated_at: a.updated_at || now,
+  }));
+  return {
+    articles,
     page_content: [],
     site_settings: [],
-    api_keys: [],
+    api_keys: [{
+      id: 'key-1',
+      name: 'agent-default',
+      key: 'fundao_agent_8caa8e1209a44a05a0a0e5f990a6a577',
+      permissions: 'write',
+      active: 1,
+      created_at: now,
+    }],
     contacts: [],
   };
-  try { seedData(); } catch { /* read-only FS, seed in-memory only */ }
+}
+
+function loadDB(): DB {
+  if (cache) return cache!;
+
+  // Try reading persisted DB file first
+  if (existsSync(DB_PATH)) {
+    try {
+      const parsed = JSON.parse(readFileSync(DB_PATH, 'utf-8'));
+      if (parsed.articles && parsed.articles.length > 0) {
+        cache = parsed;
+        return cache!;
+      }
+    } catch { /* corrupted, fall through to seed */ }
+  }
+
+  // Build fresh DB from committed seed data (works on Vercel — no file write needed)
+  cache = buildSeedDB();
+  tryWriteDB(cache); // best-effort persist
   return cache!;
 }
 
 function saveDB() {
-  if (!ensureDir()) return; // read-only filesystem
-  try {
-    writeFileSync(DB_PATH, JSON.stringify(cache, null, 2));
-  } catch {
-    // read-only filesystem, data lives in memory only
-  }
-}
-
-function genId(): string {
-  return 'id_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+  if (cache) tryWriteDB(cache);
 }
 
 function queryAll(sql: string, params: any[] = []): any[] {
   const db = loadDB();
   
-  // Simple SQL parser for our use cases
   if (sql.includes('FROM articles')) {
     let results = [...db.articles];
     if (sql.includes('WHERE published = 1')) results = results.filter(a => a.published === 1);
@@ -180,41 +206,6 @@ function upsertSetting(key: string, value: string) {
   const entry = { key, value, updated_at: new Date().toISOString() };
   if (idx >= 0) db.site_settings[idx] = entry;
   else db.site_settings.push(entry);
-  saveDB();
-}
-
-function seedData() {
-  const db = loadDB()!;
-  const now = new Date().toISOString();
-  
-  // Seed default API key
-  db.api_keys.push({
-    id: 'key-1',
-    name: 'agent-default',
-    key: 'fundao_agent_8caa8e1209a44a05a0a0e5f990a6a577',
-    permissions: 'write',
-    active: 1,
-    created_at: now,
-  });
-
-  // Seed articles from committed JSON file (works on Vercel)
-  const articles: Article[] = (seedArticlesData as any[]).map((a: any, i: number) => ({
-    id: a.id || genId(),
-    title_zh: a.title_zh || '',
-    title_en: a.title_en || '',
-    slug: a.slug || '',
-    category: a.category || '',
-    content_zh: a.content_zh || '',
-    content_en: a.content_en || '',
-    excerpt_zh: a.excerpt_zh || '',
-    excerpt_en: a.excerpt_en || '',
-    cover_image: a.cover_image || '',
-    tags: a.tags || '',
-    published: a.published ?? 1,
-    created_at: a.created_at || now,
-    updated_at: a.updated_at || now,
-  }));
-  db.articles = articles;
   saveDB();
 }
 
