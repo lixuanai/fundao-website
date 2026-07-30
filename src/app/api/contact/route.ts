@@ -1,14 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getDb, genId, queryAll, saveDb } from '@/lib/db';
+import { getDb, genId, queryAll, insertContact } from '@/lib/db';
 
 export async function GET() {
-  await getDb();
+  getDb();
   const contacts = queryAll("SELECT * FROM contacts ORDER BY created_at DESC");
   return NextResponse.json(contacts);
 }
 
 export async function POST(request: NextRequest) {
-  await getDb();
+  getDb();
   const body = await request.json();
 
   if (!body.message) {
@@ -16,12 +16,13 @@ export async function POST(request: NextRequest) {
   }
 
   const id = genId();
-  const db = await getDb();
-  db.run(
-    "INSERT INTO contacts (id, name, email, message) VALUES (?,?,?,?)",
-    [id, body.name || '', body.email || '', body.message]
-  );
-  saveDb();
+  insertContact({
+    id,
+    name: body.name || '',
+    email: body.email || '',
+    message: body.message,
+    created_at: new Date().toISOString(),
+  });
 
   return NextResponse.json({ success: true, message: 'Message received' });
 }
