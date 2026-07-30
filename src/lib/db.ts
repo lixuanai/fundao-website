@@ -64,31 +64,44 @@ interface Contact {
 
 let cache: DB | null = null;
 
-function ensureDir() {
-  if (!existsSync(DB_DIR)) mkdirSync(DB_DIR, { recursive: true });
+function ensureDir(): boolean {
+  try {
+    if (!existsSync(DB_DIR)) mkdirSync(DB_DIR, { recursive: true });
+    return true;
+  } catch {
+    return false; // read-only filesystem (e.g. Vercel)
+  }
 }
 
 function loadDB(): DB {
   if (cache) return cache;
-  ensureDir();
   if (existsSync(DB_PATH)) {
-    cache = JSON.parse(readFileSync(DB_PATH, 'utf-8'));
-  } else {
-    cache = {
-      articles: [],
-      page_content: [],
-      site_settings: [],
-      api_keys: [],
-      contacts: [],
-    };
-    seedData();
+    try {
+      cache = JSON.parse(readFileSync(DB_PATH, 'utf-8'));
+      return cache!;
+    } catch {
+      // corrupted file, re-seed
+    }
   }
+  // Initialize empty DB and seed
+  cache = {
+    articles: [],
+    page_content: [],
+    site_settings: [],
+    api_keys: [],
+    contacts: [],
+  };
+  try { seedData(); } catch { /* read-only FS, seed in-memory only */ }
   return cache!;
 }
 
 function saveDB() {
-  ensureDir();
-  writeFileSync(DB_PATH, JSON.stringify(cache, null, 2));
+  if (!ensureDir()) return; // read-only filesystem
+  try {
+    writeFileSync(DB_PATH, JSON.stringify(cache, null, 2));
+  } catch {
+    // read-only filesystem, data lives in memory only
+  }
 }
 
 function genId(): string {
