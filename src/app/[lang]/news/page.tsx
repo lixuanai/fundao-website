@@ -64,12 +64,12 @@ export default function NewsPage() {
         </div>
 
         {/* Category filter */}
-        <div className="flex justify-center gap-3 mb-12 flex-wrap">
+        <div className="flex gap-2 mb-12 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:justify-center sm:overflow-visible sm:pb-0">
           {categories.map((cat) => (
             <button
               key={cat.key}
               onClick={() => setActiveCategory(cat.key)}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
+              className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap flex-shrink-0 transition-all ${
                 activeCategory === cat.key
                   ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25'
                   : 'bg-white text-gray-600 border border-gray-200 hover:border-purple-300 hover:text-purple-600'
