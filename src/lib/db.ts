@@ -56,6 +56,7 @@ interface Contact {
   id: string;
   name: string;
   email: string;
+  subject: string;
   message: string;
   created_at: string;
 }
@@ -155,7 +156,7 @@ function deleteArticle(slug: string) {
 
 function insertContact(c: Contact) {
   const db = loadDB();
-  db.contacts.push(c);
+  db.contacts.push({ ...c, subject: c.subject || '' });
   saveDB();
 }
 

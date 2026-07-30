@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getDb, genId, queryAll, insertContact } from '@/lib/db';
+import { sendContactNotification } from '@/lib/email';
 
 export async function GET() {
   getDb();
@@ -16,13 +17,24 @@ export async function POST(request: NextRequest) {
   }
 
   const id = genId();
-  insertContact({
+  const contact = {
     id,
     name: body.name || '',
     email: body.email || '',
+    subject: body.subject || '',
     message: body.message,
     created_at: new Date().toISOString(),
-  });
+  };
+  insertContact(contact);
+
+  // Send email notification (non-blocking)
+  const adminEmail = process.env.ADMIN_EMAIL || 'contact@fundao.org';
+  sendContactNotification(adminEmail, {
+    name: contact.name,
+    email: contact.email,
+    subject: contact.subject,
+    message: contact.message,
+  }).catch(err => console.error('Email notification failed:', err));
 
   return NextResponse.json({ success: true, message: 'Message received' });
 }
