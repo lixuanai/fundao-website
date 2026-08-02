@@ -1,38 +1,18 @@
-'use client';
-import { useTranslations } from 'next-intl';
+import { Metadata } from 'next';
+import LegalClient from './LegalClient';
 
-export default function TermsOfServicePage() {
-  const t = useTranslations('legal.terms');
+export async function generateMetadata({ params: { lang } }: { params: { lang: string } }): Promise<Metadata> {
+  const isZh = lang === 'zh';
+  return {
+    title: isZh ? '服务条款' : 'Terms of Service',
+    description: isZh ? 'FunDAO 服务条款：使用 FunDAO 平台前请阅读以下条款。' : 'FunDAO Terms of Service: please read before using the FunDAO platform.',
+    alternates: {
+      canonical: `/${lang}/legal/terms`,
+      languages: { zh: `/zh/legal/terms`, en: `/en/legal/terms` },
+    },
+  };
+}
 
-  return (
-    <div className="min-h-screen pt-24 pb-20">
-      <div className="mesh-gradient opacity-30"></div>
-      
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="glass-card rounded-3xl p-8">
-          <h1 className="text-3xl md:text-4xl font-bold mb-8 gradient-text">
-            {t('title')}
-          </h1>
-          <div className="prose max-w-none space-y-6 text-gray-700">
-            <section>
-              <h2 className="text-xl font-semibold text-gray-900 mb-3">{t('section1.title')}</h2>
-              <p>{t('section1.content')}</p>
-            </section>
-            <section>
-              <h2 className="text-xl font-semibold text-gray-900 mb-3">{t('section2.title')}</h2>
-              <p>{t('section2.content')}</p>
-            </section>
-            <section>
-              <h2 className="text-xl font-semibold text-gray-900 mb-3">{t('section3.title')}</h2>
-              <p>{t('section3.content')}</p>
-            </section>
-            <section>
-              <h2 className="text-xl font-semibold text-gray-900 mb-3">{t('section4.title')}</h2>
-              <p>{t('section4.content')}</p>
-            </section>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+export default function LegalPage() {
+  return <LegalClient />;
 }

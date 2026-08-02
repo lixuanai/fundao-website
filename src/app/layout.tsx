@@ -2,8 +2,41 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'FunDAO - 全球首个去中心化增值平台',
-  description: 'FunDAO 通过每日 2.5% 通缩 + 智能熔断 + 自动收益分配 + 流动性缓冲池四重机制，打造去中心化金融新生态',
+  title: {
+    default: 'FunDAO - Decentralized Value Growth Protocol',
+    template: '%s | FunDAO',
+  },
+  description: 'FunDAO — the first decentralized value growth protocol. Daily 2.5% deflation, smart circuit breaker, auto yield distribution, and liquidity buffer pool.',
+  metadataBase: new URL('https://fundao.fun'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'zh': '/zh',
+      'en': '/en',
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'zh_CN',
+    alternateLocale: ['en_US'],
+    siteName: 'FunDAO',
+    title: 'FunDAO - Decentralized Value Growth Protocol',
+    description: 'FunDAO — the first decentralized value growth protocol with 2.5% daily deflation, smart circuit breaker, auto yield distribution, and liquidity buffer pool.',
+    url: 'https://fundao.fun',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'FunDAO' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FunDAO - Decentralized Value Growth Protocol',
+    description: 'FunDAO — the first decentralized value growth protocol with 2.5% daily deflation, smart circuit breaker, auto yield distribution, and liquidity buffer pool.',
+    images: ['/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: ['FunDAO', 'DeFi', 'decentralized finance', 'deflation', 'yield', 'blockchain', 'crypto', '去中心化金融', '通缩', '收益分配'],
+  authors: [{ name: 'FunDAO Team' }],
 };
 
 export default function RootLayout({

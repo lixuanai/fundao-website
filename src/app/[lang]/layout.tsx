@@ -1,5 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
+import { Metadata } from 'next';
 import { locales } from '../../../i18n.config';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -7,6 +8,22 @@ import DynamicBackground from '@/components/layout/DynamicBackground';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale }));
+}
+
+export async function generateMetadata({ params: { lang } }: { params: { lang: string } }): Promise<Metadata> {
+  const isZh = lang === 'zh';
+  return {
+    alternates: {
+      canonical: `/${lang}`,
+      languages: {
+        'zh': '/zh',
+        'en': '/en',
+      },
+    },
+    openGraph: {
+      locale: isZh ? 'zh_CN' : 'en_US',
+    },
+  };
 }
 
 export default async function LocaleLayout({
