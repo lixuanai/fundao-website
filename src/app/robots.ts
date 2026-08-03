@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://fundao.fun/sitemap.xml',
+    sitemap: 'https://www.fundao.fun/sitemap.xml',
   }
 }

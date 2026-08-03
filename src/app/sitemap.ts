@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ['zh', 'en']
   const pages = ['', '/about', '/products', '/news', '/whitepaper', '/contact', '/agent']
   const legalPages = ['/legal/privacy', '/legal/terms', '/legal/disclaimer']
-  const baseUrl = 'https://fundao.fun'
+  const baseUrl = 'https://www.fundao.fun'
 
   const allPages = [...pages, ...legalPages]
 

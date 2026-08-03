@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     template: '%s | FunDAO',
   },
   description: 'FunDAO — the first decentralized value growth protocol. Daily 2.5% deflation, smart circuit breaker, auto yield distribution, and liquidity buffer pool.',
-  metadataBase: new URL('https://fundao.fun'),
+  metadataBase: new URL('https://www.fundao.fun'),
   alternates: {
     canonical: '/',
     languages: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: 'FunDAO',
     title: 'FunDAO - Decentralized Value Growth Protocol',
     description: 'FunDAO — the first decentralized value growth protocol with 2.5% daily deflation, smart circuit breaker, auto yield distribution, and liquidity buffer pool.',
-    url: 'https://fundao.fun',
+    url: 'https://www.fundao.fun',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'FunDAO' }],
   },
   twitter: {
