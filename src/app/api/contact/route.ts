@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
   insertContact(contact);
 
   // Send email notification (non-blocking)
-  const adminEmail = process.env.ADMIN_EMAIL || 'contact@fundao.org';
+  const adminEmail = process.env.ADMIN_EMAIL || 'lfcpeipei@gmail.com';
   sendContactNotification(adminEmail, {
     name: contact.name,
     email: contact.email,
