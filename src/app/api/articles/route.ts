@@ -16,7 +16,17 @@ export async function GET(request: NextRequest) {
   sql += ` ORDER BY created_at DESC`;
 
   const articles = queryAll(sql, params);
-  return NextResponse.json(articles);
+  const categoryEnMap: Record<string, string> = {
+    '行业新闻': 'Industry News',
+    '生态合作': 'Ecosystem Partnerships',
+    '项目动态': 'Project Updates',
+    '机制解读': 'Mechanism Analysis',
+  };
+  const enriched = articles.map((a: any) => ({
+    ...a,
+    category_en: a.category_en || categoryEnMap[a.category] || a.category,
+  }));
+  return NextResponse.json(enriched);
 }
 
 export async function POST(request: NextRequest) {
