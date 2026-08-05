@@ -24,9 +24,6 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: s
     openGraph: {
       locale: isZh ? 'zh_CN' : 'en_US',
     },
-    other: {
-      'baidu-site-verification': 'codeva-SUNQeBA20G',
-    },
   };
 }
 
