@@ -11,6 +11,7 @@ interface Article {
   title_en: string;
   slug: string;
   category: string;
+  category_en: string;
   content_zh: string;
   content_en: string;
   cover_image: string;
@@ -78,7 +79,7 @@ export default function ArticleDetailPage({ params }: { params: { id: string; la
         <article className="glass-card rounded-3xl p-6 sm:p-8">
           <div className="flex items-center space-x-2 mb-6">
             <span className="tag-purple">
-              {article.category}
+              {currentLocale === 'zh' ? article.category : (article.category_en || article.category)}
             </span>
             <span className="text-sm text-gray-500">{article.created_at?.split('T')[0] || ''}</span>
           </div>

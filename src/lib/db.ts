@@ -19,6 +19,7 @@ interface Article {
   title_en: string;
   slug: string;
   category: string;
+  category_en: string;
   content_zh: string;
   content_en: string;
   excerpt_zh: string;
@@ -85,6 +86,7 @@ function buildSeedDB(): DB {
     title_en: a.title_en || '',
     slug: a.slug || '',
     category: a.category || '',
+    category_en: a.category_en || a.category,
     content_zh: a.content_zh || '',
     content_en: a.content_en || '',
     excerpt_zh: a.excerpt_zh || '',

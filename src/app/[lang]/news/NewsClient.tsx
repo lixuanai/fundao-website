@@ -11,6 +11,7 @@ interface Article {
   title_en: string;
   slug: string;
   category: string;
+  category_en: string;
   excerpt_zh: string;
   excerpt_en: string;
   created_at: string;
@@ -33,22 +34,31 @@ export default function NewsPage() {
       .catch(() => {});
   }, []);
 
+  const categoryKeys = ['行业新闻', '生态合作', '项目动态', '机制解读'];
+  const categoryEnMap: Record<string, string> = {
+    '行业新闻': 'Industry News',
+    '生态合作': 'Partnerships',
+    '项目动态': 'Updates',
+    '机制解读': 'Mechanisms',
+  };
+  const tagColors: Record<string, string> = {
+    '行业新闻': 'tag-purple',
+    '生态合作': 'tag-cyan',
+    '项目动态': 'tag-pink',
+    '机制解读': 'tag-purple',
+  };
+
   const categories = [
     { key: 'all', label: tNews('categories.all') },
-    { key: '行业新闻', label: tNews('categories.mechanism') },
-    { key: '生态合作', label: tNews('categories.partnership') },
-    { key: '项目动态', label: tNews('categories.updates') },
+    ...categoryKeys.map(k => ({
+      key: k,
+      label: currentLocale === 'zh' ? k : (categoryEnMap[k] || k),
+    })),
   ];
 
   const filteredArticles = activeCategory === 'all'
     ? articles
     : articles.filter(a => a.category === activeCategory);
-
-  const tagColors: Record<string, string> = {
-    '行业新闻': 'tag-purple',
-    '生态合作': 'tag-cyan',
-    '项目动态': 'tag-pink',
-  };
 
   return (
     <div className="min-h-screen pt-24 pb-20">
@@ -90,7 +100,7 @@ export default function NewsPage() {
             >
               <div className="flex items-center space-x-2 mb-4">
                 <span className={`text-xs px-3 py-1 rounded-full font-medium ${tagColors[article.category] || 'tag-purple'}`}>
-                  {article.category}
+                  {currentLocale === 'zh' ? article.category : (article.category_en || article.category)}
                 </span>
                 <span className="text-xs text-gray-400">{article.created_at?.split('T')[0] || ''}</span>
               </div>

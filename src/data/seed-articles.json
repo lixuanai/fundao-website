@@ -13,7 +13,8 @@
     "tags": "涨幅,通缩,社区",
     "published": 1,
     "created_at": "2026-07-30T00:00:00.000Z",
-    "updated_at": "2026-08-05T00:00:00.000Z"
+    "updated_at": "2026-08-05T00:00:00.000Z",
+    "category_en": "Industry News"
   },
   {
     "id": "id_seed_2",
@@ -29,7 +30,8 @@
     "tags": "通缩,销毁,熔断",
     "published": 1,
     "created_at": "2026-07-30T00:00:00.000Z",
-    "updated_at": "2026-07-30T00:00:00.000Z"
+    "updated_at": "2026-07-30T00:00:00.000Z",
+    "category_en": "Industry News"
   },
   {
     "id": "id_seed_3",
@@ -45,7 +47,8 @@
     "tags": "投资,机构,合作",
     "published": 1,
     "created_at": "2026-07-30T00:00:00.000Z",
-    "updated_at": "2026-08-05T00:00:00.000Z"
+    "updated_at": "2026-08-05T00:00:00.000Z",
+    "category_en": "Ecosystem Partnerships"
   },
   {
     "id": "id_seed_4",
@@ -61,7 +64,8 @@
     "tags": "路线图,多链,AI",
     "published": 1,
     "created_at": "2026-07-30T00:00:00.000Z",
-    "updated_at": "2026-07-30T00:00:00.000Z"
+    "updated_at": "2026-07-30T00:00:00.000Z",
+    "category_en": "Project Updates"
   },
   {
     "id": "id_ms7hvsicr2h87p",
@@ -77,7 +81,8 @@
     "tags": "涨幅,通缩,机构,DeFi",
     "published": 1,
     "created_at": "2026-07-30T12:33:35.508Z",
-    "updated_at": "2026-08-05T00:00:00.000Z"
+    "updated_at": "2026-08-05T00:00:00.000Z",
+    "category_en": "Industry News"
   },
   {
     "id": "deflationary_tokens_2026",
@@ -93,7 +98,8 @@
     "tags": "通缩,代币经济,DeFi,指南",
     "published": 1,
     "created_at": "2026-08-05T00:00:00.000Z",
-    "updated_at": "2026-08-05T00:00:00.000Z"
+    "updated_at": "2026-08-05T00:00:00.000Z",
+    "category_en": "Industry News"
   },
   {
     "id": "fundao_40day_performance",
@@ -109,7 +115,8 @@
     "tags": "数据,增长,DeFi,分析",
     "published": 1,
     "created_at": "2026-08-05T00:00:00.000Z",
-    "updated_at": "2026-08-05T00:00:00.000Z"
+    "updated_at": "2026-08-05T00:00:00.000Z",
+    "category_en": "Industry News"
   },
   {
     "id": "bull_market_defi_guide",
@@ -120,12 +127,13 @@
     "content_zh": "<h2>牛市来了，但99%的项目会归零</h2>\n<p>每一轮牛市都会诞生无数 DeFi 项目，但绝大多数最终归零。如何在早期识别有真实增长潜力的项目？以下是 5 个关键信号。</p>\n\n<h2>信号一：可持续的通缩机制</h2>\n<p>好的通缩不是一次性销毁，而是持续的、自动化的供应缩减。查看项目的智能合约，确认通缩机制是否写死在代码中，而非依赖项目方手动操作。</p>\n<p>✅ 案例：FunDAO 的每日 2.5% 通缩由智能合约自动执行，无需人工干预。</p>\n\n<h2>信号二：LP 高比例锁仓</h2>\n<p>流动性池（LP）锁仓比例低于 30% 的项目，项目方随时可以撤走流动性跑路。60% 以上的锁仓比例才是安全线。</p>\n<p>✅ 案例：FunDAO 的 LP 锁仓比例达 60%。</p>\n\n<h2>信号三：机构参投 + 透明融资</h2>\n<p>有知名机构参投的项目，经过尽职调查，跑路风险更低。但要注意：机构名字可以伪造，必须核实融资公告的真实性。</p>\n<p>✅ 案例：FunDAO 获得 13 家顶级加密基金参投。</p>\n\n<h2>信号四：智能安全机制</h2>\n<p>熔断保护、反鲸鱼机制、交易限额等安全设计，说明团队在认真做产品，而非单纯割韭菜。</p>\n<p>✅ 案例：FunDAO 的智能熔断机制在价格异常波动时自动保护持币者。</p>\n\n<h2>信号五：活跃的社区治理</h2>\n<p>真正的 DAO 项目应该有透明的治理流程、活跃的社区讨论、以及持币者对重大决策的投票权。</p>\n\n<h2>总结清单</h2>\n<table>\n<tr><th>信号</th><th>检查方法</th><th>安全线</th></tr>\n<tr><td>通缩机制</td><td>查智能合约</td><td>自动化执行</td></tr>\n<tr><td>LP锁仓</td><td>查锁仓合约</td><td>>60%</td></tr>\n<tr><td>机构参投</td><td>核实公告</td><td>>5家知名机构</td></tr>\n<tr><td>安全机制</td><td>查代码审计</td><td>有熔断+反鲸鱼</td></tr>\n<tr><td>社区治理</td><td>看Telegram/Discord</td><td>日活>1000</td></tr>\n</table>\n\n<p>👉 用这套标准评估 FunDAO：<a href=\"https://www.fundao.fun/zh/whitepaper\">FunDAO 白皮书</a></p>\n\n<h2>风险提示</h2>\n<p>以上信号仅供参考，不构成投资建议。加密货币投资具有高风险，请 DYOR。</p>",
     "content_en": "<h2>The Bull Market Is Here, But 99% of Projects Will Go to Zero</h2>\n<p>Every bull market spawns countless DeFi projects, but most eventually go to zero. How to identify projects with real growth potential early? Here are 5 key signals.</p>\n\n<h2>Signal 1: Sustainable Deflation Mechanism</h2>\n<p>Good deflation isn't a one-time burn — it's continuous, automated supply reduction. Check the smart contract to confirm deflation is hardcoded, not dependent on manual operations.</p>\n\n<h2>Signal 2: High LP Lock Ratio</h2>\n<p>Projects with LP lock ratios below 30% can have liquidity pulled at any time. 60%+ is the safety line.</p>\n\n<h2>Signal 3: Institutional Backing + Transparent Funding</h2>\n<p>Projects backed by known institutions have undergone due diligence, reducing rug-pull risk. Always verify funding announcements.</p>\n\n<h2>Signal 4: Smart Safety Mechanisms</h2>\n<p>Circuit breakers, anti-whale mechanisms, and transaction limits show the team is building a real product.</p>\n\n<h2>Signal 5: Active Community Governance</h2>\n<p>Real DAO projects should have transparent governance, active community discussions, and holder voting rights on major decisions.</p>\n\n<p>👉 Evaluate FunDAO with these criteria: <a href=\"https://www.fundao.fun/en/whitepaper\">FunDAO Whitepaper</a></p>\n\n<h2>Risk Disclaimer</h2>\n<p>These signals are for reference only and do not constitute investment advice. Crypto investment carries high risk. DYOR.</p>",
     "excerpt_zh": "牛市筛选DeFi项目的5个关键信号：通缩、锁仓、机构、安全、治理",
-    "excerpt_en": "5 key signals to筛选 DeFi projects in a bull market: deflation, locking, institutions, safety, governance",
+    "excerpt_en": "5 key signals to identify DeFi projects in a bull market: deflation, locking, institutions, safety, governance",
     "cover_image": "",
     "tags": "牛市,DeFi,投资指南,筛选",
     "published": 1,
     "created_at": "2026-08-05T00:00:00.000Z",
-    "updated_at": "2026-08-05T00:00:00.000Z"
+    "updated_at": "2026-08-05T00:00:00.000Z",
+    "category_en": "Industry News"
   },
   {
     "id": "fundao_four_mechanisms",
@@ -141,7 +149,8 @@
     "tags": "机制,通缩,熔断,分红,技术",
     "published": 1,
     "created_at": "2026-08-05T00:00:00.000Z",
-    "updated_at": "2026-08-05T00:00:00.000Z"
+    "updated_at": "2026-08-05T00:00:00.000Z",
+    "category_en": "Mechanism Analysis"
   },
   {
     "id": "defi_passive_income_2026",
@@ -157,6 +166,7 @@
     "tags": "被动收入,DeFi,新手,指南",
     "published": 1,
     "created_at": "2026-08-05T00:00:00.000Z",
-    "updated_at": "2026-08-05T00:00:00.000Z"
+    "updated_at": "2026-08-05T00:00:00.000Z",
+    "category_en": "Industry News"
   }
 ]

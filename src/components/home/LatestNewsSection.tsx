@@ -11,6 +11,7 @@ interface Article {
   title_en: string;
   slug: string;
   category: string;
+  category_en: string;
   excerpt_zh: string;
   excerpt_en: string;
   created_at: string;
@@ -61,7 +62,7 @@ export default function LatestNewsSection() {
             >
               <div className="flex items-center space-x-2 mb-3 sm:mb-4">
                 <span className="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full font-medium">
-                  {article.category}
+                  {currentLocale === 'zh' ? article.category : (article.category_en || article.category)}
                 </span>
                 <span className="text-xs text-gray-400">{article.created_at?.split('T')[0] || ''}</span>
               </div>
