@@ -282,8 +282,8 @@
         "pillars": [
           {
             "name": "Referral Contribution Reward 15%",
-            "description": "Directly refer new participants, referrers receive 15% of the referred person's participation amount as referral contribution reward. Instant到账, only counts direct referrals (no multi-level distribution), 15% high ratio industry-leading.",
-            "example": "A refers B, B participates with 1,000 U → A receives 150 U, instant到账"
+            "description": "Directly refer new participants, referrers receive 15% of the referred person's participation amount as referral contribution reward. Instantcredited, only counts direct referrals (no multi-level distribution), 15% high ratio industry-leading.",
+            "example": "A refers B, B participates with 1,000 U → A receives 150 U, instantcredited"
           },
           {
             "name": "Community Contribution Incentive 35%",
