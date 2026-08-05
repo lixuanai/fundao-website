@@ -26,16 +26,10 @@ export default function CTASection() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <Link
-            href={`/${currentLocale}/whitepaper`}
+            href={`/${currentLocale}/contact`}
             className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-white text-purple-600 font-bold text-base sm:text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-xl text-center"
           >
             {t('button')}
-          </Link>
-          <Link
-            href={`/${currentLocale}/contact`}
-            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full border-2 border-white/50 text-white font-bold text-base sm:text-lg hover:bg-white/10 transition-all text-center"
-          >
-            {tContact('contactUs')}
           </Link>
         </div>
       </div>
