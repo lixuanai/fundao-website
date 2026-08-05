@@ -5,6 +5,7 @@ import { locales } from '../../../i18n.config';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import DynamicBackground from '@/components/layout/DynamicBackground';
+import FloatingContact from '@/components/layout/FloatingContact';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale }));
@@ -43,6 +44,7 @@ export default async function LocaleLayout({
         <Header />
         <main className="min-h-screen relative z-10">{children}</main>
         <Footer />
+        <FloatingContact />
       </NextIntlClientProvider>
     </div>
   );

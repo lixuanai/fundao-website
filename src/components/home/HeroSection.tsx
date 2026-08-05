@@ -63,6 +63,12 @@ export default function HeroSection() {
             >
               {tAbout('about')}
             </Link>
+            <Link
+              href={`/${currentLocale}/contact`}
+              className="w-full sm:w-auto text-center px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-green-500 text-white font-semibold text-base sm:text-lg hover:bg-green-600 transition-all shadow-lg shadow-green-500/25 hover:shadow-green-500/40"
+            >
+              {tAbout('contact')}
+            </Link>
           </div>
 
           {/* Stats cards */}
