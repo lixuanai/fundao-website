@@ -120,6 +120,7 @@ export default function Header() {
                 <Link
                   href={`/${currentLocale}/contact`}
                   className="btn-gradient text-sm !py-2 !px-5 !rounded-full"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   {t('contact')}
                 </Link>
