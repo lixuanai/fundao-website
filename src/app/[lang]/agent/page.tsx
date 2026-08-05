@@ -9,8 +9,8 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: s
       ? 'FunDAO Agent 门户：API 文档、操作端口、开发者资源。'
       : 'FunDAO Agent Portal: API docs, operation endpoints, developer resources.',
     alternates: {
-      canonical: `/${lang}/agent`,
-      languages: { zh: '/zh/agent', en: '/en/agent' },
+      canonical: `https://www.fundao.fun/${lang}/agent`,
+      languages: { zh: 'https://www.fundao.fun/zh/agent', en: 'https://www.fundao.fun/en/agent' },
     },
   };
 }

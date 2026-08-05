@@ -15,8 +15,8 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: s
       ? 'FunDAO 通过每日 2.5% 通缩 + 智能熔断 + 自动收益分配 + 流动性缓冲池四重机制，打造去中心化金融新生态。'
       : 'FunDAO — the first decentralized value growth protocol with 2.5% daily deflation, smart circuit breaker, auto yield distribution, and liquidity buffer pool.',
     alternates: {
-      canonical: `/${lang}`,
-      languages: { zh: '/zh', en: '/en' },
+      canonical: `https://www.fundao.fun/${lang}`,
+      languages: { zh: 'https://www.fundao.fun/zh', en: 'https://www.fundao.fun/en' },
     },
   };
 }

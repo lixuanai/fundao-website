@@ -7,8 +7,8 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: s
     title: isZh ? '服务条款' : 'Terms of Service',
     description: isZh ? 'FunDAO 服务条款：使用 FunDAO 平台前请阅读以下条款。' : 'FunDAO Terms of Service: please read before using the FunDAO platform.',
     alternates: {
-      canonical: `/${lang}/legal/terms`,
-      languages: { zh: `/zh/legal/terms`, en: `/en/legal/terms` },
+      canonical: `https://www.fundao.fun/${lang}/legal/terms`,
+      languages: { zh: `https://www.fundao.fun/zh/legal/terms`, en: `https://www.fundao.fun/en/legal/terms` },
     },
   };
 }

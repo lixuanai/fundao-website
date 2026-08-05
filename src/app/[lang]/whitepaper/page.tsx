@@ -9,8 +9,8 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: s
       ? 'FunDAO 白皮书：代币经济模型、通缩机制、收益分配方案、发展路线图。'
       : 'FunDAO Whitepaper: tokenomics, deflation mechanism, yield distribution, roadmap.',
     alternates: {
-      canonical: `/${lang}/whitepaper`,
-      languages: { zh: '/zh/whitepaper', en: '/en/whitepaper' },
+      canonical: `https://www.fundao.fun/${lang}/whitepaper`,
+      languages: { zh: 'https://www.fundao.fun/zh/whitepaper', en: 'https://www.fundao.fun/en/whitepaper' },
     },
   };
 }

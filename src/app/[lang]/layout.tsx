@@ -14,10 +14,10 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: s
   const isZh = lang === 'zh';
   return {
     alternates: {
-      canonical: `/${lang}`,
+      canonical: `https://www.fundao.fun/${lang}`,
       languages: {
-        'zh': '/zh',
-        'en': '/en',
+        'zh': 'https://www.fundao.fun/zh',
+        'en': 'https://www.fundao.fun/en',
       },
     },
     openGraph: {

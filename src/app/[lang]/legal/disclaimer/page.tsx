@@ -7,8 +7,8 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: s
     title: isZh ? '风险声明' : 'Risk Disclaimer',
     description: isZh ? 'FunDAO 风险声明：投资加密货币存在风险，请谨慎决策。' : 'FunDAO Risk Disclaimer: cryptocurrency investment carries risks, please decide carefully.',
     alternates: {
-      canonical: `/${lang}/legal/disclaimer`,
-      languages: { zh: `/zh/legal/disclaimer`, en: `/en/legal/disclaimer` },
+      canonical: `https://www.fundao.fun/${lang}/legal/disclaimer`,
+      languages: { zh: `https://www.fundao.fun/zh/legal/disclaimer`, en: `https://www.fundao.fun/en/legal/disclaimer` },
     },
   };
 }

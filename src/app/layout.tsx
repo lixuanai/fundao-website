@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   description: 'FunDAO — the first decentralized value growth protocol. Daily 2.5% deflation, smart circuit breaker, auto yield distribution, and liquidity buffer pool.',
   metadataBase: new URL('https://www.fundao.fun'),
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.fundao.fun/',
     languages: {
-      'zh': '/zh',
-      'en': '/en',
+      'zh': 'https://www.fundao.fun/zh',
+      'en': 'https://www.fundao.fun/en',
     },
   },
   openGraph: {

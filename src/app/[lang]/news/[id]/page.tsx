@@ -31,8 +31,8 @@ export async function generateMetadata({ params }: { params: { id: string; lang:
     title,
     description,
     alternates: {
-      canonical: `/${params.lang}/news/${params.id}`,
-      languages: { zh: `/zh/news/${params.id}`, en: `/en/news/${params.id}` },
+      canonical: `https://www.fundao.fun/${params.lang}/news/${params.id}`,
+      languages: { zh: `https://www.fundao.fun/zh/news/${params.id}`, en: `https://www.fundao.fun/en/news/${params.id}` },
     },
     openGraph: {
       title,
