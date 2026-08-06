@@ -1,4 +1,6 @@
 import Script from 'next/script';
+import zhMessages from '@/messages/zh.json';
+import enMessages from '@/messages/en.json';
 import { Metadata } from 'next';
 import HeroSection from '@/components/home/HeroSection';
 import AdvantagesSection from '@/components/home/AdvantagesSection';
@@ -42,7 +44,25 @@ const organizationSchema = {
   },
 };
 
-export default function HomePage() {
+
+function getFaqSchema(lang: string) {
+  const messages = lang === 'zh' ? zhMessages : enMessages;
+  const faqItems = messages.home?.faq?.items || [];
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item: { question: string; answer: string }) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
+}
+
+export default function HomePage({ params: { lang } }: { params: { lang: string } }) {
   return (
     <>
       <Script
@@ -50,6 +70,12 @@ export default function HomePage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqSchema(lang)) }}
       />
       <HeroSection />
       <AdvantagesSection />
