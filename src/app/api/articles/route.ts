@@ -16,6 +16,7 @@ export async function GET(request: NextRequest) {
   sql += ` ORDER BY created_at DESC`;
 
   const articles = queryAll(sql, params);
+  // Force category_en mapping for all articles
   const categoryEnMap: Record<string, string> = {
     '行业新闻': 'Industry News',
     '生态合作': 'Ecosystem Partnerships',
