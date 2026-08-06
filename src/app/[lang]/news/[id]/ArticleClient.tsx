@@ -15,6 +15,7 @@ interface Article {
   content_zh: string;
   content_en: string;
   cover_image: string;
+  cover_image_en?: string;
   created_at: string;
   published: number;
 }
@@ -88,9 +89,9 @@ export default function ArticleDetailPage({ params }: { params: { id: string; la
             {title}
           </h1>
 
-          {article.cover_image && (
+          {((currentLocale === 'zh' ? article.cover_image : article.cover_image_en) || article.cover_image) && (
             <img
-              src={article.cover_image}
+              src={currentLocale === 'zh' ? article.cover_image : (article.cover_image_en || article.cover_image)}
               alt={title}
               className="w-full rounded-2xl mb-8 shadow-lg"
             />

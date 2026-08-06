@@ -14,7 +14,8 @@
     "published": 1,
     "created_at": "2026-07-30T00:00:00.000Z",
     "updated_at": "2026-08-05T00:00:00.000Z",
-    "category_en": "Industry News"
+    "category_en": "Industry News",
+    "cover_image_en": ""
   },
   {
     "id": "id_seed_2",
@@ -31,7 +32,8 @@
     "published": 1,
     "created_at": "2026-07-30T00:00:00.000Z",
     "updated_at": "2026-07-30T00:00:00.000Z",
-    "category_en": "Industry News"
+    "category_en": "Industry News",
+    "cover_image_en": ""
   },
   {
     "id": "id_seed_3",
@@ -48,7 +50,8 @@
     "published": 1,
     "created_at": "2026-07-30T00:00:00.000Z",
     "updated_at": "2026-08-05T00:00:00.000Z",
-    "category_en": "Ecosystem Partnerships"
+    "category_en": "Ecosystem Partnerships",
+    "cover_image_en": ""
   },
   {
     "id": "id_seed_4",
@@ -65,7 +68,8 @@
     "published": 1,
     "created_at": "2026-07-30T00:00:00.000Z",
     "updated_at": "2026-07-30T00:00:00.000Z",
-    "category_en": "Project Updates"
+    "category_en": "Project Updates",
+    "cover_image_en": ""
   },
   {
     "id": "id_ms7hvsicr2h87p",
@@ -82,7 +86,8 @@
     "published": 1,
     "created_at": "2026-07-30T12:33:35.508Z",
     "updated_at": "2026-08-05T00:00:00.000Z",
-    "category_en": "Industry News"
+    "category_en": "Industry News",
+    "cover_image_en": "/images/articles/image_20260730_202444_0.jpeg"
   },
   {
     "id": "deflationary_tokens_2026",
@@ -99,7 +104,8 @@
     "published": 1,
     "created_at": "2026-08-05T00:00:00.000Z",
     "updated_at": "2026-08-05T00:00:00.000Z",
-    "category_en": "Industry News"
+    "category_en": "Industry News",
+    "cover_image_en": ""
   },
   {
     "id": "fundao_40day_performance",
@@ -116,7 +122,8 @@
     "published": 1,
     "created_at": "2026-08-05T00:00:00.000Z",
     "updated_at": "2026-08-05T00:00:00.000Z",
-    "category_en": "Industry News"
+    "category_en": "Industry News",
+    "cover_image_en": ""
   },
   {
     "id": "bull_market_defi_guide",
@@ -133,7 +140,8 @@
     "published": 1,
     "created_at": "2026-08-05T00:00:00.000Z",
     "updated_at": "2026-08-05T00:00:00.000Z",
-    "category_en": "Industry News"
+    "category_en": "Industry News",
+    "cover_image_en": ""
   },
   {
     "id": "fundao_four_mechanisms",
@@ -150,7 +158,8 @@
     "published": 1,
     "created_at": "2026-08-05T00:00:00.000Z",
     "updated_at": "2026-08-05T00:00:00.000Z",
-    "category_en": "Mechanism Analysis"
+    "category_en": "Mechanism Analysis",
+    "cover_image_en": ""
   },
   {
     "id": "defi_passive_income_2026",
@@ -167,7 +176,8 @@
     "published": 1,
     "created_at": "2026-08-05T00:00:00.000Z",
     "updated_at": "2026-08-05T00:00:00.000Z",
-    "category_en": "Industry News"
+    "category_en": "Industry News",
+    "cover_image_en": ""
   },
   {
     "id": "defi-trends-2026",
@@ -184,7 +194,8 @@
     "tags": "DeFi,趋势,2026,机构,合规",
     "published": 1,
     "created_at": "2026-08-06T00:00:00.000Z",
-    "updated_at": "2026-08-06T00:00:00.000Z"
+    "updated_at": "2026-08-06T00:00:00.000Z",
+    "cover_image_en": "/images/articles/defi-trends-2026-en.svg"
   },
   {
     "id": "deflationary-tokenomics-guide",
@@ -201,7 +212,8 @@
     "tags": "通缩,代币经济学,销毁,长期持有",
     "published": 1,
     "created_at": "2026-08-06T00:00:00.000Z",
-    "updated_at": "2026-08-06T00:00:00.000Z"
+    "updated_at": "2026-08-06T00:00:00.000Z",
+    "cover_image_en": "/images/articles/deflationary-tokenomics-guide-en.svg"
   },
   {
     "id": "web3-passive-to-active-yield",
@@ -218,7 +230,8 @@
     "tags": "Web3,主动收益,流动性,策略",
     "published": 1,
     "created_at": "2026-08-06T00:00:00.000Z",
-    "updated_at": "2026-08-06T00:00:00.000Z"
+    "updated_at": "2026-08-06T00:00:00.000Z",
+    "cover_image_en": "/images/articles/web3-passive-to-active-yield-en.svg"
   },
   {
     "id": "fundao-multi-chain-expansion",
@@ -235,6 +248,7 @@
     "tags": "多链,跨链,生态,扩展",
     "published": 1,
     "created_at": "2026-08-06T00:00:00.000Z",
-    "updated_at": "2026-08-06T00:00:00.000Z"
+    "updated_at": "2026-08-06T00:00:00.000Z",
+    "cover_image_en": "/images/articles/fundao-multi-chain-expansion-en.svg"
   }
 ]

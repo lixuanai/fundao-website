@@ -25,6 +25,7 @@ interface Article {
   excerpt_zh: string;
   excerpt_en: string;
   cover_image: string;
+  cover_image_en: string;
   tags: string;
   published: number;
   created_at: string;
@@ -92,6 +93,7 @@ function buildSeedDB(): DB {
     excerpt_zh: a.excerpt_zh || '',
     excerpt_en: a.excerpt_en || '',
     cover_image: a.cover_image || '',
+    cover_image_en: a.cover_image_en || a.cover_image || '',
     tags: a.tags || '',
     published: a.published ?? 1,
     created_at: a.created_at || now,

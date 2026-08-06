@@ -53,6 +53,7 @@ export async function POST(request: NextRequest) {
     excerpt_zh: body.excerpt_zh || '',
     excerpt_en: body.excerpt_en || '',
     cover_image: body.cover_image || '',
+    cover_image_en: body.cover_image_en || body.cover_image || '',
     tags: body.tags || '',
     published: body.published ? 1 : 0,
     created_at: now,

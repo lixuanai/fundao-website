@@ -28,6 +28,7 @@ export async function PUT(request: NextRequest, { params }: { params: { slug: st
     tags: body.tags,
     published: body.published ? 1 : 0,
     cover_image: body.cover_image,
+    cover_image_en: body.cover_image_en || body.cover_image,
   });
   return NextResponse.json({ updated: true });
 }

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#grad2)"/>
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white" text-anchor="middle">Deflationary Tokenomics</text>
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" opacity="0.9">Why It Outperforms Inflation Models</text>
+  <text x="600" y="400" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" opacity="0.9">for Long-Term Holding</text>
+  <circle cx="300" cy="200" r="100" fill="white" opacity="0.15"/>
+  <circle cx="900" cy="450" r="150" fill="white" opacity="0.15"/>
+  <text x="600" y="520" font-family="Arial, sans-serif" font-size="48" fill="white" text-anchor="middle" opacity="0.8">↓ -2.5% Daily</text>
+</svg>
