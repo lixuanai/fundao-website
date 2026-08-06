@@ -47,6 +47,7 @@ export async function POST(request: NextRequest) {
     title_en: body.title_en || '',
     slug: body.slug || '',
     category: body.category || '项目动态',
+    category_en: body.category_en || '',
     content_zh: body.content_zh || '',
     content_en: body.content_en || '',
     excerpt_zh: body.excerpt_zh || '',
