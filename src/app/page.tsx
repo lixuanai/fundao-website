@@ -10,9 +10,12 @@ export const metadata: Metadata = {
 
 export default function RootPage() {
   return (
-    <div>
-      <meta name="baidu-site-verification" content="codeva-SUNQeBA20G" />
-      <p>Redirecting to <a href="/zh">FunDAO</a>...</p>
-    </div>
+    <>
+      <meta httpEquiv="refresh" content="0;url=/zh" />
+      <div style={{ textAlign: 'center', paddingTop: '40vh', fontFamily: 'system-ui, sans-serif' }}>
+        <p style={{ fontSize: '18px', color: '#666' }}>Redirecting to FunDAO...</p>
+        <p><a href="/zh" style={{ color: '#7c3aed' }}>Click here if not redirected</a></p>
+      </div>
+    </>
   );
 }
