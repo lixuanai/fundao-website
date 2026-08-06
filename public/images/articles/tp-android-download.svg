@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" rx="16" fill="#1a1a2e"/>
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#4facfe" text-anchor="middle">Android 下载方式</text>
+  <!-- Method 1: Google Play -->
+  <rect x="50" y="80" width="340" height="380" rx="16" fill="#16213e"/>
+  <text x="220" y="120" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#00f2fe" text-anchor="middle">方式一：Google Play</text>
+  <rect x="100" y="145" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="220" y="182" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">1. 打开 Google Play 商店</text>
+  <rect x="100" y="215" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="220" y="245" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">2. 搜索 "TokenPocket"</text>
+  <text x="220" y="265" font-family="Arial, sans-serif" font-size="14" fill="#aaa" text-anchor="middle">认准官方开发者</text>
+  <rect x="100" y="285" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="220" y="322" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">3. 点击「安装」</text>
+  <rect x="100" y="355" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="220" y="392" font-family="Arial, sans-serif" font-size="16" fill="#4facfe" text-anchor="middle">4. 等待下载完成</text>
+  <!-- Method 2: Official APK -->
+  <rect x="410" y="80" width="340" height="380" rx="16" fill="#16213e"/>
+  <text x="580" y="120" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#00f2fe" text-anchor="middle">方式二：官网下载 APK</text>
+  <rect x="460" y="145" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="580" y="175" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">1. 浏览器打开</text>
+  <text x="580" y="195" font-family="Arial, sans-serif" font-size="14" fill="#4facfe" text-anchor="middle">tokenpocket.pro</text>
+  <rect x="460" y="215" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="580" y="252" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">2. 点击「Android下载」</text>
+  <rect x="460" y="285" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="580" y="315" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">3. 允许安装未知来源</text>
+  <text x="580" y="335" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">设置 → 安全 → 未知来源</text>
+  <rect x="460" y="355" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="580" y="392" font-family="Arial, sans-serif" font-size="16" fill="#4facfe" text-anchor="middle">4. 安装 APK 文件</text>
+  <text x="400" y="485" font-family="Arial, sans-serif" font-size="14" fill="#aaa" text-anchor="middle">⚠️ 请务必从官方渠道下载，谨防假冒应用</text>
+</svg>

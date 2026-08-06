@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea" />
+      <stop offset="100%" style="stop-color:#764ba2" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="16" fill="url(#bg)"/>
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">What Is a Mnemonic Phrase?</text>
+  <text x="400" y="85" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" opacity="0.9">The "Master Key" to Your Wallet</text>
+  <rect x="100" y="120" width="600" height="280" rx="16" fill="white" opacity="0.15"/>
+  <rect x="130" y="145" width="160" height="50" rx="8" fill="white" opacity="0.2"/>
+  <text x="145" y="175" font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.7">1.</text>
+  <text x="170" y="175" font-family="Arial, sans-serif" font-size="16" fill="white">apple</text>
+  <rect x="320" y="145" width="160" height="50" rx="8" fill="white" opacity="0.2"/>
+  <text x="335" y="175" font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.7">2.</text>
+  <text x="360" y="175" font-family="Arial, sans-serif" font-size="16" fill="white">brave</text>
+  <rect x="510" y="145" width="160" height="50" rx="8" fill="white" opacity="0.2"/>
+  <text x="525" y="175" font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.7">3.</text>
+  <text x="550" y="175" font-family="Arial, sans-serif" font-size="16" fill="white">candy</text>
+  <rect x="130" y="210" width="160" height="50" rx="8" fill="white" opacity="0.2"/>
+  <text x="145" y="240" font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.7">4.</text>
+  <text x="170" y="240" font-family="Arial, sans-serif" font-size="16" fill="white">dream</text>
+  <rect x="320" y="210" width="160" height="50" rx="8" fill="white" opacity="0.2"/>
+  <text x="335" y="240" font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.7">5.</text>
+  <text x="360" y="240" font-family="Arial, sans-serif" font-size="16" fill="white">eagle</text>
+  <rect x="510" y="210" width="160" height="50" rx="8" fill="white" opacity="0.2"/>
+  <text x="525" y="240" font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.7">6.</text>
+  <text x="550" y="240" font-family="Arial, sans-serif" font-size="16" fill="white">forest</text>
+  <rect x="130" y="275" width="160" height="50" rx="8" fill="white" opacity="0.2"/>
+  <text x="145" y="305" font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.7">7.</text>
+  <text x="170" y="305" font-family="Arial, sans-serif" font-size="16" fill="white">garden</text>
+  <rect x="320" y="275" width="160" height="50" rx="8" fill="white" opacity="0.2"/>
+  <text x="335" y="305" font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.7">8.</text>
+  <text x="360" y="305" font-family="Arial, sans-serif" font-size="16" fill="white">house</text>
+  <rect x="510" y="275" width="160" height="50" rx="8" fill="white" opacity="0.2"/>
+  <text x="525" y="305" font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.7">9.</text>
+  <text x="550" y="305" font-family="Arial, sans-serif" font-size="16" fill="white">island</text>
+  <rect x="130" y="340" width="160" height="50" rx="8" fill="white" opacity="0.2"/>
+  <text x="145" y="370" font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.7">10.</text>
+  <text x="175" y="370" font-family="Arial, sans-serif" font-size="16" fill="white">jungle</text>
+  <rect x="320" y="340" width="160" height="50" rx="8" fill="white" opacity="0.2"/>
+  <text x="335" y="370" font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.7">11.</text>
+  <text x="365" y="370" font-family="Arial, sans-serif" font-size="16" fill="white">king</text>
+  <rect x="510" y="340" width="160" height="50" rx="8" fill="white" opacity="0.2"/>
+  <text x="525" y="370" font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.7">12.</text>
+  <text x="555" y="370" font-family="Arial, sans-serif" font-size="16" fill="white">love</text>
+  <text x="400" y="440" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">12 English Words = Full Control of Your Wallet</text>
+  <text x="400" y="470" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" opacity="0.8">Order matters! Must record in order 1-12</text>
+</svg>

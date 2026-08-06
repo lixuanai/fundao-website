@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" rx="16" fill="#1a1a2e"/>
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#4facfe" text-anchor="middle">Android Download Methods</text>
+  <rect x="50" y="80" width="340" height="380" rx="16" fill="#16213e"/>
+  <text x="220" y="120" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#00f2fe" text-anchor="middle">Method 1: Google Play</text>
+  <rect x="100" y="145" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="220" y="182" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">1. Open Google Play Store</text>
+  <rect x="100" y="215" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="220" y="245" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">2. Search "TokenPocket"</text>
+  <text x="220" y="265" font-family="Arial, sans-serif" font-size="14" fill="#aaa" text-anchor="middle">Verify official developer</text>
+  <rect x="100" y="285" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="220" y="322" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">3. Tap "Install"</text>
+  <rect x="100" y="355" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="220" y="392" font-family="Arial, sans-serif" font-size="16" fill="#4facfe" text-anchor="middle">4. Wait for download</text>
+  <rect x="410" y="80" width="340" height="380" rx="16" fill="#16213e"/>
+  <text x="580" y="120" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#00f2fe" text-anchor="middle">Method 2: Official APK</text>
+  <rect x="460" y="145" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="580" y="175" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">1. Open browser, go to</text>
+  <text x="580" y="195" font-family="Arial, sans-serif" font-size="14" fill="#4facfe" text-anchor="middle">tokenpocket.pro</text>
+  <rect x="460" y="215" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="580" y="252" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">2. Tap "Android Download"</text>
+  <rect x="460" y="285" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="580" y="315" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">3. Allow unknown sources</text>
+  <text x="580" y="335" font-family="Arial, sans-serif" font-size="12" fill="#aaa" text-anchor="middle">Settings → Security</text>
+  <rect x="460" y="355" width="240" height="60" rx="12" fill="#0f3460"/>
+  <text x="580" y="392" font-family="Arial, sans-serif" font-size="16" fill="#4facfe" text-anchor="middle">4. Install APK file</text>
+  <text x="400" y="485" font-family="Arial, sans-serif" font-size="14" fill="#aaa" text-anchor="middle">⚠️ Always download from official sources only</text>
+</svg>

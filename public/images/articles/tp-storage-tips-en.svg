@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#11998e" />
+      <stop offset="100%" style="stop-color:#38ef7d" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="16" fill="url(#bg)"/>
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">✅ Correct Backup Methods</text>
+  <rect x="60" y="90" width="320" height="180" rx="12" fill="white" opacity="0.2"/>
+  <text x="220" y="130" font-family="Arial, sans-serif" font-size="50" text-anchor="middle">📝</text>
+  <text x="220" y="170" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Paper Backup</text>
+  <text x="220" y="200" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Write down 12 words</text>
+  <text x="220" y="225" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Mark order 1-12</text>
+  <text x="220" y="250" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Store in safe place</text>
+  <rect x="420" y="90" width="320" height="180" rx="12" fill="white" opacity="0.2"/>
+  <text x="580" y="130" font-family="Arial, sans-serif" font-size="50" text-anchor="middle">🔐</text>
+  <text x="580" y="170" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Hardware Wallet</text>
+  <text x="580" y="200" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Ledger/Trezor etc.</text>
+  <text x="580" y="225" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Offline key storage</text>
+  <text x="580" y="250" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Most secure method</text>
+  <rect x="60" y="290" width="320" height="180" rx="12" fill="white" opacity="0.2"/>
+  <text x="220" y="330" font-family="Arial, sans-serif" font-size="50" text-anchor="middle">📋</text>
+  <text x="220" y="370" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Multiple Copies</text>
+  <text x="220" y="400" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Prepare 2-3 copies</text>
+  <text x="220" y="425" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Store in different locations</text>
+  <text x="220" y="450" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Prevent single point failure</text>
+  <rect x="420" y="290" width="320" height="180" rx="12" fill="white" opacity="0.2"/>
+  <text x="580" y="330" font-family="Arial, sans-serif" font-size="50" text-anchor="middle">🔒</text>
+  <text x="580" y="370" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Fireproof Safe</text>
+  <text x="580" y="400" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Use fireproof waterproof safe</text>
+  <text x="580" y="425" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Hide at home or bank vault</text>
+  <text x="580" y="450" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">For maximum protection</text>
+  <text x="400" y="490" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Recommended: Paper backup + Multiple copies + Fireproof safe</text>
+</svg>

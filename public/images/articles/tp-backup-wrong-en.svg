@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" rx="16" fill="#1a1a2e"/>
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ff6b6b" text-anchor="middle">❌ Wrong Backup Methods</text>
+  <rect x="60" y="90" width="320" height="150" rx="12" fill="#2d1b1b"/>
+  <text x="220" y="130" font-family="Arial, sans-serif" font-size="50" text-anchor="middle">📱</text>
+  <text x="220" y="170" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b" text-anchor="middle">Screenshot</text>
+  <text x="220" y="200" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">May sync to cloud</text>
+  <text x="220" y="225" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">Phone lost = backup lost</text>
+  <rect x="420" y="90" width="320" height="150" rx="12" fill="#2d1b1b"/>
+  <text x="580" y="130" font-family="Arial, sans-serif" font-size="50" text-anchor="middle">💬</text>
+  <text x="580" y="170" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b" text-anchor="middle">WeChat/Message</text>
+  <text x="580" y="200" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">Chat logs can be stolen</text>
+  <text x="580" y="225" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">Servers keep records</text>
+  <rect x="60" y="260" width="320" height="150" rx="12" fill="#2d1b1b"/>
+  <text x="220" y="300" font-family="Arial, sans-serif" font-size="50" text-anchor="middle">📧</text>
+  <text x="220" y="340" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b" text-anchor="middle">Email/Notes</text>
+  <text x="220" y="370" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">Email hacked = assets lost</text>
+  <text x="220" y="395" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">Cloud storage not safe</text>
+  <rect x="420" y="260" width="320" height="150" rx="12" fill="#2d1b1b"/>
+  <text x="580" y="300" font-family="Arial, sans-serif" font-size="50" text-anchor="middle">🗣️</text>
+  <text x="580" y="340" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b" text-anchor="middle">Tell Others</text>
+  <text x="580" y="370" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">Trust no one</text>
+  <text x="580" y="395" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">Including "support"</text>
+  <text x="400" y="435" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f0883e" text-anchor="middle">All methods above can lead to asset loss!</text>
+</svg>

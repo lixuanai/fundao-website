@@ -129,6 +129,7 @@ function loadDB(): DB {
           '生态合作': 'Ecosystem Partnerships',
           '项目动态': 'Project Updates',
           '机制解读': 'Mechanism Analysis',
+          '新手指南': 'Beginner Guide',
         };
         parsed.articles = parsed.articles.map((a: any) => ({
           ...a,

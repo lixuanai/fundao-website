@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00c9ff" />
+      <stop offset="100%" style="stop-color:#92fe9d" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="16" fill="url(#bg)"/>
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">第三步：验证助记词</text>
+  <text x="400" y="85" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" opacity="0.9">按顺序点击正确的单词</text>
+  <!-- Verification area -->
+  <rect x="100" y="120" width="600" height="120" rx="12" fill="white" opacity="0.2"/>
+  <text x="400" y="155" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" opacity="0.8">请按顺序点击：</text>
+  <!-- Selected words display -->
+  <rect x="130" y="175" width="100" height="40" rx="8" fill="white" opacity="0.3"/>
+  <text x="180" y="200" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">apple</text>
+  <rect x="250" y="175" width="100" height="40" rx="8" fill="white" opacity="0.3"/>
+  <text x="300" y="200" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">brave</text>
+  <rect x="370" y="175" width="100" height="40" rx="8" fill="white" opacity="0.3"/>
+  <text x="420" y="200" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">candy</text>
+  <rect x="490" y="175" width="100" height="40" rx="8" fill="white" opacity="0.15" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="540" y="200" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">?</text>
+  <!-- Word buttons -->
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" opacity="0.8">点击下方正确的单词：</text>
+  <rect x="100" y="300" width="120" height="45" rx="8" fill="white" opacity="0.2"/>
+  <text x="160" y="328" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">dream</text>
+  <rect x="240" y="300" width="120" height="45" rx="8" fill="white" opacity="0.2"/>
+  <text x="300" y="328" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">eagle</text>
+  <rect x="380" y="300" width="120" height="45" rx="8" fill="#4facfe"/>
+  <text x="440" y="328" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">forest</text>
+  <rect x="520" y="300" width="120" height="45" rx="8" fill="white" opacity="0.2"/>
+  <text x="580" y="328" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">garden</text>
+  <!-- Hint arrow -->
+  <text x="440" y="370" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">↑ 点击第6个单词</text>
+  <text x="400" y="420" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" opacity="0.9">验证通过后，钱包创建完成！</text>
+</svg>

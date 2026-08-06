@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb" />
+      <stop offset="100%" style="stop-color:#f5576c" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="16" fill="url(#bg)"/>
+  <text x="400" y="80" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">第二步：创建钱包</text>
+  <text x="400" y="120" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" opacity="0.9">设置密码 → 备份助记词 → 验证助记词</text>
+  <!-- Flow chart -->
+  <rect x="80" y="180" width="180" height="100" rx="12" fill="white" opacity="0.2"/>
+  <text x="170" y="220" font-family="Arial, sans-serif" font-size="40" text-anchor="middle">🔑</text>
+  <text x="170" y="260" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">设置密码</text>
+  <text x="280" y="230" font-family="Arial, sans-serif" font-size="30" fill="white">→</text>
+  <rect x="310" y="180" width="180" height="100" rx="12" fill="white" opacity="0.2"/>
+  <text x="400" y="220" font-family="Arial, sans-serif" font-size="40" text-anchor="middle">📝</text>
+  <text x="400" y="260" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">备份助记词</text>
+  <text x="510" y="230" font-family="Arial, sans-serif" font-size="30" fill="white">→</text>
+  <rect x="540" y="180" width="180" height="100" rx="12" fill="white" opacity="0.2"/>
+  <text x="630" y="220" font-family="Arial, sans-serif" font-size="40" text-anchor="middle">✅</text>
+  <text x="630" y="260" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">验证助记词</text>
+  <!-- Bottom note -->
+  <rect x="150" y="320" width="500" height="80" rx="12" fill="white" opacity="0.15"/>
+  <text x="400" y="355" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">⚠️ 助记词是钱包的唯一凭证</text>
+  <text x="400" y="385" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" opacity="0.9">丢失助记词 = 永久丢失钱包内所有资产</text>
+</svg>

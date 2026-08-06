@@ -34,18 +34,20 @@ export default function NewsPage() {
       .catch(() => {});
   }, []);
 
-  const categoryKeys = ['行业新闻', '生态合作', '项目动态', '机制解读'];
+  const categoryKeys = ['行业新闻', '生态合作', '项目动态', '机制解读', '新手指南'];
   const categoryEnMap: Record<string, string> = {
     '行业新闻': 'Industry News',
     '生态合作': 'Partnerships',
     '项目动态': 'Updates',
     '机制解读': 'Mechanisms',
+    '新手指南': 'Beginner Guide',
   };
   const tagColors: Record<string, string> = {
     '行业新闻': 'tag-purple',
     '生态合作': 'tag-cyan',
     '项目动态': 'tag-pink',
     '机制解读': 'tag-purple',
+    '新手指南': 'tag-cyan',
   };
 
   const categories = [

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" rx="16" fill="#1a1a2e"/>
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#f0883e" text-anchor="middle">⚠️ 安全提示</text>
+  <!-- Warning 1 -->
+  <rect x="60" y="90" width="680" height="80" rx="12" fill="#2d1b1b"/>
+  <text x="100" y="125" font-family="Arial, sans-serif" font-size="32">🚫</text>
+  <text x="150" y="120" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b">不要截图保存助记词</text>
+  <text x="150" y="150" font-family="Arial, sans-serif" font-size="14" fill="#8b949e">截图可能被云同步，增加泄露风险</text>
+  <!-- Warning 2 -->
+  <rect x="60" y="185" width="680" height="80" rx="12" fill="#2d1b1b"/>
+  <text x="100" y="220" font-family="Arial, sans-serif" font-size="32">🚫</text>
+  <text x="150" y="215" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b">不要通过网络传输助记词</text>
+  <text x="150" y="245" font-family="Arial, sans-serif" font-size="14" fill="#8b949e">微信、QQ、邮件等都可能被截获</text>
+  <!-- Warning 3 -->
+  <rect x="60" y="280" width="680" height="80" rx="12" fill="#2d1b1b"/>
+  <text x="100" y="315" font-family="Arial, sans-serif" font-size="32">🚫</text>
+  <text x="150" y="310" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b">不要相信任何"客服"</text>
+  <text x="150" y="340" font-family="Arial, sans-serif" font-size="14" fill="#8b949e">官方不会私下索要你的助记词或私钥</text>
+  <!-- Warning 4 -->
+  <rect x="60" y="375" width="680" height="80" rx="12" fill="#2d1b1b"/>
+  <text x="100" y="410" font-family="Arial, sans-serif" font-size="32">🚫</text>
+  <text x="150" y="405" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b">不要在陌生设备上登录钱包</text>
+  <text x="150" y="435" font-family="Arial, sans-serif" font-size="14" fill="#8b949e">公共电脑、他人手机都可能存在风险</text>
+  <text x="400" y="485" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#4facfe" text-anchor="middle">牢记：助记词 = 钱包控制权，泄露即丢币！</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" rx="16" fill="#0d1117"/>
+  <text x="400" y="45" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#4facfe" text-anchor="middle">Create Wallet - Set Password</text>
+  <rect x="250" y="70" width="300" height="300" rx="20" fill="#161b22"/>
+  <text x="400" y="110" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">Set Wallet Password</text>
+  <rect x="290" y="125" width="220" height="40" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+  <text x="310" y="150" font-family="Arial, sans-serif" font-size="18" fill="#8b949e">••••••••</text>
+  <text x="400" y="195" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">Confirm Password</text>
+  <rect x="290" y="210" width="220" height="40" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+  <text x="310" y="235" font-family="Arial, sans-serif" font-size="18" fill="#8b949e">••••••••</text>
+  <rect x="290" y="265" width="220" height="8" rx="4" fill="#30363d"/>
+  <rect x="290" y="265" width="160" height="8" rx="4" fill="#4facfe"/>
+  <text x="400" y="290" font-family="Arial, sans-serif" font-size="12" fill="#4facfe" text-anchor="middle">Password Strength: Strong</text>
+  <rect x="310" y="310" width="180" height="40" rx="20" fill="#4facfe"/>
+  <text x="400" y="336" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Next</text>
+  <text x="100" y="130" font-family="Arial, sans-serif" font-size="14" fill="#f0883e" text-anchor="middle">💡 Tips:</text>
+  <text x="100" y="160" font-family="Arial, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">8+ characters</text>
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">Upper + lowercase</text>
+  <text x="100" y="210" font-family="Arial, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">Numbers + symbols</text>
+  <text x="700" y="130" font-family="Arial, sans-serif" font-size="14" fill="#ff6b6b" text-anchor="middle">⚠️ Note:</text>
+  <text x="700" y="160" font-family="Arial, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">Password is for</text>
+  <text x="700" y="185" font-family="Arial, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">local encryption</text>
+  <text x="700" y="210" font-family="Arial, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">only, not uploaded</text>
+</svg>

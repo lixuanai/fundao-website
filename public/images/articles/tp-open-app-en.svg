@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea" />
+      <stop offset="100%" style="stop-color:#764ba2" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" rx="16" fill="url(#bg)"/>
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">First Time Opening TP Wallet</text>
+  <rect x="300" y="70" width="200" height="310" rx="25" fill="white" opacity="0.15"/>
+  <rect x="315" y="95" width="170" height="260" rx="5" fill="white" opacity="0.1"/>
+  <text x="400" y="160" font-family="Arial, sans-serif" font-size="36" text-anchor="middle">🛡️</text>
+  <text x="400" y="200" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">TokenPocket</text>
+  <text x="400" y="225" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" opacity="0.8">Your Universal Digital Wallet</text>
+  <rect x="330" y="250" width="140" height="35" rx="17" fill="#4facfe"/>
+  <text x="400" y="273" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Create Wallet</text>
+  <rect x="330" y="295" width="140" height="35" rx="17" fill="white" opacity="0.2"/>
+  <text x="400" y="318" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Import Wallet</text>
+  <text x="220" y="270" font-family="Arial, sans-serif" font-size="16" fill="#00f2fe" text-anchor="middle">New user →</text>
+  <text x="580" y="315" font-family="Arial, sans-serif" font-size="16" fill="#00f2fe" text-anchor="middle">← Existing wallet</text>
+</svg>

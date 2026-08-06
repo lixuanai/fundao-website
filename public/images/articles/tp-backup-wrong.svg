@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" rx="16" fill="#1a1a2e"/>
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ff6b6b" text-anchor="middle">❌ 错误的备份方式</text>
+  <!-- Wrong method 1 -->
+  <rect x="60" y="90" width="320" height="150" rx="12" fill="#2d1b1b"/>
+  <text x="220" y="130" font-family="Arial, sans-serif" font-size="50" text-anchor="middle">📱</text>
+  <text x="220" y="170" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b" text-anchor="middle">截图保存</text>
+  <text x="220" y="200" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">可能被云同步泄露</text>
+  <text x="220" y="225" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">手机丢失=备份丢失</text>
+  <!-- Wrong method 2 -->
+  <rect x="420" y="90" width="320" height="150" rx="12" fill="#2d1b1b"/>
+  <text x="580" y="130" font-family="Arial, sans-serif" font-size="50" text-anchor="middle">💬</text>
+  <text x="580" y="170" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b" text-anchor="middle">微信/QQ发送</text>
+  <text x="580" y="200" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">聊天记录可能被窃取</text>
+  <text x="580" y="225" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">服务器有记录</text>
+  <!-- Wrong method 3 -->
+  <rect x="60" y="260" width="320" height="150" rx="12" fill="#2d1b1b"/>
+  <text x="220" y="300" font-family="Arial, sans-serif" font-size="50" text-anchor="middle">📧</text>
+  <text x="220" y="340" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b" text-anchor="middle">邮件/备忘录</text>
+  <text x="220" y="370" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">邮箱被盗=资产被盗</text>
+  <text x="220" y="395" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">云端存储不安全</text>
+  <!-- Wrong method 4 -->
+  <rect x="420" y="260" width="320" height="150" rx="12" fill="#2d1b1b"/>
+  <text x="580" y="300" font-family="Arial, sans-serif" font-size="50" text-anchor="middle">🗣️</text>
+  <text x="580" y="340" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b" text-anchor="middle">告诉他人</text>
+  <text x="580" y="370" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">任何人都不可信</text>
+  <text x="580" y="395" font-family="Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">包括"官方客服"</text>
+  <text x="400" y="435" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f0883e" text-anchor="middle">以上方式都可能导致资产丢失！</text>
+</svg>

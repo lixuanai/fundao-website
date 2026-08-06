@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" rx="16" fill="#1a1a2e"/>
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#f0883e" text-anchor="middle">⚠️ Security Tips</text>
+  <rect x="60" y="90" width="680" height="80" rx="12" fill="#2d1b1b"/>
+  <text x="100" y="125" font-family="Arial, sans-serif" font-size="32">🚫</text>
+  <text x="150" y="120" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b">Never screenshot your mnemonic</text>
+  <text x="150" y="150" font-family="Arial, sans-serif" font-size="14" fill="#8b949e">Screenshots may sync to cloud, increasing leak risk</text>
+  <rect x="60" y="185" width="680" height="80" rx="12" fill="#2d1b1b"/>
+  <text x="100" y="220" font-family="Arial, sans-serif" font-size="32">🚫</text>
+  <text x="150" y="215" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b">Never transmit mnemonic online</text>
+  <text x="150" y="245" font-family="Arial, sans-serif" font-size="14" fill="#8b949e">WeChat, email, etc. can all be intercepted</text>
+  <rect x="60" y="280" width="680" height="80" rx="12" fill="#2d1b1b"/>
+  <text x="100" y="315" font-family="Arial, sans-serif" font-size="32">🚫</text>
+  <text x="150" y="310" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b">Never trust any "customer service"</text>
+  <text x="150" y="340" font-family="Arial, sans-serif" font-size="14" fill="#8b949e">Official team will never ask for your mnemonic</text>
+  <rect x="60" y="375" width="680" height="80" rx="12" fill="#2d1b1b"/>
+  <text x="100" y="410" font-family="Arial, sans-serif" font-size="32">🚫</text>
+  <text x="150" y="405" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ff6b6b">Never login on unfamiliar devices</text>
+  <text x="150" y="435" font-family="Arial, sans-serif" font-size="14" fill="#8b949e">Public computers or others' phones may be risky</text>
+  <text x="400" y="485" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#4facfe" text-anchor="middle">Remember: Mnemonic = Wallet control, leak = lose crypto!</text>
+</svg>

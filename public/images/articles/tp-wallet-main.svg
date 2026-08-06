@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" rx="16" fill="#0d1117"/>
+  <text x="400" y="45" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#4facfe" text-anchor="middle">钱包主界面</text>
+  <!-- Phone mockup -->
+  <rect x="250" y="70" width="300" height="400" rx="20" fill="#161b22"/>
+  <!-- Header -->
+  <rect x="250" y="70" width="300" height="60" rx="20" fill="#4facfe"/>
+  <text x="400" y="105" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">TokenPocket</text>
+  <!-- Balance card -->
+  <rect x="270" y="150" width="260" height="100" rx="12" fill="#1f2937"/>
+  <text x="290" y="175" font-family="Arial, sans-serif" font-size="12" fill="#8b949e">总资产 (USD)</text>
+  <text x="290" y="210" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white">$0.00</text>
+  <text x="290" y="235" font-family="Arial, sans-serif" font-size="12" fill="#4facfe">💰 点击充值</text>
+  <!-- Token list -->
+  <text x="270" y="275" font-family="Arial, sans-serif" font-size="14" fill="white">我的资产</text>
+  <!-- BNB -->
+  <rect x="270" y="290" width="260" height="50" rx="8" fill="#1f2937"/>
+  <circle cx="295" cy="315" r="15" fill="#f3ba2f"/>
+  <text x="295" y="320" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">B</text>
+  <text x="320" y="310" font-family="Arial, sans-serif" font-size="14" fill="white">BNB</text>
+  <text x="320" y="330" font-family="Arial, sans-serif" font-size="12" fill="#8b949e">BSC</text>
+  <text x="510" y="315" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="end">0.00</text>
+  <!-- USDT -->
+  <rect x="270" y="350" width="260" height="50" rx="8" fill="#1f2937"/>
+  <circle cx="295" cy="375" r="15" fill="#26a17b"/>
+  <text x="295" y="380" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">T</text>
+  <text x="320" y="370" font-family="Arial, sans-serif" font-size="14" fill="white">USDT</text>
+  <text x="320" y="390" font-family="Arial, sans-serif" font-size="12" fill="#8b949e">BSC</text>
+  <text x="510" y="375" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="end">0.00</text>
+  <!-- Bottom nav -->
+  <rect x="250" y="420" width="300" height="50" rx="0" fill="#1f2937"/>
+  <text x="310" y="450" font-family="Arial, sans-serif" font-size="12" fill="#4facfe" text-anchor="middle">🏠 首页</text>
+  <text x="400" y="450" font-family="Arial, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">📊 DApp</text>
+  <text x="490" y="450" font-family="Arial, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">⚙️ 设置</text>
+  <!-- Annotations -->
+  <text x="100" y="170" font-family="Arial, sans-serif" font-size="14" fill="#f0883e">← 总资产</text>
+  <text x="100" y="315" font-family="Arial, sans-serif" font-size="14" fill="#f0883e">← 添加代币</text>
+  <text x="700" y="210" font-family="Arial, sans-serif" font-size="14" fill="#f0883e">充值 →</text>
+  <text x="700" y="315" font-family="Arial, sans-serif" font-size="14" fill="#f0883e">转账 →</text>
+</svg>
