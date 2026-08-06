@@ -37,6 +37,9 @@ export const metadata: Metadata = {
   },
   keywords: ['FunDAO', 'DeFi', 'decentralized finance', 'deflation', 'yield', 'blockchain', 'crypto', '去中心化金融', '通缩', '收益分配'],
   authors: [{ name: 'FunDAO Team' }],
+  other: {
+    'baidu-site-verification': 'codeva-SUNQeBA20G',
+  },
 };
 
 export default function RootLayout({
@@ -46,9 +49,6 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning>
-      <head>
-        <meta name="baidu-site-verification" content="codeva-SUNQeBA20G" />
-      </head>
       <body>{children}</body>
     </html>
   );
