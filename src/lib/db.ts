@@ -121,6 +121,17 @@ function loadDB(): DB {
     try {
       const parsed = JSON.parse(readFileSync(DB_PATH, 'utf-8'));
       if (parsed.articles && parsed.articles.length > 0) {
+        // Ensure all articles have category_en field
+        const categoryEnMap: Record<string, string> = {
+          '行业新闻': 'Industry News',
+          '生态合作': 'Ecosystem Partnerships',
+          '项目动态': 'Project Updates',
+          '机制解读': 'Mechanism Analysis',
+        };
+        parsed.articles = parsed.articles.map((a: any) => ({
+          ...a,
+          category_en: a.category_en || categoryEnMap[a.category] || a.category,
+        }));
         cache = parsed;
         return cache!;
       }
