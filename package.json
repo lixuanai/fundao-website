@@ -11,6 +11,7 @@
     "dev:all": "node backend/server.js & next dev -p 3001"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "better-sqlite3": "^13.0.1",
     "cors": "^2.8.6",
     "express": "^5.2.1",
