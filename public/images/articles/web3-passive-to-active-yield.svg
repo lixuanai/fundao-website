@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#grad3)"/>
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white" text-anchor="middle">Web3 投资新范式</text>
+  <text x="600" y="360" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle" opacity="0.9">从被动持有到主动收益</text>
+  <rect x="150" y="450" width="200" height="100" rx="10" fill="white" opacity="0.2"/>
+  <rect x="500" y="450" width="200" height="100" rx="10" fill="white" opacity="0.2"/>
+  <rect x="850" y="450" width="200" height="100" rx="10" fill="white" opacity="0.2"/>
+  <text x="250" y="510" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">HODL</text>
+  <text x="600" y="510" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">LP</text>
+  <text x="950" y="510" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">Yield</text>
+  <path d="M 350 500 L 500 500 M 700 500 L 850 500" stroke="white" stroke-width="3" opacity="0.5"/>
+</svg>
