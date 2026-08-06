@@ -1,24 +1,28 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 
 export default function PartnersSection() {
   const t = useTranslations('home.partners');
 
+  const pathname = usePathname();
+  const currentLocale = pathname.split('/')[1] || 'zh';
+
   const partners = [
-    { name: 'Dragonfly', abbr: 'D', color: 'from-blue-500 to-blue-600' },
-    { name: 'Animoca Brands', abbr: 'AB', color: 'from-red-500 to-red-600' },
-    { name: 'OKX Ventures', abbr: 'OKX', color: 'from-gray-700 to-gray-900' },
-    { name: 'Spartan Group', abbr: 'SG', color: 'from-indigo-500 to-indigo-600' },
-    { name: 'Bitscale Capital', abbr: 'BC', color: 'from-green-500 to-green-600' },
-    { name: '6th Man Ventures', abbr: '6M', color: 'from-orange-500 to-orange-600' },
-    { name: 'IVC', abbr: 'IVC', color: 'from-purple-500 to-purple-600' },
-    { name: 'Mechanism Capital', abbr: 'MC', color: 'from-cyan-500 to-cyan-600' },
-    { name: 'Morningstar Ventures', abbr: 'MV', color: 'from-yellow-500 to-yellow-600' },
-    { name: 'W3GG', abbr: 'W3', color: 'from-pink-500 to-pink-600' },
-    { name: '心元资本', abbr: 'XY', color: 'from-teal-500 to-teal-600' },
-    { name: 'Red Building Capital', abbr: 'RB', color: 'from-rose-500 to-rose-600' },
-    { name: 'Yolo Investments', abbr: 'YI', color: 'from-amber-500 to-amber-600' },
+    { name: 'Dragonfly', nameZh: 'Dragonfly', abbr: 'D', color: 'from-blue-500 to-blue-600' },
+    { name: 'Animoca Brands', nameZh: 'Animoca Brands', abbr: 'AB', color: 'from-red-500 to-red-600' },
+    { name: 'OKX Ventures', nameZh: 'OKX Ventures', abbr: 'OKX', color: 'from-gray-700 to-gray-900' },
+    { name: 'Spartan Group', nameZh: 'Spartan Group', abbr: 'SG', color: 'from-indigo-500 to-indigo-600' },
+    { name: 'Bitscale Capital', nameZh: 'Bitscale Capital', abbr: 'BC', color: 'from-green-500 to-green-600' },
+    { name: '6th Man Ventures', nameZh: '6th Man Ventures', abbr: '6M', color: 'from-orange-500 to-orange-600' },
+    { name: 'IVC', nameZh: 'IVC', abbr: 'IVC', color: 'from-purple-500 to-purple-600' },
+    { name: 'Mechanism Capital', nameZh: 'Mechanism Capital', abbr: 'MC', color: 'from-cyan-500 to-cyan-600' },
+    { name: 'Morningstar Ventures', nameZh: 'Morningstar Ventures', abbr: 'MV', color: 'from-yellow-500 to-yellow-600' },
+    { name: 'W3GG', nameZh: 'W3GG', abbr: 'W3', color: 'from-pink-500 to-pink-600' },
+    { name: 'Xinyuan Capital', nameZh: '心元资本', abbr: 'XY', color: 'from-teal-500 to-teal-600' },
+    { name: 'Red Building Capital', nameZh: 'Red Building Capital', abbr: 'RB', color: 'from-rose-500 to-rose-600' },
+    { name: 'Yolo Investments', nameZh: 'Yolo Investments', abbr: 'YI', color: 'from-amber-500 to-amber-600' },
   ];
 
   return (
@@ -42,7 +46,7 @@ export default function PartnersSection() {
                 {partner.abbr}
               </div>
               <span className="text-[10px] sm:text-xs text-gray-500 text-center font-medium group-hover:text-purple-600 transition-colors leading-tight">
-                {partner.name}
+                {currentLocale === 'zh' ? partner.nameZh : partner.name}
               </span>
             </div>
           ))}
