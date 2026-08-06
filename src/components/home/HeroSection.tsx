@@ -72,13 +72,14 @@ export default function HeroSection() {
           </div>
 
           {/* Stats cards */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-4 max-w-5xl mx-auto">
             {[
               { value: t('stats.holdersValue'), label: t('stats.holders'), color: 'purple' },
               { value: t('stats.growthValue'), label: t('stats.growth'), color: 'pink' },
               { value: t('stats.lpValue'), label: t('stats.lp'), color: 'cyan' },
               { value: t('stats.totalSupplyValue'), label: t('stats.totalSupply'), color: 'purple' },
               { value: t('stats.chainValue'), label: t('stats.chain'), color: 'pink' },
+              { value: t('stats.onchainValue'), label: t('stats.onchain'), color: 'cyan' },
             ].map((stat, i) => (
               <div
                 key={i}

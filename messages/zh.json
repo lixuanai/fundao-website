@@ -42,7 +42,9 @@
         "totalSupply": "代币总量",
         "totalSupplyValue": "21亿枚",
         "chain": "底层链",
-        "chainValue": "BSC"
+        "chainValue": "BSC",
+        "onchain": "链上执行",
+        "onchainValue": "无法篡改"
       }
     },
     "advantages": {

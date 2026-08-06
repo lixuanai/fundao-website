@@ -42,7 +42,9 @@
         "totalSupply": "Total Supply",
         "totalSupplyValue": "2.1B",
         "chain": "Chain",
-        "chainValue": "BSC"
+        "chainValue": "BSC",
+        "onchain": "On-Chain",
+        "onchainValue": "Immutable"
       }
     },
     "advantages": {
