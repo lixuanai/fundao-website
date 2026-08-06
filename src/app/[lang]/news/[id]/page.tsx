@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import { Metadata } from 'next';
 import ArticleClient from './ArticleClient';
 
@@ -43,6 +44,52 @@ export async function generateMetadata({ params }: { params: { id: string; lang:
   };
 }
 
-export default function ArticleDetailPage({ params }: { params: { id: string; lang: string } }) {
-  return <ArticleClient params={params} />;
+export default async function ArticleDetailPage({ params }: { params: { id: string; lang: string } }) {
+  const article = await getArticle(params.id);
+
+  const articleSchema = article
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: params.lang === 'zh' ? article.title_zh : article.title_en,
+        description:
+          article.excerpt_zh || article.content_zh.replace(/<[^>]+>/g, '').slice(0, 160),
+        image: article.cover_image
+          ? `https://www.fundao.fun${article.cover_image}`
+          : 'https://www.fundao.fun/og-image.png',
+        datePublished: article.created_at,
+        dateModified: article.updated_at,
+        author: {
+          '@type': 'Organization',
+          name: 'FunDAO',
+          url: 'https://www.fundao.fun',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'FunDAO',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.fundao.fun/og-image.png',
+          },
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `https://www.fundao.fun/${params.lang}/news/${params.id}`,
+        },
+      }
+    : null;
+
+  return (
+    <>
+      {articleSchema && (
+        <Script
+          id="article-schema"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
+      )}
+      <ArticleClient params={params} />
+    </>
+  );
 }
