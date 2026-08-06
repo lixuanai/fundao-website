@@ -11,13 +11,6 @@ const nextConfig = {
       },
     ],
   },
-  redirects: async () => [
-    {
-      source: '/',
-      destination: '/zh',
-      permanent: true,
-    },
-  ],
 };
 
 module.exports = withNextIntl(nextConfig);
