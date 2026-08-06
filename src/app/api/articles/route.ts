@@ -27,7 +27,7 @@ export async function GET(request: NextRequest) {
     ...a,
     category_en: a.category_en || categoryEnMap[a.category] || a.category,
   }));
-  return NextResponse.json(enriched);
+  return NextResponse.json({ ...enriched, _version: '2026-08-06-v2', _count: enriched.length });
 }
 
 export async function POST(request: NextRequest) {
