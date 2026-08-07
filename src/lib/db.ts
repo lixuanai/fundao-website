@@ -130,11 +130,40 @@ function loadDB(): DB {
           '项目动态': 'Project Updates',
           '机制解读': 'Mechanism Analysis',
           '新手指南': 'Beginner Guide',
+          '市场动态': 'Market Dynamics',
+          '知识科普': 'Knowledge',
         };
         parsed.articles = parsed.articles.map((a: any) => ({
           ...a,
           category_en: a.category_en || categoryEnMap[a.category] || a.category,
         }));
+        // Merge any new articles from seed data that aren't in persisted DB
+        const existingSlugs = new Set(parsed.articles.map((a: any) => a.slug));
+        const seedArticles = (seedArticlesData as any[]).filter((a: any) => !existingSlugs.has(a.slug));
+        if (seedArticles.length > 0) {
+          const now2 = new Date().toISOString();
+          for (const a of seedArticles) {
+            parsed.articles.push({
+              id: a.id || genId(),
+              title_zh: a.title_zh || '',
+              title_en: a.title_en || '',
+              slug: a.slug || '',
+              category: a.category || '',
+              category_en: a.category_en || categoryEnMap[a.category] || a.category,
+              content_zh: a.content_zh || '',
+              content_en: a.content_en || '',
+              excerpt_zh: a.excerpt_zh || '',
+              excerpt_en: a.excerpt_en || '',
+              cover_image: a.cover_image || '',
+              cover_image_en: a.cover_image_en || a.cover_image || '',
+              tags: a.tags || '',
+              published: a.published ?? 1,
+              created_at: a.created_at || now2,
+              updated_at: a.updated_at || now2,
+            });
+          }
+          tryWriteDB(parsed);
+        }
         cache = parsed;
         return cache!;
       }
