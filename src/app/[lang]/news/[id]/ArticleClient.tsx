@@ -82,7 +82,7 @@ export default function ArticleDetailPage({ params }: { params: { id: string; la
             <span className="tag-purple">
               {currentLocale === 'zh' ? article.category : (article.category_en || article.category)}
             </span>
-            <span className="text-sm text-gray-500">{article.created_at?.split('T')[0] || ''}</span>
+            <span className="text-sm text-gray-500">By Mr.Xuan · {article.created_at?.split('T')[0] || ''}</span>
           </div>
 
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text mb-6 sm:mb-8 leading-tight">
