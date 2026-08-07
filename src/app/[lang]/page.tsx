@@ -1,6 +1,6 @@
 import Script from 'next/script';
-import zhMessages from '@/messages/zh.json';
-import enMessages from '@/messages/en.json';
+import zhMessages from '../../../messages/zh.json';
+import enMessages from '../../../messages/en.json';
 import { Metadata } from 'next';
 import HeroSection from '@/components/home/HeroSection';
 import AdvantagesSection from '@/components/home/AdvantagesSection';
