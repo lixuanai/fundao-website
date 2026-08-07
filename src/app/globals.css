@@ -592,3 +592,56 @@ body {
   }
 }
 }
+
+/* Article content table styling */
+.prose table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(124, 58, 237, 0.08);
+  background: #fff;
+}
+
+.prose thead th {
+  background: linear-gradient(135deg, #7C3AED, #A78BFA);
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.9rem;
+  border: none;
+}
+
+.prose tbody td {
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(124, 58, 237, 0.08);
+  font-size: 0.9rem;
+  color: #374151;
+  vertical-align: top;
+}
+
+.prose tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.prose tbody tr:hover {
+  background: rgba(124, 58, 237, 0.03);
+}
+
+/* Mobile: make tables scroll horizontally */
+@media (max-width: 640px) {
+  .prose table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.85rem;
+  }
+  .prose thead th,
+  .prose tbody td {
+    padding: 8px 12px;
+    white-space: nowrap;
+  }
+}
