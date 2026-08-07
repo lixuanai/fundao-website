@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#11998e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38ef7d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg3)"/>
+  <path d="M 200 250 L 300 200 L 400 220 L 500 150 L 600 180" stroke="rgba(255,255,255,0.8)" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="600" cy="180" r="8" fill="white"/>
+  <text x="400" y="120" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="rgba(255,255,255,0.3)" text-anchor="middle">↓</text>
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">DeFi Passive Income Rising</text>
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="18" fill="rgba(255,255,255,0.9)" text-anchor="middle">Rate Cut Expectations Boost Yield Assets</text>
+</svg>
