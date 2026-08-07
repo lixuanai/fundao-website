@@ -60,13 +60,13 @@ export default async function ArticleDetailPage({ params }: { params: { id: stri
         datePublished: article.created_at,
         dateModified: article.updated_at,
         author: {
-          '@type': 'Organization',
-          name: 'FunDAO',
+          '@type': 'Person',
+          name: 'Mr.Xuan',
           url: 'https://www.fundao.fun',
         },
         publisher: {
           '@type': 'Organization',
-          name: 'FunDAO',
+          name: 'Mr.Xuan',
           logo: {
             '@type': 'ImageObject',
             url: 'https://www.fundao.fun/og-image.png',
