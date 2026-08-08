@@ -1,0 +1,65 @@
+# FunDAO
+
+> FunDAO is the first decentralized yield platform on BSC with 2.5% daily deflation, smart circuit breaker protection, and auto yield distribution. Start with 0.1 BNB. Backed by 13 top crypto funds.
+
+## About
+
+- [About FunDAO](https://www.fundao.fun/zh/about) - Platform overview and mission
+- [Whitepaper](https://www.fundao.fun/zh/whitepaper) - Technical whitepaper
+- [Products](https://www.fundao.fun/zh/products) - Product features and mechanisms
+- [Contact](https://www.fundao.fun/zh/contact) - Get in touch
+
+## Core Mechananisms
+
+- [Four Core Mechanisms Deep Dive](https://www.fundao.fun/zh/news/fundao-four-core-mechanisms-deep-dive) - Deflation, direct referral, dividends, circuit breaker
+- [Daily 2.5% Deflation](https://www.fundao.fun/zh/news/daily-deflation) - 50% burn + 50% distribution, three-tier circuit breaker
+- [Deflationary Tokens Guide 2026](https://www.fundao.fun/zh/news/deflationary-tokens-guide-2026) - Complete guide: 5 mechanism types, comparison with inflation tokens
+- [Deflationary Tokenomics Guide](https://www.fundao.fun/zh/news/deflationary-tokenomics-guide) - Daily 2.5% deflation + smart circuit breaker, holding means appreciation
+
+## Safety & Security
+
+- [FunDAO Safety Analysis](https://www.fundao.fun/zh/news/fundao-safety-analysis) - Six-Zero security architecture: no owner, no private sale, no reserve, no insider, no backdoor, ownership renounced
+- [Audit Passed ≠ Safe](https://www.fundao.fun/zh/news/audit-not-equal-security) - Lessons from DeFi crashes in H1 2026: AFX Trade, Ostium, BonkDAO
+- [Governance Attack Textbook](https://www.fundao.fun/zh/news/governance-attack-bonkdao) - How BonkDAO lost $19.3M with 2.9% voting rate
+- [Algorithmic Stablecoins vs Deflationary Tokens](https://www.fundao.fun/zh/news/algorithmic-stablecoin-vs-deflationary) - Balance Coin collapse vs FunDAO model
+
+## Performance & Growth
+
+- [FunDAO 40-Day 20x Growth](https://www.fundao.fun/zh/news/fundao-40day-20x-growth) - Four engines: deflation, circuit breaker, yield distribution, institutional backing
+- [13 Top Crypto Funds Invest](https://www.fundao.fun/zh/news/13-funds) - Dragonfly, Animoca, OKX Ventures and 10 more
+- [5 Signs DeFi Growth Potential](https://www.fundao.fun/zh/news/5-signs-defi-growth-potential-2026) - Bull market guide for evaluating DeFi projects
+
+## Market Analysis
+
+- [BTC Consolidation & Deflation Opportunity](https://www.fundao.fun/zh/news/btc-consolidation-deflation-opportunity) - Why deflationary tokens become steady choice during BTC sideways
+- [Rate Cut Expectations & DeFi Yield](https://www.fundao.fun/zh/news/rate-cut-expectation-defi-yield) - Why DeFi passive income becomes new favorite
+- [Geopolitical Risk & DeFi Safety](https://www.fundao.fun/zh/news/geopolitical-risk-defi-safety) - US-Iran conflict and circuit breaker value
+- [Hyperliquid vs BSC Ecosystem](https://www.fundao.fun/zh/news/hyperliquid-bsc-ecosystem-comparison) - Decentralized derivatives new landscape
+- [OlympusDAO Deep Analysis](https://www.fundao.fun/zh/news/olympusdao-deep-analysis) - (3,3) game theory, bond mechanism & lessons learned
+
+## Guides & Tutorials
+
+- [DeFi Passive Income Guide 2026](https://www.fundao.fun/zh/news/defi-passive-income-guide-2026) - 5 passive income methods compared, beginner steps
+- [TP Wallet Download Guide](https://www.fundao.fun/zh/news/tp-wallet-download-guide) - Complete download & installation for Android, iOS, Desktop
+- [TP Wallet Creation & Backup](https://www.fundao.fun/zh/news/tp-wallet-create-guide) - Mnemonic phrase & private key explained
+- [Web3 Passive to Active Yield](https://www.fundao.fun/zh/news/web3-passive-to-active-yield) - From HODL to active yield strategies
+
+## Ecosystem
+
+- [Multi-Chain Expansion](https://www.fundao.fun/zh/news/fundao-multi-chain-expansion) - From BSC to Ethereum, Solana, cross-chain interoperability
+- [DeFi Trends 2026](https://www.fundao.fun/zh/news/defi-trends-2026) - How decentralized finance reshapes global investment
+- [FunDAO Roadmap 2026](https://www.fundao.fun/zh/news/roadmap-2026) - Multi-chain expansion, AI trading integration, RWA exploration
+
+## Optional
+
+- [FunDAO 20x in 40 Days](https://www.fundao.fun/zh/news/fundao-20x-in-40-days) - 13 institutions bet on FunDAO
+
+## Key Facts
+
+- **Chain:** BSC (Binance Smart Chain)
+- **Daily Deflation:** 2.5% (50% burn + 50% distribution)
+- **Circuit Breaker:** 3 tiers - 5% drop→50% slippage, 10%→70%, 20%→90%
+- **Security:** Six-Zero architecture, ownership renounced
+- **Entry:** 0.1 BNB minimum
+- **Author:** Mr.Xuan
+- **Languages:** Chinese (zh), English (en)

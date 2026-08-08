@@ -18,24 +18,37 @@ interface Article {
   cover_image_en?: string;
   created_at: string;
   published: number;
+  excerpt_zh?: string;
+  excerpt_en?: string;
 }
 
-export default function ArticleDetailPage({ params }: { params: { id: string; lang: string } }) {
+interface ArticleClientProps {
+  articleId: string;
+  lang: string;
+  initialArticle?: Article | null;
+}
+
+export default function ArticleDetailPage({ articleId, lang, initialArticle }: ArticleClientProps) {
   const tCommon = useTranslations('common');
   const pathname = usePathname();
-  const currentLocale = pathname.split('/')[1] || 'zh';
-  const [article, setArticle] = useState<Article | null>(null);
-  const [loading, setLoading] = useState(true);
+  const currentLocale = pathname.split('/')[1] || lang || 'zh';
+  const [article, setArticle] = useState<Article | null>(initialArticle || null);
+  const [loading, setLoading] = useState(!initialArticle);
 
   useEffect(() => {
-    fetch(`/api/articles/${params.id}`)
+    if (initialArticle) {
+      setLoading(false);
+      return;
+    }
+
+    fetch(`/api/articles/${articleId}`)
       .then(res => res.json())
       .then(data => {
         setArticle(data);
         setLoading(false);
       })
       .catch(() => setLoading(false));
-  }, [params.id]);
+  }, [articleId, initialArticle]);
 
   if (loading) {
     return (

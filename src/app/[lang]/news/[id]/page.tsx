@@ -1,8 +1,12 @@
 import Script from 'next/script';
 import { Metadata } from 'next';
 import ArticleClient from './ArticleClient';
+import articlesData from '@/data/seed-articles.json';
 
 async function getArticle(id: string) {
+  const localArticle = (articlesData as any[]).find(a => a.id === id || a.slug === id);
+  if (localArticle) return localArticle;
+
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://fundao.fun'}/api/articles/${id}`, {
       next: { revalidate: 60 },
@@ -19,9 +23,7 @@ export async function generateMetadata({ params }: { params: { id: string; lang:
   const isZh = params.lang === 'zh';
 
   if (!article) {
-    return {
-      title: isZh ? '文章未找到' : 'Article Not Found',
-    };
+    return { title: isZh ? '文章未找到' : 'Article Not Found' };
   }
 
   const title = isZh ? article.title_zh : article.title_en;
@@ -89,7 +91,7 @@ export default async function ArticleDetailPage({ params }: { params: { id: stri
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
         />
       )}
-      <ArticleClient params={params} />
+      <ArticleClient articleId={params.id} lang={params.lang} initialArticle={article} />
     </>
   );
 }

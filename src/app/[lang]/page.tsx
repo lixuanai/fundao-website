@@ -45,6 +45,25 @@ const organizationSchema = {
 };
 
 
+
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'FunDAO',
+  url: 'https://www.fundao.fun',
+  description: 'FunDAO - Decentralized Yield Platform with 2.5% Daily Deflation',
+  inLanguage: ['zh', 'en'],
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://www.fundao.fun/{lang}/news?q={search_term_string}'
+    },
+    'query-input': 'required name=search_term_string'
+  }
+};
+
 function getFaqSchema(lang: string) {
   const messages = lang === 'zh' ? zhMessages : enMessages;
   const faqItems = messages.home?.faq?.items || [];
@@ -76,6 +95,12 @@ export default function HomePage({ params: { lang } }: { params: { lang: string 
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqSchema(lang)) }}
+      />
+      <Script
+        id="website-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
       <HeroSection />
       <AdvantagesSection />
