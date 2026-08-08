@@ -1,0 +1,41 @@
+name: SEO - Ping Search Engines on Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ping-search-engines:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Vercel deployment
+        run: sleep 120
+
+      - name: Ping Google with sitemap
+        run: |
+          curl -s "https://www.google.com/ping?sitemap=https://www.fundao.fun/sitemap.xml"
+          echo "Google sitemap ping sent"
+
+      - name: Ping Bing with sitemap
+        run: |
+          curl -s "https://www.bing.com/ping?sitemap=https://www.fundao.fun/sitemap.xml"
+          echo "Bing sitemap ping sent"
+
+      - name: Request Google indexing for new articles
+        run: |
+          # Fetch sitemap and extract article URLs
+          SITEMAP=$(curl -s https://www.fundao.fun/sitemap.xml)
+          ARTICLE_URLS=$(echo "$SITEMAP" | grep -oP '(?<=<loc>)[^<]+/news/[^<]+')
+          
+          echo "Found article URLs:"
+          echo "$ARTICLE_URLS"
+          
+          # Ping each article URL to Google
+          while IFS= read -r url; do
+            if [ -n "$url" ]; then
+              curl -s "https://www.google.com/ping?sitemap=$url"
+              echo "Pinged Google: $url"
+              sleep 1
+            fi
+          done <<< "$ARTICLE_URLS"
