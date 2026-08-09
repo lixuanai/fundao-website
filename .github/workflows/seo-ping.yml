@@ -1,0 +1,44 @@
+name: SEO - Ping Search Engines on Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ping-search-engines:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Wait for Vercel deployment
+        run: sleep 120
+
+      - name: Ping Google with sitemap
+        run: |
+          curl -s "https://www.google.com/ping?sitemap=https://www.fundao.fun/sitemap.xml"
+          echo "Google sitemap ping sent"
+
+      - name: Ping Bing with sitemap
+        run: |
+          curl -s "https://www.bing.com/ping?sitemap=https://www.fundao.fun/sitemap.xml"
+          echo "Bing sitemap ping sent"
+
+      - name: Push article URLs to Baidu
+        run: |
+          SITEMAP="https://www.fundao.fun/sitemap.xml"
+          BAIDU_TOKEN="4AGpdHwjLm3Bkz3S"
+          BAIDU_SITE="https://www.fundao.fun"
+          TMPFILE="/tmp/fundao_urls.txt"
+
+          curl -s "$SITEMAP" | grep -oP '(?<=<loc>)[^<]+/news/[^<]+' > "$TMPFILE"
+          URL_COUNT=$(wc -l < "$TMPFILE")
+          echo "Found $URL_COUNT article URLs"
+
+          if [ "$URL_COUNT" -gt 0 ]; then
+            RESPONSE=$(curl -s -H 'Content-Type: text/plain' --data-binary @"$TMPFILE" \
+              "http://data.zz.baidu.com/urls?site=$BAIDU_SITE&token=$BAIDU_TOKEN")
+            echo "Baidu response: $RESPONSE"
+          fi
+          rm -f "$TMPFILE"
