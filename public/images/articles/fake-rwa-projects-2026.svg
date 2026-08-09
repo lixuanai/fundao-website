@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="600" cy="315" r="200" fill="#ff4444" opacity="0.06"/>
+  <text x="600" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" font-weight="bold" fill="#ff4444">⚠ 伪RWA警示</text>
+  <text x="600" y="230" text-anchor="middle" font-family="Arial,sans-serif" font-size="36" fill="white">Altura金库冻结</text>
+  <text x="600" y="290" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#ff8800">融资$3,900万后跑路</text>
+  <rect x="300" y="330" width="600" height="4" rx="2" fill="#ff4444" opacity="0.5"/>
+  <text x="600" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#aaa">5个关键信号识别伪RWA项目</text>
+  <text x="600" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#aaa">FunDAO链上透明 | 权限丢弃 | 无人可改</text>
+  <text x="600" y="540" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#666">真正的透明，是链上可查、无人可改</text>
+  <text x="1100" y="600" text-anchor="end" font-family="Arial,sans-serif" font-size="16" fill="#444">FunDAO | Mr.Xuan</text>
+</svg>

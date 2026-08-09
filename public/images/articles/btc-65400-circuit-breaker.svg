@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f7971e"/>
+      <stop offset="100%" style="stop-color:#ffd200"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="600" y="140" text-anchor="middle" font-family="Arial,sans-serif" font-size="72" font-weight="bold" fill="url(#gold)">BTC $65,400</text>
+  <text x="600" y="210" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="#ff4444">两次试探未突破</text>
+  <rect x="300" y="250" width="600" height="4" rx="2" fill="url(#gold)" opacity="0.6"/>
+  <text x="600" y="320" text-anchor="middle" font-family="Arial,sans-serif" font-size="36" fill="white">极端行情下的保护</text>
+  <text x="600" y="390" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" font-weight="bold" fill="#00d2ff">三级熔断机制</text>
+  <text x="600" y="450" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#aaa">5%→50% | 10%→70% | 20%→90%</text>
+  <text x="600" y="520" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#666">真正的安全，是在任何行情下都能保护你的资金</text>
+  <text x="1100" y="600" text-anchor="end" font-family="Arial,sans-serif" font-size="16" fill="#444">FunDAO | Mr.Xuan</text>
+</svg>
