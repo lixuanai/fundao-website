@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="600" cy="315" r="220" fill="#627eea" opacity="0.08"/>
+  <text x="600" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#627eea">Vitalik's New Ethereum Roadmap</text>
+  <text x="600" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="56" font-weight="bold" fill="white">Quantum Safety · STARKs · Native Rollups</text>
+  <rect x="250" y="220" width="700" height="2" rx="1" fill="#627eea" opacity="0.4"/>
+  <text x="300" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#88aaff">Privacy</text>
+  <text x="600" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#88aaff">Post-Quantum</text>
+  <text x="900" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#88aaff">L2 Integration</text>
+  <text x="600" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#ff6b6b">Should Retail Investors Panic or Get Excited?</text>
+  <text x="600" y="420" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#888">Ethereum Chooses Flexibility vs FunDAO Chooses Certainty</text>
+  <text x="600" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#666">Deep Analysis · Roadmap Decoded</text>
+  <text x="1100" y="600" text-anchor="end" font-family="Arial,sans-serif" font-size="16" fill="#444">FunDAO | Mr.Xuan</text>
+</svg>

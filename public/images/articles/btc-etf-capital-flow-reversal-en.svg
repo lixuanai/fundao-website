@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a3a5c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="400" cy="315" r="160" fill="#00cc88" opacity="0.08"/>
+  <circle cx="800" cy="315" r="160" fill="#ff4444" opacity="0.08"/>
+  <text x="600" y="90" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#f7931a">BTC ETF Capital Signal Decoded</text>
+  <text x="400" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" font-weight="bold" fill="#00cc88">+$854M</text>
+  <text x="800" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" font-weight="bold" fill="#ff4444">-$145M</text>
+  <text x="400" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#88ffbb">Last Week Inflow</text>
+  <text x="800" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#ff8888">Yesterday Outflow</text>
+  <rect x="300" y="260" width="600" height="2" rx="1" fill="#f7931a" opacity="0.4"/>
+  <text x="600" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="white">Trend Reversal or Normal Volatility?</text>
+  <text x="300" y="370" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#88bbff">CME Turns Long</text>
+  <text x="600" y="370" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#88bbff">ETH 5-Week Inflow</text>
+  <text x="900" y="370" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#88bbff">$65,400 Key Level</text>
+  <text x="600" y="440" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#00cc88">Core-Satellite Strategy + FunDAO Deflation Yield</text>
+  <text x="600" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#666">Institutional Money Flows In and Out · Burn Mechanism Runs Daily</text>
+  <text x="1100" y="600" text-anchor="end" font-family="Arial,sans-serif" font-size="16" fill="#444">FunDAO | Mr.Xuan</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="300" cy="315" r="180" fill="#ff4444" opacity="0.08"/>
+  <circle cx="900" cy="315" r="180" fill="#00cc88" opacity="0.08"/>
+  <text x="600" y="90" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#ff6688">Pump.fun $34.68M/mo · GMGN $20M/mo</text>
+  <text x="600" y="170" text-anchor="middle" font-family="Arial,sans-serif" font-size="52" font-weight="bold" fill="#ff4444">Shovel Sellers Get Rich</text>
+  <text x="600" y="230" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="white">While 99% of Players Lose</text>
+  <rect x="300" y="265" width="600" height="2" rx="1" fill="#ff4444" opacity="0.4"/>
+  <text x="300" y="320" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#ff4488">Pepe Creator Blames Hack</text>
+  <text x="600" y="320" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#ff4488">99% Tokens Go to Zero</text>
+  <text x="900" y="320" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#ff4488">Zero-Sum Game</text>
+  <text x="300" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#888">You Trade → Platform Takes Cut</text>
+  <text x="600" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#888">You Hold → Auto Appreciate</text>
+  <text x="900" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#888">2.5% Daily Burn</text>
+  <text x="600" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#00cc88">Deflationary: You Hold, You Grow</text>
+  <text x="600" y="520" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#666">FunDAO · Mechanism Driven · Not Emotion</text>
+  <text x="1100" y="600" text-anchor="end" font-family="Arial,sans-serif" font-size="16" fill="#444">FunDAO | Mr.Xuan</text>
+</svg>
