@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a0a"/>
+      <stop offset="100%" style="stop-color:#2e1a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="300" cy="300" r="180" fill="#ff6600" opacity="0.06"/>
+  <circle cx="900" cy="350" r="160" fill="#ff6600" opacity="0.04"/>
+  <text x="600" y="80" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#ff6600">骗局进化史 · 2026</text>
+  <text x="600" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" font-weight="bold" fill="#ff6600">资金盘换了新马甲</text>
+  <text x="600" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="white">从爆咖啡到AI量化：普通人越来越难识别</text>
+  <rect x="300" y="250" width="600" height="2" rx="1" fill="#ff6600" opacity="0.4"/>
+  <text x="300" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#ffaa66">实体咖啡店伪装</text>
+  <text x="600" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#ffaa66">AI量化包装</text>
+  <text x="900" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#ffaa66">套牌真PE机构</text>
+  <text x="300" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#888">爆咖啡：年化222%</text>
+  <text x="600" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#888">百域量化：跟单稳赚</text>
+  <text x="900" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#888">春华创投：假冒品牌</text>
+  <text x="300" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#666">港澳1.1亿港元</text>
+  <text x="600" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#666">公司已人去楼空</text>
+  <text x="900" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#666">多地警方通报</text>
+  <text x="600" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#00d2ff">不需要实体店，不需要包装，规则写在链上</text>
+  <text x="600" y="530" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#666">权限丢弃 · 开源代码 · 任何人可验证</text>
+  <text x="600" y="575" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#555">FunDAO 防骗教育</text>
+  <text x="1100" y="610" text-anchor="end" font-family="Arial,sans-serif" font-size="14" fill="#444">FunDAO | Mr.Xuan</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a2a4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="600" cy="315" r="220" fill="#f7931a" opacity="0.05"/>
+  <text x="600" y="80" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#f7931a">数据夜交易指南 · 2026.8.12</text>
+  <text x="600" y="165" text-anchor="middle" font-family="Arial,sans-serif" font-size="64" font-weight="bold" fill="#f7931a">CPI 3.4%</text>
+  <text x="600" y="225" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="white">今晚20:30公布 · 加密市场命运之夜</text>
+  <rect x="300" y="255" width="600" height="2" rx="1" fill="#f7931a" opacity="0.4"/>
+  <text x="380" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#88bbff">BTC清算临界点</text>
+  <text x="820" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#88bbff">$4.42亿多头</text>
+  <text x="380" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#ff6666">跌破$63,351</text>
+  <text x="820" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#00cc88">全线爆仓</text>
+  <text x="600" y="440" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#00d2ff">通缩代币：不受CPI影响的每日销毁机制</text>
+  <text x="600" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#666">不管通胀高低 · 每天自动销毁2.5% · 机制驱动增值</text>
+  <text x="600" y="555" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#555">FunDAO 散户生存指南</text>
+  <text x="1100" y="600" text-anchor="end" font-family="Arial,sans-serif" font-size="14" fill="#444">FunDAO | Mr.Xuan</text>
+</svg>

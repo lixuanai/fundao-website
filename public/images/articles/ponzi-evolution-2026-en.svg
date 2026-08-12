@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a0a"/>
+      <stop offset="100%" style="stop-color:#2e1a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="300" cy="300" r="180" fill="#ff6600" opacity="0.06"/>
+  <circle cx="900" cy="350" r="160" fill="#ff6600" opacity="0.04"/>
+  <text x="600" y="80" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#ff6600">Ponzi Evolution · 2026</text>
+  <text x="600" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" font-weight="bold" fill="#ff6600">New Masks for Scams</text>
+  <text x="600" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="white">From Bubble Coffee to AI Quant: Harder to Spot</text>
+  <rect x="300" y="250" width="600" height="2" rx="1" fill="#ff6600" opacity="0.4"/>
+  <text x="300" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#ffaa66">Physical Store Disguise</text>
+  <text x="600" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#ffaa66">AI Quant Wrapper</text>
+  <text x="900" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#ffaa66">Fake PE Clone</text>
+  <text x="300" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#888">Bubble Coffee: 222% APY</text>
+  <text x="600" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#888">Copy Trading Guaranteed</text>
+  <text x="900" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#888">Chunhua Clone Scam</text>
+  <text x="300" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#666">HK$110M in Macau/HK</text>
+  <text x="600" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#666">Company Vanished</text>
+  <text x="900" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#666">Police Reports Filed</text>
+  <text x="600" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#00d2ff">No Stores, No Packaging — Rules Written On-Chain</text>
+  <text x="600" y="530" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#666">Permissions Dropped · Open Source · Anyone Can Verify</text>
+  <text x="600" y="575" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#555">FunDAO Scam Education</text>
+  <text x="1100" y="610" text-anchor="end" font-family="Arial,sans-serif" font-size="14" fill="#444">FunDAO | Mr.Xuan</text>
+</svg>
