@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a2e"/>
+      <stop offset="100%" style="stop-color:#2e0a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="250" cy="200" r="180" fill="#00ff88" opacity="0.05"/>
+  <circle cx="950" cy="430" r="200" fill="#ff4444" opacity="0.05"/>
+  <text x="600" y="80" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#00ff88">Deep Investigation · Blockchain Trust Crisis</text>
+  <text x="600" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="60" font-weight="bold" fill="#00ff88">3 Trillion</text>
+  <text x="600" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="white">Harmony Mints From Thin Air · Team Announces Rollback</text>
+  <rect x="300" y="250" width="600" height="2" rx="1" fill="#00ff88" opacity="0.4"/>
+  <text x="350" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#ff8888">Mint Exploit</text>
+  <text x="600" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#ff8888">Supply Up 270x</text>
+  <text x="850" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#ff8888">Holders Diluted 99.6%</text>
+  <text x="600" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#ffcc00">Does "Immutable" Still Hold?</text>
+  <text x="600" y="440" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#888">The DAO · EOS Freeze · BSC Halt · Ronin Reissue</text>
+  <text x="600" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#00d2ff">True Immutability = Renounced Permissions + No Admin</text>
+  <text x="600" y="565" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#666">FunDAO · Locked at Deployment · No Infinite Mint Possible</text>
+  <text x="1100" y="610" text-anchor="end" font-family="Arial,sans-serif" font-size="14" fill="#444">FunDAO | Mr.Xuan</text>
+</svg>
