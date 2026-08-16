@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a2a4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="600" cy="315" r="220" fill="#f7931a" opacity="0.05"/>
+  <text x="600" y="80" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#f7931a">Macro Turning Point · 2026.8.16</text>
+  <text x="600" y="165" text-anchor="middle" font-family="Arial,sans-serif" font-size="64" font-weight="bold" fill="#ff4444">-23K</text>
+  <text x="600" y="225" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="white">US July Non-Farm Employment Declines</text>
+  <rect x="300" y="255" width="600" height="2" rx="1" fill="#f7931a" opacity="0.4"/>
+  <text x="380" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#88bbff">Expected: +80K</text>
+  <text x="820" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#ff6666">Actual: -23K</text>
+  <text x="380" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#888">Rate hike odds 55% to 44%</text>
+  <text x="820" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#888">BOJ may accelerate hiking</text>
+  <text x="600" y="440" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#00d2ff">Deflationary Token: Daily Burn Unaffected by Macro Data</text>
+  <text x="600" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#666">Regardless of Non-Farm · 2.5% Auto Burn Daily · Mechanism Driven</text>
+  <text x="600" y="555" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#555">FunDAO Retail Survival Guide</text>
+  <text x="1100" y="610" text-anchor="end" font-family="Arial,sans-serif" font-size="14" fill="#444">FunDAO | Mr.Xuan</text>
+</svg>

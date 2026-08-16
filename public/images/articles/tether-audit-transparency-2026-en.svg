@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1a0a"/>
+      <stop offset="100%" style="stop-color:#1a2e1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="300" cy="250" r="180" fill="#26a17b" opacity="0.06"/>
+  <circle cx="900" cy="400" r="160" fill="#00d2ff" opacity="0.05"/>
+  <text x="600" y="80" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#26a17b">Stablecoin Transparency Debate · 2026</text>
+  <text x="600" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" font-weight="bold" fill="#26a17b">Audit Passed ≠ True Transparency</text>
+  <text x="600" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="white">Tether KPMG Audit: Reserves Exceed Liabilities by $6.8B</text>
+  <rect x="300" y="250" width="600" height="2" rx="1" fill="#26a17b" opacity="0.4"/>
+  <text x="350" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#ff8888">Not Covered: Private Loans</text>
+  <text x="600" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#ff8888">Not Covered: Derivatives</text>
+  <text x="850" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#ff8888">Not Covered: Asset Quality</text>
+  <text x="600" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#ffcc00">Third-Party Audit vs On-Chain Transparency</text>
+  <text x="350" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#888">Trust Company + Auditor</text>
+  <text x="850" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#888">Trust Nobody</text>
+  <text x="600" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#00d2ff">FunDAO: 60/25/15 Distribution On-Chain Verifiable · Every Second</text>
+  <text x="600" y="555" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#666">True Transparency Isn't "Quarterly Reports" but "Verifiable Every Second"</text>
+  <text x="1100" y="610" text-anchor="end" font-family="Arial,sans-serif" font-size="14" fill="#444">FunDAO | Mr.Xuan</text>
+</svg>
