@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23"/>
+      <stop offset="100%" style="stop-color:#1a1a3e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="600" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="56" font-weight="bold" fill="#f0b90b">Binance Delists 6 Tokens</text>
+  <text x="600" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="42" fill="#e74c3c">Is Your Token Safe?</text>
+  <text x="600" y="330" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="#ecf0f1">ACX · HFT · PIVX · PYR · VANRY · VIC</text>
+  <line x1="300" y1="370" x2="900" y2="370" stroke="#f0b90b" stroke-width="2"/>
+  <text x="600" y="420" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#95a5a6">How to Identify Delisting Risk Early</text>
+  <text x="600" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#7f8c8d">FunDAO Deep Analysis</text>
+  <rect x="150" y="100" width="120" height="120" rx="10" fill="none" stroke="#f0b90b" stroke-width="2" opacity="0.3"/>
+  <rect x="930" y="410" width="120" height="120" rx="10" fill="none" stroke="#e74c3c" stroke-width="2" opacity="0.3"/>
+</svg>
