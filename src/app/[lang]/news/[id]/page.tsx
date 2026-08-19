@@ -1,6 +1,7 @@
 import Script from 'next/script';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import parse from 'html-react-parser';
 import articlesData from '@/data/seed-articles.json';
 
 async function getArticle(id: string) {
@@ -139,10 +140,9 @@ export default async function ArticleDetailPage({ params }: { params: { id: stri
               />
             )}
 
-            <div
-              className="prose max-w-none text-gray-700 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: content }}
-            />
+            <div className="prose max-w-none text-gray-700 leading-relaxed">
+              {parse(content)}
+            </div>
           </article>
         </div>
       </div>
