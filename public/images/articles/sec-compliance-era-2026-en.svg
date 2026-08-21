@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1a2e"/>
+      <stop offset="100%" style="stop-color:#1a2a4e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="600" y="140" text-anchor="middle" font-family="Arial,sans-serif" font-size="56" font-weight="bold" fill="#3498db">SEC Opens Gates</text>
+  <text x="600" y="210" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" fill="#f39c12">Token Exemption + CLARITY Act</text>
+  <text x="600" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="36" fill="#ecf0f1">Is Crypto Compliance Era Here?</text>
+  <line x1="300" y1="320" x2="900" y2="320" stroke="#3498db" stroke-width="2"/>
+  <text x="600" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#95a5a6">$5M Exempt · $75M Simplified · Trump Pushes Congress</text>
+  <text x="600" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#7f8c8d">FunDAO Deep Analysis</text>
+  <rect x="150" y="100" width="120" height="120" rx="10" fill="none" stroke="#3498db" stroke-width="2" opacity="0.3"/>
+  <rect x="930" y="410" width="120" height="120" rx="10" fill="none" stroke="#f39c12" stroke-width="2" opacity="0.3"/>
+</svg>
