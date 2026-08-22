@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f7931a"/>
+      <stop offset="100%" style="stop-color:#ffcb05"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="600" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#f7931a" letter-spacing="4">DEEP ANALYSIS</text>
+  <text x="600" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" fill="white" font-weight="bold">BTC Surges 23% in One Week</text>
+  <text x="600" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" fill="url(#gold)" font-weight="bold">170K Liquidated · $4.5B Gone</text>
+  <text x="600" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="#ccc">The Clearing Logic Behind the Epic Short Squeeze</text>
+  <line x1="400" y1="400" x2="800" y2="400" stroke="#f7931a" stroke-width="2"/>
+  <text x="600" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#888">BTC $79,500 | Biggest Weekly Gain in 3 Years</text>
+  <text x="600" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" fill="#888">Spot ETF Weekly Inflow Over $1 Billion</text>
+  <text x="600" y="580" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#555">fundao.fun</text>
+</svg>
