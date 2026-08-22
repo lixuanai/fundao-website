@@ -965,7 +965,15 @@
     "cover_zh": "btc-weekly-surge-2026.svg",
     "cover_en": "btc-weekly-surge-2026-en.svg",
     "description_zh": "BTC触及79500美元，一周暴涨23%创三年最大周涨幅。17万人爆仓、45亿美元空头被强平。这不是牛市回归，而是杠杆清算螺旋的加速。",
-    "description_en": "BTC hits $79,500 with 23% weekly gain. 170K traders liquidated, $4.5B in shorts wiped out. This isn't a bull market return — it's an accelerating leverage liquidation spiral."
+    "description_en": "BTC hits $79,500 with 23% weekly gain. 170K traders liquidated, $4.5B in shorts wiped out. This isn't a bull market return — it's an accelerating leverage liquidation spiral.",
+    "published": 1,
+    "created_at": "2026-08-22T00:00:00.000Z",
+    "updated_at": "2026-08-22T00:00:00.000Z",
+    "excerpt_zh": "比特币一周涨了23%，从6.4万美元一路拉到7.95万美元，创三年最大周涨幅。17万人爆仓，45亿美元灰飞烟灭。这不是牛市回归，而是杠杆清算螺旋的加速。",
+    "excerpt_en": "BTC surged 23% in one week from $64K to $79.5K, the biggest weekly gain in 3 years. 170K traders liquidated, $4.5B wiped out. This isn't a bull market return — it's an accelerating leverage liquidation spiral.",
+    "cover_image": "/images/articles/btc-weekly-surge-2026.svg",
+    "cover_image_en": "/images/articles/btc-weekly-surge-2026-en.svg",
+    "tags": "BTC,轧空,爆仓,杠杆清算,ETF"
   },
   {
     "id": "gold-surpasses-treasuries-global-reserve-asset-2026",
@@ -979,7 +987,15 @@
     "cover_zh": "gold-treasury-reserve-2026.svg",
     "cover_en": "gold-treasury-reserve-2026-en.svg",
     "description_zh": "黄金占全球央行储备27%，美债降至22%。金价4680美元，白银逼近70美元。这不是金价新高，而是全球央行系统性抛弃美债的历史性时刻。",
-    "description_en": "Gold now 27% of global central bank reserves vs Treasuries at 22%. Gold at $4,680, silver nearing $70. This isn't a new gold high — it's a historic systemic shift away from USD."
+    "description_en": "Gold now 27% of global central bank reserves vs Treasuries at 22%. Gold at $4,680, silver nearing $70. This isn't a new gold high — it's a historic systemic shift away from USD.",
+    "published": 1,
+    "created_at": "2026-08-22T00:00:00.000Z",
+    "updated_at": "2026-08-22T00:00:00.000Z",
+    "excerpt_zh": "黄金正式超越美债，成了全球第一大储备资产。黄金占全球央行储备27%，美债降至22%。金价4680美元，白银逼近70美元。这是全球央行系统性抛弃美债的历史性时刻。",
+    "excerpt_en": "Gold officially surpasses US Treasuries as the world's top reserve asset. Gold at 27% vs Treasuries at 22%. Gold $4,680, silver nearing $70. A historic systemic shift away from USD dominance.",
+    "cover_image": "/images/articles/gold-treasury-reserve-2026.svg",
+    "cover_image_en": "/images/articles/gold-treasury-reserve-2026-en.svg",
+    "tags": "黄金,美债,去美元化,央行储备,法币信用"
   },
   {
     "id": "cctv-exposes-stock-livestream-scam-chain-2026",
@@ -993,6 +1009,14 @@
     "cover_zh": "cctv-livestream-scam-2026.svg",
     "cover_en": "cctv-livestream-scam-2026-en.svg",
     "description_zh": "央视8月21日曝光荐股直播诈骗链，涉案8600万，1.2万受害人，82名诈骗分子从柬埔寨被押解回国。穿西装、看K线、讲术语——虚假专业感为什么比街头骗局更有杀伤力？",
-    "description_en": "CCTV exposed a stock livestream scam on Aug 21: $86M involved, 12K victims, 82 scammers extradited from Cambodia. Why does fake professionalism kill harder than street scams?"
+    "description_en": "CCTV exposed a stock livestream scam on Aug 21: $86M involved, 12K victims, 82 scammers extradited from Cambodia. Why does fake professionalism kill harder than street scams?",
+    "published": 1,
+    "created_at": "2026-08-22T00:00:00.000Z",
+    "updated_at": "2026-08-22T00:00:00.000Z",
+    "excerpt_zh": "央视曝光荐股直播诈骗链，1.2万人受害，涉案金额8600万，82名诈骗分子从柬埔寨被押解回国。穿西装、看K线、讲术语——虚假专业感为什么比街头骗局更有杀伤力？",
+    "excerpt_en": "CCTV exposes stock livestream scam chain: 12K victims, $86M involved, 82 scammers extradited from Cambodia. Suits, charts, jargon — why does fake professionalism kill harder than street scams?",
+    "cover_image": "/images/articles/cctv-livestream-scam-2026.svg",
+    "cover_image_en": "/images/articles/cctv-livestream-scam-2026-en.svg",
+    "tags": "央视,荐股诈骗,柬埔寨,防骗,虚假专业感"
   }
 ]
